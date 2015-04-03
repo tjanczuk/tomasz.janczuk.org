@@ -1,0 +1,98 @@
+---
+layout: post
+title: Improving performance of concurrent WCF calls in Silverlight applications
+date: '2009-08-19T15:22:00.001-07:00'
+author: Tomasz Janczuk
+tags: 
+modified_time: '2009-08-19T15:22:26.042-07:00'
+blogger_id: tag:blogger.com,1999:blog-2987032012497124857.post-27603866402551564
+blogger_orig_url: http://tomasz.janczuk.org/2009/08/improving-performance-of-concurrent-wcf.html
+---
+
+
+
+
+Many people notice an apparent degradation of latency of concurrent WCF calls in a Silverlight application compared to a similar code in a Windows Console application. This post explains this phenomenon and shows how to optimize performance of concurrent calls in Silverlight.  
+
+WCF proxies in Silverlight applications use the SynchronizationContext of the thread from which the web service call is initiated to schedule the invocation of the async event handler when the response is received. When the web service call is initiated from the UI thread of a Silverlight application, the async event handler code will also execute on the UI thread. Given that there is only one UI thread in the Silverlight application, and given it has other chores (primarily managing the UI itself), the average latency of multiple concurrent WCF calls *as measured by the code executing on the UI thread* may appear to be long. This is because the execution of the event handlers for individual calls needs to be serialized on a single thread and interlaced with other tasks that thread has to perform. The benefit of this model is that the code in the event handler can directly manipulate controls on the page, which is a privilege reserved for code executing on the UI thread. The example below shows how to measure an average latency of multiple WCF calls initiated from a UI thread:  
+
+{% highlight csharp linenos %}
+
+
+int responseCount;       
+int totalLatency;        
+const int MessageCount = 100;     
+
+void MainPage_Loaded(object sender, RoutedEventArgs e)       
+{        
+    TestService.ServiceClient proxy = new TestService.ServiceClient();        
+    proxy.HelloCompleted += new EventHandler<WcfPerf.TestService.HelloCompletedEventArgs>(proxy_HelloCompleted);        
+    for (int i = 0; i < MessageCount; i++)        
+    {        
+        proxy.HelloAsync("foo", Environment.TickCount);        
+    }        
+}     
+
+void proxy_HelloCompleted(object sender, WcfPerf.TestService.HelloCompletedEventArgs e)       
+{        
+    int end = Environment.TickCount;        
+    this.responseCount++;        
+    this.totalLatency += end - (int)e.UserState;              
+    if (this.responseCount == MessageCount)        
+    {        
+        this.Log.Text = ((double)(this.totalLatency) / MessageCount).ToString();        
+    }        
+}     
+
+{% endhighlight %}
+
+  
+
+In order to avoid synchronizing the invocations of event handlers for individual calls on a single UI thread, a worker thread can be used to initiate the web service calls. Newly created worker threads do not have a SynchronizationContext set, which means event handler code for every response from the server will execute on its own thread. This greatly reduces contention in the client application and reduces the average latency of a series of concurrent calls. Consider the code below which uses the worker thread approach:  
+
+{% highlight csharp linenos %}
+
+
+int responseCount;       
+int totalLatency;        
+const int MessageCount = 100;        
+Thread workerThread;     
+
+void MainPage_Loaded(object sender, RoutedEventArgs e)       
+{        
+    this.workerThread = new Thread(this.StartSending);        
+    this.workerThread.Start();        
+}     
+
+void StartSending()       
+{        
+    TestService.ServiceClient proxy = new TestService.ServiceClient();        
+    proxy.HelloCompleted += new EventHandler<WcfPerf.TestService.HelloCompletedEventArgs>(proxy_HelloCompleted);        
+    for (int i = 0; i < MessageCount; i++)        
+    {        
+        proxy.HelloAsync("foo", Environment.TickCount);        
+    }        
+}     
+
+void proxy_HelloCompleted(object sender, WcfPerf.TestService.HelloCompletedEventArgs e)       
+{        
+    int end = Environment.TickCount;        
+    lock (this.workerThread)        
+    {        
+        this.responseCount++;        
+        this.totalLatency += end - (int)e.UserState;        
+    }        
+    if (this.responseCount == MessageCount)        
+    {        
+        this.Dispatcher.BeginInvoke(delegate        
+        {        
+            this.Log.Text = ((double)(this.totalLatency) / MessageCount).ToString();        
+        });        
+    }        
+} 
+
+{% endhighlight %}
+
+  
+
+My ad-hoc measurements indicate the average latency of the worker thread approach is about 20% of the average latency of the UI thread approach. The downside of this approach is the more complex way of manipulating the UI controls on the page. The worker thread has to explicitly schedule the code that manipulates the UI to execute on the UI thread, as shown in the proxy_HelloCompleted implementation above.   
