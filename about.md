@@ -1,11 +1,17 @@
 ---
 layout: page
-title: About
+title: Tomek on Software
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+![Tomasz Janczuk](/assets/images/tjanczuk.jpg)
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Engineer at [Auth0](https://auth0.com).  
+Founder of [MobileChapters](https://MobileChapters.com).  
+Formerly at Microsoft (12 years), and HP (1/2 years).  
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+**Software: shaken, not stirred**
+
+[tomasz@janczuk.org](mailto:tomasz@janczuk.org)  
+[@tjanczuk](https://twitter.com/tjanczuk)  
+[https://github.com/tjanczuk](https://github.com/tjanczuk)  
