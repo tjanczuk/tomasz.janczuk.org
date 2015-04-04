@@ -6,6 +6,8 @@ permalink: /about/
 
 ![Tomasz Janczuk](/assets/images/tjanczuk.jpg)
 
+**Tomasz Janczuk**
+
 Engineer at [Auth0](https://auth0.com).  
 Founder of [MobileChapters](https://MobileChapters.com).  
 Formerly at Microsoft (12 years), and HP (1/2 years).  
