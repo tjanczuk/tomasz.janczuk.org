@@ -14,7 +14,7 @@ tags:
 
 If you are writing a mobile or web application today, your requirements for backend functionality are quite different from what they were 5 or 10 years go. In this post I will introduce the concept of a *webtask*: a novel approach to running backend logic in modern mobile or web applications. You can also head directly to [webtask.io](https://webtask.io) to see the webtask concept in practice. 
 
-### Why do you still need a backend
+### Why do you still need a backend?
 
 Client-server architecture was invented in the 1960s and widely used ever since. Majority of modern mobile and web applications are based on this architecture. 
 
