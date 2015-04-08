@@ -12,7 +12,7 @@ tags:
 - backend
 ---
 
-If you are writing a mobile or web application today, your requirements for backend functionality are quite different from what they were 5 or 10 years go. In this post I will introduce the concept of a *webtask*: a novel approach to running backend logic in modern mobile or web applications. You can also head directly to [webtask.io](https://webtask.io) to see the webtask concept in practice. 
+If you are writing a mobile or web application today, your requirements for backend functionality are quite different from what they were 5 or 10 years go. In this post I will introduce the concept of a *webtask*: a novel approach to running backend logic in modern mobile or web applications. You can also head directly to [webtask.io](https://webtask.io) playground to try out the webtask concept in practice. 
 
 ### Why do you still need a backend?
 
@@ -86,4 +86,4 @@ Building a webtask runtime that serves the needs of multiple applications and us
 
 ### Webtask.io
 
-Lastly, you can learn more and experiment with a live webtask runtime at [webtask.io](https://webtask.io). From accessing MongoDB, sending E-mails, to accepting Stripe payments and sending SMS messages, there are many examples of using webtasks to implement and securely run backend logic from a modern web application. Enjoy!
+Lastly, you can learn more and experiment with a live webtask runtime at [webtask.io](https://webtask.io) playground. From accessing MongoDB, sending E-mails, to accepting Stripe payments and sending SMS messages, there are many examples of using webtasks to implement and securely run backend logic from a modern web application. Enjoy!
