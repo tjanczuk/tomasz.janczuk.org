@@ -20,6 +20,20 @@
               on
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
+              <div class="share" style="text-align:left;display:inline-block;padding-top:0;padding-left:10px;">
+                {% for social in site.social %}
+                  {% if social.share_url != null %}
+                    <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}.html"
+                      onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{site.url}}{{page.id}}.html"
+                      onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-google-plus"></i><span class="hidden">google-plus</span>
+                    </a>
+              </div>
             </div>
             <div style="text-align:center">
               <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
@@ -30,12 +44,26 @@
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">{{ page.title }}</h1>
-            <div class="cf post-meta-text">
+            <div class="cf post-meta-text">              
               <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
               on
               <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
+              <div class="share" style="text-align:left;display:inline-block;padding-top:0;padding-left:10px;">
+                {% for social in site.social %}
+                  {% if social.share_url != null %}
+                    <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}.html"
+                      onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{site.url}}{{page.id}}.html"
+                      onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-google-plus"></i><span class="hidden">google-plus</span>
+                    </a>
+              </div>
             </div>
           </div>
         </div>
@@ -60,6 +88,10 @@
                 </a>
               {% endif %}
             {% endfor %}
+                <a class="icon-google-plus" href="https://plus.google.com/share?url={{site.url}}{{page.id}}.html"
+                  onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+                <i class="fa fa-google-plus"></i><span class="hidden">google-plus</span>
+                </a>
           </section>
         </footer>
         <div class="bottom-teaser cf">
@@ -68,6 +100,11 @@
             <section class="author">
               <div class="author-image" style="background-image: url({{site.author_image}})">Blog Logo</div>
               <h4>{{ site.author }}</h4>
+              <p class="follow">
+                <a class="icon-twitter" href="https://twitter.com/tjanczuk"><i class="fa fa-twitter"></i></a>
+                &nbsp;
+                <a class="icon-githubs" href="https://github.com/tjanczuk"><i class="fa fa-github"></i></a>
+              </p>
               <p class="bio">{{author.bio}}</p>
               <hr>
               <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>

@@ -33,23 +33,23 @@ social:
     share_title: ?text=
     share_link: "&amp;url="
 
-#  - icon:	facebook
-#    url:	https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: https://www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
+  - icon:	facebook
+    share_url: https://www.facebook.com/sharer.php
+    share_title: ?t=
+    share_link: "&amp;u="
+    # url: https://facebook.com/???
+    # desc: Connect with me facebook
 
   - icon:	github
     url:	https://github.com/tjanczuk
     desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
+    # share_url:
+    # share_title:
+    # share_link:
 
-#  - icon:	google-plus
-#    url:	https://google.com/???
-#    desc:	Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
+  # - icon:	google-plus
+  #   share_url: https://plus.google.com/share
+  #   share_title: 
+  #   share_link: ?url=
+    # url: https://google.com/106765781828978076113
+    # desc:  Add me on google+
