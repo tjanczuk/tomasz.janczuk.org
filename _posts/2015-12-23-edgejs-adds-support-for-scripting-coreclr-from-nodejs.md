@@ -13,7 +13,7 @@ tags:
 - web
 ---
 
-The [Edge.js project](https://githu.com/tjanczuk/edge) allows you to script CLR from Node.js in-process on Windows, OSX, and Linux.
+The [Edge.js project](https://github.com/tjanczuk/edge) allows you to script CLR from Node.js in-process on Windows, OSX, and Linux.
 
 ```javascript
 var edge = require('edge');
