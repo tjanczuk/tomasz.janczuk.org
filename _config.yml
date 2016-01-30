@@ -21,7 +21,8 @@ author_image: "/assets/images/tj.png"
 
 paginate:	10
 
-url: "http://tomasz.janczuk.org" # the base hostname & protocol for your site
+url: "https://tomasz.janczuk.org" # the base hostname & protocol for your site
+enforce_ssl: tomasz.janczuk.org   # without any protocol
 baseurl: ""
 
 # social icons and sharing options
