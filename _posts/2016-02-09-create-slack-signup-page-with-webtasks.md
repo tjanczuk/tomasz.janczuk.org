@@ -2,7 +2,7 @@
 layout: post
 title: Create Slack signup page with Auth0 Webtasks
 author: Tomasz Janczuk
-bottomimage: /assets/post_images/2016-01-29/2.jpg
+bottomimage: /assets/images/b_1.jpg
 tags:
 - webtask
 - webtasks
