@@ -49,7 +49,7 @@ Use the resulting URL as your Slack signup page and start building a public comm
 
 <img src="/assets/post_images/2016-02-09/3.png" class="tj-img-diagram-100" alt="Slack signup page for Edge.js">
 
-If you are interested in what the webtask code is doing behind the scenes, or customize the UI or signup exprience, check out the [auth0/webtask-slack-signup](https://github.com/auth0/webtask-slack-signup) repo. Since you have the flexibility of writing any Node.js code, your customization options or unlimited. 
+If you are interested in what the webtask code is doing behind the scenes, or customize the UI or signup exprience, check out the [auth0/webtask-slack-signup](https://github.com/auth0/webtask-slack-signup) repo. Since you have the flexibility of writing any Node.js code, your customization options are unlimited. 
 
 ### But is that secure?
 
