@@ -69,9 +69,9 @@ Back in the CloudFlare dashboard, make sure your new custom domain SSL settings 
 
 #### 6. Voila! 
 
-Congratulations, you have just set up custom domain access with SSL to [Auth0 Webtasks](https://webtask.io). You can now access any previously created webtasks or any webtask management HTTP API with this new domain name. 
+Congratulations, you have just set up custom domain access with SSL to [Auth0 Webtasks](https://webtask.io). You can now access any previously created webtasks using the custom domain name and a simplified URL path, e.g. *https://serverless.host/tjanczuk/dudesays*. Note how the `/api/run` part of the URL is now absent. Given that, you can only *execute* created webtasks using the custom domain name. Webtask management HTTP APIs must be invoked using the shared webtask domain name, e.g. https://webtask.it.auth0.com/api/. 
 
-For example, you can now use [https://serverless.host/api/run/tjanczuk/dudesays](https://serverless.host/api/run/tjanczuk/dudesays) webtask (notice the custom domain we just set up) to check what folks on Twitter are twitting about:
+For example, a webtask you were previously able to access at [https://webtask.it.auth0.com/api/run/tjanczuk/dudesays](https://webtask.it.auth0.com/api/run/tjanczuk/dudesays) you can now call using [https://serverless.host/tjanczuk/dudesays](https://serverless.host/tjanczuk/dudesays) (notice the custom domain we just set up and the lack of */api/run* URL segments):
 
 <img src="/assets/post_images/2016-03-30/7.png" class="tj-img-diagram-75" alt="Auth0 Webtasks: backendless appliaction with backend logic">
 
