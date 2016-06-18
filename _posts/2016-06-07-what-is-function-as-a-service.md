@@ -48,7 +48,7 @@ Go ahead and call it. It is a service.
 
 ### Wait, what just happened?
 
-We have used the CLI of [Auth0 Webtasks](https://webtask.io) to turn a Node.js function into an HTTP endpoint that can be called from a mobile or HTML5 app, or just with *curl*. Auth0 Webtasks is all about making developer life's simple - all you need is a *function*. Webtasks turn it into *service*. Learn more at [https://webtask.io](https://webtask.io).
+We have used the CLI of [Auth0 Webtasks](https://webtask.io) to turn a Node.js function into an HTTP endpoint that can be called from a mobile or HTML5 app, or just with *curl*. Auth0 Webtasks is all about making developer's life simple - all you need is a *function*. Webtasks turn it into *service*. Learn more at [https://webtask.io](https://webtask.io).
 
 ### *Function as a Service* vs *Serverless*
 
