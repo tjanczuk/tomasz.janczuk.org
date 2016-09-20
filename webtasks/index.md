@@ -21,7 +21,7 @@ tags:
 
 Since joining [Auth0](https://auth0.com) in September 2014, I had a chance to create and evolve [Auth0 Webtasks](https://webtask.io). Webtasks originally provided the foundation for extending the functionality of the multi-tenant Auth0 platform through custom code.  
 
-> Webtasks are like serverless webhooks: webhooks with a hosting platfrom included. 
+> Webtasks are like serverless webhooks: webhooks with a hosting platform included. 
 
 Below is a collection of blog posts I have written on the subject. 
 
