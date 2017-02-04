@@ -40,13 +40,16 @@
       <div class="column p-center"><p>or until impeachment</p></div>
     </div>
     <div class="row">
-    <div class="column p-center">
+    <div class="column p-center" id="twitter">
     <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Time left till America is great again" data-via="tjanczuk" data-hashtags="trump" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     </div>
   
   </div>
   <script>
+    if (window.location.hash.indexOf('notwitter') > -1) {
+      document.getElementById('twitter').style.display = 'none';
+    }
     var end = new Date('3 Nov 2020 00:00:00 EDT');
     update();
     setInterval(update, 1000);
