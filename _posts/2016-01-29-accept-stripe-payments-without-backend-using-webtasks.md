@@ -147,7 +147,7 @@ module.exports = function (ctx, req, res) {
 Now create a webtask by combining the code in *coffee4tomek.js* with the secret Stripe key: 
 
 ```bash
-wt create coffee4tomek.js --secret stripeSecretKey={stripe_secret_key}
+wt create coffee4tomek.js --secret stripeSecretKey={stripe_secret_key} --parse-body
 ```
 
 You will get back a webtask URL that may look like this:
