@@ -22,7 +22,7 @@ When Alexander Bain invented the precursor of a fax machine in 1846, he probably
 > "Where do you live?"  
 > "The 21st century."  
 
-I was not until March 31st 2017 (a day before April Fool's Day) when Twillio breathed a new life into the dying art of fax sending by introducing the [Fax API](https://www.twilio.com/blog/2017/03/twilio-programmable-fax.html). Modern humans can now send faxes by issuing a simple HTTP POST request: 
+It was not until March 31st 2017 (a day before April Fool's Day) when Twilio breathed a new life into the dying art of fax sending by introducing the [Fax API](https://www.twilio.com/blog/2017/03/twilio-programmable-fax.html). Modern humans can now send faxes by issuing a simple HTTP POST request: 
 
 ```bash
 curl 'https://fax.twilio.com/v1/Faxes' \
@@ -39,7 +39,7 @@ Let's fix it and create that PDF document on the fly, no servers required.
 
 ### Serverless PDF with Webtasks
 
-We are going to use [Auth0 Webtasks](https://webtask.io) to create a Node.js function that accepts text and turns it into a PDF document, and then expose this function as an HTTP endpoint that can be used as the *MediaUrl* parameter in a call to Twillio. No servers, no hosting. Just code. 
+We are going to use [Auth0 Webtasks](https://webtask.io) to create a Node.js function that accepts text and turns it into a PDF document, and then expose this function as an HTTP endpoint that can be used as the *MediaUrl* parameter in a call to Twilio. No servers, no hosting. Just code. 
 
 First, the function: 
 
@@ -71,7 +71,7 @@ Voila! You have just created an HTTP endpoint (URL at the bottom of the webtask 
 
 <img src="/assets/post_images/2017-04-03/1.png" class="tj-img-diagram-100" alt="Back to the XXI century">
 
-You can then use this URL as the *MediaUrl* parameter in a call to Twillio, e.g.:
+You can then use this URL as the *MediaUrl* parameter in a call to Twilio, e.g.:
 
 ```bash
 curl 'https://fax.twilio.com/v1/Faxes' \
@@ -84,7 +84,7 @@ And with that you are back in the future, in the warm embrace of the XXI century
 
 ### Faxing me softly
 
-Using the Twillio APIs directly to send a fax requires you to specify the API keys as part of the call: 
+Using the Twilio APIs directly to send a fax requires you to specify the API keys as part of the call: 
 
 ```bash
 curl 'https://fax.twilio.com/v1/Faxes' \
@@ -93,13 +93,13 @@ curl 'https://fax.twilio.com/v1/Faxes' \
     ...
 ```
 
-This is great if only you will ever send a fax, but what if you want to allow everyone in your office to communicate with lawyers or the federal government over fax using your Twillio account? Fear not, Auth0 Webtasks have you covered. 
+This is great if only you will ever send a fax, but what if you want to allow everyone in your office to communicate with lawyers or the federal government over fax using your Twilio account? Fear not, Auth0 Webtasks have you covered. 
 
-We are going to create another Auth0 Webtask. This time it will accept an HTTP POST request with *title* and *body* parameters, delegate the creation of the PDF to the previously created webtask, and then *call the Twillio* API on your behalf. Why is this better? Becuse 
+We are going to create another Auth0 Webtask. This time it will accept an HTTP POST request with *title* and *body* parameters, delegate the creation of the PDF to the previously created webtask, and then *call the Twilio* API on your behalf. Why is this better? Becuse 
 
 > Webtasks allow you to securely associate secrets with code. 
 
-You can store your Twillio key alongside the created webtask to use it within the code, which enables you to freely share the URL to the webtask itself with folks in your office without disclosing your secret keys.
+You can store your Twilio key alongside the created webtask to use it within the code, which enables you to freely share the URL to the webtask itself with folks in your office without disclosing your secret keys.
 
 Here is the webtask code: 
 
@@ -126,7 +126,7 @@ You will notice that *MediaUrl* is pointing to the URL of of the previosuly crea
 
 <img src="/assets/post_images/2017-04-03/2.png" class="tj-img-diagram-100" alt="Storing secrets with Auth0 Webtasks">
 
-With this webtask created, anyone who has the URL can now send a fax using your Twillio keys: 
+With this webtask created, anyone who has the URL can now send a fax using your Twilio keys: 
 
 ```bash
 curl https://skynet.run.webtask.io/faxit?title=Hello\&body=World
@@ -164,6 +164,6 @@ And with that, we have finally opened a wormhole connecting the today with the d
 
 ### Conclusion
 
-In this post we've used [Twillio Fax APIs](https://www.twilio.com/blog/2017/03/twilio-programmable-fax.html) with [Auth0 Webtasks](https://webtask.io) to serverlessly send faxes. Then we exposed this functionality as a Slack slash command using [Slash Webtasks](https://webtask.io/slack). 
+In this post we've used [Twilio Fax APIs](https://www.twilio.com/blog/2017/03/twilio-programmable-fax.html) with [Auth0 Webtasks](https://webtask.io) to serverlessly send faxes. Then we exposed this functionality as a Slack slash command using [Slash Webtasks](https://webtask.io/slack). 
 
 No servers were harmed in this experiment. 
