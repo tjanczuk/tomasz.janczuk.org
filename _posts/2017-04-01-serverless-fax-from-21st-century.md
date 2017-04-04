@@ -117,12 +117,12 @@ module.exports = function(ctx, cb) {
       To: '+15558675309',
       From: '+15017250604'
     })
-    .auth(ctx.secrets.TWILLIO_USER, ctx.secrets.TWILLIO_TOKEN)
+    .auth(ctx.secrets.TWILIO_USER, ctx.secrets.TWILIO_TOKEN)
     .end((e,r) => cb(e));
 };
 ```
 
-You will notice that *MediaUrl* is pointing to the URL of of the previosuly created webtask that turns title and body parameters into a PDF document. But you will also notice that the basic authentication credentials are sourced from mysterious *ctx.secrets.TWILLIO_USER* and *ctx.secrets.TWILLIO_TOKEN* properties. You can specify them to be securely stored alongside your webtask using the webtask editor: 
+You will notice that *MediaUrl* is pointing to the URL of of the previosuly created webtask that turns title and body parameters into a PDF document. But you will also notice that the basic authentication credentials are sourced from mysterious *ctx.secrets.TWILIO_USER* and *ctx.secrets.TWILIO_TOKEN* properties. You can specify them to be securely stored alongside your webtask using the webtask editor: 
 
 <img src="/assets/post_images/2017-04-03/2.png" class="tj-img-diagram-100" alt="Storing secrets with Auth0 Webtasks">
 

@@ -192,7 +192,7 @@ Did I earn my coffee *now*?
 
 ### Webtasks: backendless microservices
 
-How does it all hang together, and how is it secure? You can read about the details of the [webtask secrity model](https://webtask.io/docs/how), but here is the gist:
+How does it all hang together, and how is it secure? You can read about the details of the [webtask security model](https://webtask.io/docs/how), but here is the gist:
 
 1. The webtask code does not contain any secrets. Secrets are provided to that code at runtime through the *ctx* parameter.  
 2. Both secrets and webtask code are specified at webtask creation time through *wt create*, encrypted, signed, and stored for you in an undisclosed location in the Mojave desert. (Behind the scenes the secrets and code are bundled together and cryptographically protected from tampering and disclosure in a structure called *webtask token*).  
