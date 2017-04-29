@@ -47,29 +47,33 @@
   
   </div>
   <script>
-    if (window.location.hash.indexOf('notwitter') > -1) {
-      document.getElementById('twitter').style.display = 'none';
-    }
-    var end = new Date('3 Nov 2020 00:00:00 EDT');
-    update();
-    setInterval(update, 1000);
-    function update() {
-      var diff = Math.floor(Math.max(0, end - new Date()) / 1000);
-      document.getElementById('seconds').innerHTML = Math.floor(diff % 60);
-      diff = Math.floor(diff / 60);
-      document.getElementById('minutes').innerHTML = Math.floor(diff % 60);
-      diff = Math.floor(diff / 60);
-      document.getElementById('hours').innerHTML = Math.floor(diff % 24);
-      diff = Math.floor(diff / 24);
-      document.getElementById('days').innerHTML = Math.floor(diff);
-    }
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    setTimeout(run, 200);
 
-    ga('create', 'UA-15590292-1', 'auto');
-    ga('send', 'pageview');
+    function run() {
+      if (window.location.hash.indexOf('notwitter') > -1) {
+        document.getElementById('twitter').style.display = 'none';
+      }
+      var end = new Date('3 Nov 2020 00:00:00 EDT');
+      update();
+      setInterval(update, 1000);
+      function update() {
+        var diff = Math.floor(Math.max(0, end - new Date()) / 1000);
+        document.getElementById('seconds').innerHTML = Math.floor(diff % 60);
+        diff = Math.floor(diff / 60);
+        document.getElementById('minutes').innerHTML = Math.floor(diff % 60);
+        diff = Math.floor(diff / 60);
+        document.getElementById('hours').innerHTML = Math.floor(diff % 24);
+        diff = Math.floor(diff / 24);
+        document.getElementById('days').innerHTML = Math.floor(diff);
+      }
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-15590292-1', 'auto');
+      ga('send', 'pageview');
+    }
   </script>
 </body>
 </html>
