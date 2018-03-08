@@ -15,7 +15,7 @@ tags:
 
 In 2007, Jeff Lindsay introduced *webhooks* in his [Webhooks to revolutionize the web](http://progrium.com/blog/2007/05/03/web-hooks-to-revolutionize-the-web/) article. Since then, webhooks have become the dominant mechanism for exposing events from web services. Fast forward to 2017, and a new, better pattern started to emerge: serverless webhooks. 
 
-### webhooks (2007)
+### Webhooks (2007)
 
 This is how Jeff defined webhooks in his iconic article from 2007: 
 
