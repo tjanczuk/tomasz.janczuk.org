@@ -1,7 +1,7 @@
 # Build settings
-markdown: redcarpet
-highlighter: pygments
-gems:
+markdown: kramdown
+highlighter: rouge
+plugins:
   - jemoji
 
 permalink: /:year/:month/:title.html

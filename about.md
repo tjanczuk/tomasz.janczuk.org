@@ -8,13 +8,14 @@ permalink: /about/
 
 **Tomasz Janczuk**
 
-Engineer at [Auth0](https://auth0.com).  
-Founder of [MobileChapters](https://MobileChapters.com).  
+VP, [Auth0 Extend](https://auth0.com).  
 Formerly at Microsoft (12 years), and HP (1/2 years).  
-Creator of [Edge.js](https://tjanczuk.github.io/edge) and [iisnode](https://github.com/tjanczuk/iisnode).
+Founder of MobileChapters.  
+Creator of [Edge.js](https://github.com/tjanczuk/edge) and [iisnode](https://github.com/tjanczuk/iisnode).
 
 **Software: shaken, not stirred**
 
 [tomasz@janczuk.org](mailto:tomasz@janczuk.org)  
+[linked/in](https://www.linkedin.com/in/tjanczuk/)  
 [@tjanczuk](https://twitter.com/tjanczuk)  
 [https://github.com/tjanczuk](https://github.com/tjanczuk)  
