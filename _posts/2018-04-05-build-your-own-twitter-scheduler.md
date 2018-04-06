@@ -64,7 +64,7 @@ That's it. Sit down and watch your tweets beeing sent out.
 
 Your Twitter scheduler is an [Auth0 Webtask CRON job](https://webtask.io/docs/cron). It runs every 15 minutes (or whetever frequency you choose). It inspects the tweeting schedule you set via the YAML, and sends out any tweets that became overdue since the last time the CRON job ran. The CRON job stores the time it executed last as well as the status of the most recent tweets that were sent in [webtask storage](https://webtask.io/docs/webtask_storage). All this logic is implemented in a [webtask compiler](https://webtask.io/docs/webtask-compilers) which is defined in the [webtask-compiler NPM module](https://github.com/tjanczuk/wtc#twitter-scheduler). In addition to implementing the actual tweeting logic, the compiler allows the use of a custom DSL (the YAML with tweeting schedule in this case) to be used as the *script* of the webtask.  
 
-For a gentle introduction of the powerful *webtask compiler* concept, check out (Raymond Camden's post](https://auth0.com/blog/expanding-auth0-extend-with-compilers/).  
+For a gentle introduction of the powerful *webtask compiler* concept, check out [Raymond Camden's post](https://auth0.com/blog/expanding-auth0-extend-with-compilers/).  
 
 ### Updating the Tweet schedule
 
