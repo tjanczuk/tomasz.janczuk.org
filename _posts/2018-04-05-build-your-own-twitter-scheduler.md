@@ -98,7 +98,7 @@ which will bring up the webtask editor allowing you to change the YAML.
 
  1. The top level object must contain the *tweets* array with elements representing individual tweets.  
  2. Each tweet must contain the *text* of the tweet, and a *schedule* at minimum. It may also contain the *media* to attach to the tweet. 
- 3. The *schedule* is a single date or an array of dates that tweet will be sent. You can use any format here that is accepted by Node's `new Date(...)` constructor, like the simple one shown above. It is a good idea to specify the time zone.  
+ 3. The *schedule* is a single date or an array of dates that tweet will be sent on. You can use any format here that is accepted by Node's `new Date(...)` constructor, like the simple one shown above. It is a good idea to specify the time zone.  
  4. The *media* element, if present, is a single URL or an array of up to 4 URLs. These must be publicly accessible URLs that serve the media (typically an image) to attach to your tweet, with correct *Content-Type* header.  
 
 ### Get the status
@@ -107,7 +107,7 @@ which will bring up the webtask editor allowing you to change the YAML.
 
 <img src="/assets/post_images/2018-04-05/2.png" class="tj-img-diagram-100" alt="Status">
 
-The *schedule* element shows the JSON representationo of your YAML tweeting schedule, or an error if the YAML could not be parsed. The *plan* element specifies the Tweets that would be sent if the CRON job were to run *now*. 
+The *schedule* element shows the JSON representation of your YAML tweeting schedule, or an error if the YAML could not be parsed. The *plan* element specifies the Tweets that would be sent if the CRON job were to run *now*. 
 
 The last part of the status specifies the 20 most recently sent tweets: 
 
