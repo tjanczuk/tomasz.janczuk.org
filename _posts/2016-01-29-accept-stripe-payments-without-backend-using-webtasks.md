@@ -26,7 +26,7 @@ extra_js: |
 
 Can I ask you to buy me a coffee? A cup of *tall dark rost* costs $2.14 at my local Starbucks. Just click the button below and use your credit card.
 
-<form action="https://webtask.it.auth0.com/api/run/tjanczuk/coffee4tomek" method="POST" style="margin-bottom: 40px">
+<form action="https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek" method="POST" style="margin-bottom: 40px">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_live_CeoSX5oORYP0f5vXtj67o7CI"
@@ -153,7 +153,7 @@ wt create coffee4tomek.js --secret stripeSecretKey={stripe_secret_key} --parse-b
 You will get back a webtask URL that may look like this:
 
 ```
-https://webtask.it.auth0.com/api/run/tjanczuk/coffee4tomek
+https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek
 ```
 
 Take that webtask URL and set is as the form action of the Stripe form from the beginning of this post:
@@ -161,7 +161,7 @@ Take that webtask URL and set is as the form action of the Stripe form from the 
 ```html
 <form  
   method="POST"
-  action="https://webtask.it.auth0.com/api/run/tjanczuk/coffee4tomek">
+  action="https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek">
   <script
     src="https://checkout.stripe.com/checkout.js"
     class="stripe-button"
@@ -175,7 +175,7 @@ And you are done! Your payment button is fully functional! Time to rake in a for
 
 Did I earn my coffee *now*?
 
-<form action="https://webtask.it.auth0.com/api/run/tjanczuk/coffee4tomek" method="POST" style="margin-bottom: 40px">
+<form action="https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek" method="POST" style="margin-bottom: 40px">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_live_CeoSX5oORYP0f5vXtj67o7CI"
@@ -211,7 +211,7 @@ Last but not least, webtasks as a platform allow you to extend a SaaS product by
 
 So what are you waiting for? Webtask away! And don't forget about my coffee:
 
-<form action="https://webtask.it.auth0.com/api/run/tjanczuk/coffee4tomek" method="POST" style="margin-bottom: 40px">
+<form action="https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek" method="POST" style="margin-bottom: 40px">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_live_CeoSX5oORYP0f5vXtj67o7CI"

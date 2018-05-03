@@ -61,7 +61,7 @@ Anything you can code up in Node.js really. In practice webtasks are great for i
 
 For another specific example of webtask usage, check out my prior post on [accepting Stripe payments from Single Page Appliacations using Webtasks](https://tomasz.janczuk.org/2016/01/accept-stripe-payments-without-backend-using-webtasks.html). Or, even, better, you can just test it right here by buying me a coffee:
 
-<form action="https://webtask.it.auth0.com/api/run/tjanczuk/coffee4tomek" method="POST" style="margin-bottom: 40px">
+<form action="https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek" method="POST" style="margin-bottom: 40px">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_live_CeoSX5oORYP0f5vXtj67o7CI"
