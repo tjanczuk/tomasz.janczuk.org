@@ -94,7 +94,7 @@ To check the results of the survey above, click [here](https://wt-53f70144dc9d7c
 
 ### Wait. What, how?
 
-Your NPS widget is an HTTP endpoint created with [webtask.io](https://webtask.io). Webtask.io is a sample, freemium deployment of the [Extend](https://goextend.io) platform, a powerful solution for extending and customizing SaaS platforms. 
+Your NPS widget is an HTTP endpoint created with [webtask.io](https://webtask.io). Webtask.io is a sample, freemium deployment of the [Extend](https://goextend.io/webtaskio) platform, a powerful solution for extending and customizing SaaS platforms. 
 
 The NPS webtask responds to HTTP GET requests by serving HTML representing the survey, allowing users to click to enter their answer, and making an HTTP POST request back to itself to register that answer. Survey results are stored in [webtask storage](https://webtask.io/docs/storage), and disambibuated between individual users using an HTTP cookie randomly generated and set if not already provided on the HTTP POST request. This is of course not a waterproof way of ensuring one user can only provide a single answer (since cookies can be purged or anonymous sessions used), but in many situations more than adequate. Cookies also allow the widget to present the user with the last answer they provided on subsequent visits to your site, and change that rating without double-counting. 
 
@@ -104,4 +104,4 @@ If you are interested in the technical details of the implementation, as well as
 
 ### Shameless plug
 
-If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://tomasz.janczuk.org/2018/03/serverless-webhooks-to-revolutionize-the-saas.html). Check it out! 
+If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io/webtaskio). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://tomasz.janczuk.org/2018/03/serverless-webhooks-to-revolutionize-the-saas.html). Check it out! 
