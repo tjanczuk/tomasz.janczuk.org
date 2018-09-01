@@ -71,7 +71,7 @@ In the editor, you have access to real-time logs, secret management, all NPM mod
 
 ### Serverless Framework, Auth0 Extend, and Webtasks
 
-[Webtask.io](https://webtask.io) is a freemium sandbox of the [Auth0 Extend](https://auth0.com/extend) product. Based on the Auth0 Webtasks technology, it offers modern, serverless extensibility solution  for SaaS platforms and applications. Think [better webhooks](https://auth0.com/blog/why-is-serverless-extensibility-better-than-webhooks/).
+[Webtask.io](https://webtask.io) is a freemium sandbox of the [Auth0 Extend](https://goextend.io) product. Based on the Auth0 Webtasks technology, it offers modern, serverless extensibility solution  for SaaS platforms and applications. Think [better webhooks](https://auth0.com/blog/why-is-serverless-extensibility-better-than-webhooks/).
 
 Until recently the freemium Auth0 Extend sandbox at [webtask.io](https://webtask.io) allowed you to use Node 4.x with all public NPM modules to implement serverless webhooks. 
 

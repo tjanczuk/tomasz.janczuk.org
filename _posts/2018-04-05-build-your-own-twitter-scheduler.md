@@ -127,4 +127,4 @@ As a result, all the overdue tweets since the last execution (either by the CRON
 
 ### Shameless plug
 
-If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://auth0.com/extend). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://tomasz.janczuk.org/2018/03/serverless-webhooks-to-revolutionize-the-saas.html). Check it out! 
+If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io?utm_source=blog&utm_medium=post&utm_campaign=blog-tomek&utm_content=2018-04-05-twitter-scheduler). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://tomasz.janczuk.org/2018/03/serverless-webhooks-to-revolutionize-the-saas.html). Check it out! 

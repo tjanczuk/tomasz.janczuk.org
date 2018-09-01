@@ -13,7 +13,7 @@ tags:
 - javascript
 ---
 
-In this post I will provide a blueprint for building your own serverless platform, based on the lessons learned from working on [Auth0 Extend](https://auth0.com/extend) in the recent years. 
+In this post I will provide a blueprint for building your own serverless platform, based on the lessons learned from working on [Auth0 Extend](https://goextend.io) in the recent years. 
 
 ### Why would you want to build a serverless platform?
 
@@ -170,4 +170,4 @@ Yes and no. After you have implemented the design above, you have a functioning,
 
 > The system is up and running. The easy work is done. Now you need to run this system at 99.9...% availability, with 24/7 uptime, and zero-downtime upgrades. 
 
-The operations and devops of a serverless solution like the one described in this post is a project in itself, in many respects just as complex as the solution. Stay tuned for another post based on our experiences building and operating [Auth0 Extend](https://auth0.com/extend) to those high operational standards.  
+The operations and devops of a serverless solution like the one described in this post is a project in itself, in many respects just as complex as the solution. Stay tuned for another post based on our experiences building and operating [Auth0 Extend](https://goextend.io) to those high operational standards.  

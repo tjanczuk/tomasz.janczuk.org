@@ -74,8 +74,8 @@ This will open a browser and navigate to the Webtask Editor that allow you to mo
 
 ### What else can you do with webtask compilers?
 
-Webtask compilers are a powerful concept that enable you to implement serverless endpoints in Auth0 Webtasks using custom programming models and DSLs. You can read more about compilers in the [documentation](https://auth0.com/extend/docs/developer-guide#middleware), and see more samples in [tjanczuk/wtc](https://github.com/tjanczuk/wtc).
+Webtask compilers are a powerful concept that enable you to implement serverless endpoints in Auth0 Webtasks using custom programming models and DSLs. You can read more about compilers in the [documentation](https://goextend.io/docs/developer-guide#middleware), and see more samples in [tjanczuk/wtc](https://github.com/tjanczuk/wtc).
 
 ### Big picture: Auth0 Extend, and Webtasks
 
-[Webtask.io](https://webtask.io) is a freemium sandbox of the [Auth0 Extend](https://auth0.com/extend) product. Based on the Auth0 Webtasks technology, it offers modern, serverless extensibility solution for SaaS platforms and applications. Think [better webhooks](https://auth0.com/blog/why-is-serverless-extensibility-better-than-webhooks/).
+[Webtask.io](https://webtask.io) is a freemium sandbox of the [Auth0 Extend](https://goextend.io) product. Based on the Auth0 Webtasks technology, it offers modern, serverless extensibility solution for SaaS platforms and applications. Think [better webhooks](https://auth0.com/blog/why-is-serverless-extensibility-better-than-webhooks/).
