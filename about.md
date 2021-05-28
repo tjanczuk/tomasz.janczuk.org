@@ -8,8 +8,8 @@ permalink: /about/
 
 **Tomasz Janczuk**
 
-VP, [Auth0 Extend](https://auth0.com).  
-Formerly at Microsoft (12 years), and HP (1/2 years).  
+Co-Founder and CEO, [Fusebit](https://fusebit.io).  
+Formerly at Auth0 (4 years), HP (1/2 years), and Microsoft (12 years).  
 Founder of MobileChapters.  
 Creator of [Edge.js](https://github.com/tjanczuk/edge) and [iisnode](https://github.com/tjanczuk/iisnode).
 
@@ -18,4 +18,4 @@ Creator of [Edge.js](https://github.com/tjanczuk/edge) and [iisnode](https://git
 [tomasz@janczuk.org](mailto:tomasz@janczuk.org)  
 [linked/in](https://www.linkedin.com/in/tjanczuk/)  
 [@tjanczuk](https://twitter.com/tjanczuk)  
-[https://github.com/tjanczuk](https://github.com/tjanczuk)  
+[https://github.com/tjanczuk](https://github.com/tjanczuk)
