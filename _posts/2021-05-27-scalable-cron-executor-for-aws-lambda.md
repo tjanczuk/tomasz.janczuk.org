@@ -34,13 +34,13 @@ The problem with using CloudWatch Events in a highly scalable system is the limi
 
 After looking around for the right building blocks, a lesser known feature of Amazon SQS drew our attention: [SQS delay queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-delay-queues.html). The feature enables a message published to an SQS queue to remain invisible to consumers for a configurable time, up to 15 minutes.
 
-Equipped with this new tool, we have split our CRON processing pipeline by adding SQS delay queues in the middle, and using two additional Lambda functions: a scheduler and executor.
+Equipped with this new tool, we have split our CRON processing pipeline by adding SQS delay queues in the middle, and using two additional Lambda functions: a _scheduler_ and an _executor_.
 
-First, we defined a _single_ scheduled CloudWatch Event that triggered the _scheduler_ Lambda function every 10 minutes, starting at minute 8 of an hour. So the scheduler Lambda was running at minute 8, 18, 28, 38 etc. of every hour.
+First, we defined a _single_ scheduled CloudWatch Event that triggered the scheduler Lambda function every 10 minutes, starting at minute 8 of an hour. So the scheduler Lambda was running at minute 8, 18, 28, 38 etc. of every hour.
 
 <a href="/assets/post_images/2021-05-27/1.svg" style="border-bottom:none;"><img src="/assets/post_images/2021-05-27/1.svg" class="tj-img-diagram-100" alt="Scalable CRON executor for AWS Lambda"></a>
 
-The purpose of the scheduler Lambda was to inspect all scheduled jobs in the system (possibly thousands), and select those that were due for execution in the subsequent whole-10-minute interval. For example, if the scheduler Lambda was running at 3:18, it would compute all scheduled job executions that need to occurr in the 3:20-3:30 ten minute time span. The scheduler Lambda would then enqueue those job definitions to the SQS queue, setting the delayed delivery for each to correspond to the exact intended moment of execution of that job. For example, if a job was to run at 3:24, the scheduler Lambda running at 3:18 would enqueue that job to SQS setting the delayed execution to 6 minutes. The granularity of delayed execution allows the execution time to be set with 1 second precision.
+The purpose of the scheduler Lambda was to consider all scheduled jobs in the system (possibly millions), and select those that were due for execution in the subsequent whole-10-minute interval. For example, if the scheduler Lambda was running at 3:18, it would compute all scheduled job executions that need to occurr in the 3:20-3:30 ten minute time span. The scheduler Lambda would then enqueue those job definitions to the SQS queue, setting the delayed delivery for each to correspond to the exact intended moment of execution of that job. For example, if a job was to run at 3:24, the scheduler Lambda running at 3:18 would enqueue that job to SQS setting the delayed execution to 6 minutes. The granularity of delayed execution allows the execution time to be set with 1 second precision.
 
 Lastly, the executor Lambda would consume messages from SQS as they are released following their delayed delivery settings. The executor Lambda would then invoke the appropriate customer-defined Lambda function to execute the intended logic.
 
