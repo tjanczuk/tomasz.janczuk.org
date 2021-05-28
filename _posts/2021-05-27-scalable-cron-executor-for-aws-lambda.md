@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scalable CRON executor for AWS Lambda
+title: Scalable CRON job executor for AWS Lambda
 author: Tomasz Janczuk
 tags:
   - serverless
