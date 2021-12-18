@@ -1,0 +1,65 @@
+#!/usr/bin/env zx
+
+const Fs = require("fs");
+const Path = require("path");
+const Yaml = require("yaml");
+
+const posts = Fs.readdirSync(Path.join(__dirname, "_posts"));
+try {
+  Fs.mkdirSync(Path.join(__dirname, "_posts_fusebitio"));
+} catch (_) {}
+posts.forEach((postFileName) => {
+  console.log(`Converting ${postFileName}`);
+  // read post
+  let content = Fs.readFileSync(Path.join(__dirname, "_posts", postFileName), {
+    encoding: "utf8",
+  });
+  // extract and parse header
+  const lines = content.split("\n");
+  let markerCount = 0;
+  let head = [];
+  let post = [];
+  lines.forEach((line) => {
+    if (line === "---") {
+      if (markerCount === 2) {
+        post.push(line);
+      } else {
+        markerCount++;
+      }
+    } else if (markerCount === 1) {
+      head.push(line);
+    } else if (markerCount === 2) {
+      post.push(line);
+    }
+  });
+  head = Yaml.parse(head.join("\n"));
+  // convert header
+  const newHead = {
+    post_title: head.title,
+    date: postFileName.substring(0, 10),
+    post_author: head.author,
+    post_author_avatar: "tomek.png",
+    post_image: "blog-tomek.png",
+    post_slug: head.title.toLowerCase().replace(/ /g, "-"),
+    post_date_in_url: true,
+    post_og_image: "site",
+    post_excerpt: "Tomek on Software - shaken, not stirred",
+    tags: ["post"],
+  };
+  // convert post
+  const newPost = [];
+  post.forEach((line) => {
+    newPost.push(
+      line.replace(
+        /\/assets\/post_images\//g,
+        "/assets/images/blog/tomek_blog/"
+      )
+    );
+  });
+  // reconstruct and write post
+  content = `---\n${Yaml.stringify(newHead)}---\n${newPost.join("\n")}}`;
+  Fs.writeFileSync(
+    Path.join(__dirname, "_posts_fusebitio", postFileName),
+    content
+  );
+});
