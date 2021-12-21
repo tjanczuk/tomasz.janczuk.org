@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-07-20'  
 post_title: Silverlight HTML5 WebSocket client with an HTML bridge to Ajax/JavaScript
-date: 2010-07-20
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: silverlight-html5-websocket-client-with-an-html-bridge-to-ajax/javascript
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

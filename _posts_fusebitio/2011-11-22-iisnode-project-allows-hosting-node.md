@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2011-11-22'  
 post_title: iisnode v0.1.10 has shipped
-date: 2011-11-22
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: iisnode-v0.1.10-has-shipped
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2017-04-01'  
 post_title: Serverless fax from the XXI century
-date: 2017-04-01
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: serverless-fax-from-the-xxi-century
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 When Alexander Bain invented the precursor of a fax machine in 1846, he probably did not expect the technology would be ridiculed a mere century and a half later: 

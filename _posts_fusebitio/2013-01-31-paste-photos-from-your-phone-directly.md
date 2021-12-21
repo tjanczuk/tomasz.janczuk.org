@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-01-31'  
 post_title: Paste photos from your phone directly into Windows Live Writer
-date: 2013-01-31
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: paste-photos-from-your-phone-directly-into-windows-live-writer
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

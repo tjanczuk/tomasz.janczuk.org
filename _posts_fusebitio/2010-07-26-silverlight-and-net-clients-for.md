@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-07-26'  
 post_title: Silverlight and .NET clients for the Laharsub publish/subscribe
   service for web clients
-date: 2010-07-26
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: silverlight-and-.net-clients-for-the-laharsub-publish/subscribe-service-for-web-clients
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

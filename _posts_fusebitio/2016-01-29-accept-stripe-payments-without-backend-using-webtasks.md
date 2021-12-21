@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2016-01-29'  
 post_title: Accept Stripe payments without a backend using Webtasks
-date: 2016-01-29
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: accept-stripe-payments-without-a-backend-using-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 Can I ask you to buy me a coffee? A cup of *tall dark rost* costs $2.14 at my local Starbucks. Just click the button below and use your credit card.

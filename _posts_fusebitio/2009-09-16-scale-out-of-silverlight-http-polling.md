@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2009-09-16'  
 post_title: Scale-out of Silverlight HTTP polling duplex WCF service in a web farm scenario
-date: 2009-09-16
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: scale-out-of-silverlight-http-polling-duplex-wcf-service-in-a-web-farm-scenario
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

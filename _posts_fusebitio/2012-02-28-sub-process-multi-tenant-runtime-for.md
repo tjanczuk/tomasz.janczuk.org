@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2012-02-28'  
 post_title: Sub-process, multi-tenant runtime for HTTP APIs using node.js
-date: 2012-02-28
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: sub-process,-multi-tenant-runtime-for-http-apis-using-node.js
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

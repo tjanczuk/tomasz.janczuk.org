@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2009-08-19'  
 post_title: Improving performance of concurrent WCF calls in Silverlight applications
-date: 2009-08-19
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: improving-performance-of-concurrent-wcf-calls-in-silverlight-applications
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

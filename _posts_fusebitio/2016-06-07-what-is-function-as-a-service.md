@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2016-06-07'  
 post_title: What is Function as a Service (FaaS)?
-date: 2016-06-07
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: what-is-function-as-a-service-(faas)?
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 *Function as a Service* seems to be the new black. But what is it? This brief post will explain it. 

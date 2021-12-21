@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2012-05-31'  
 post_title: Develop on Mac, host on GitHub, and deploy to Windows Azure with git-azure
-date: 2012-05-31
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: develop-on-mac,-host-on-github,-and-deploy-to-windows-azure-with-git-azure
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

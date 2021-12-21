@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-07-11'  
 post_title: "Laharsub: HTTP REST pub/sub service for AJAX and Silverlight web clients"
-date: 2010-07-11
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: laharsub:-http-rest-pub/sub-service-for-ajax-and-silverlight-web-clients
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

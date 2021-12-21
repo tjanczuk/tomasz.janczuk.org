@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-01-04'  
 post_title: Hosting socket.io WebSocket apps in IIS using iisnode
-date: 2013-01-04
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: hosting-socket.io-websocket-apps-in-iis-using-iisnode
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

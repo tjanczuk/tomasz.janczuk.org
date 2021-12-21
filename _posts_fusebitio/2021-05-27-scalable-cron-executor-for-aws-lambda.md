@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2021-05-27'  
 post_title: Scalable CRON job executor for AWS Lambda
-date: 2021-05-27
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: scalable-cron-job-executor-for-aws-lambda
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 Running scheduled jobs at scale in the cloud is an interesting problem to solve. In this post I will describe an architecture we came up with at [Fusebit](https://fusebit.io) that allows us to execute a large number of arbitrarily scheduled CRON jobs in AWS using Lambda, SQS, and CloudWatch.

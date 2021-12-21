@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2017-04-13'  
 post_title: Extend Stripe with Node.js
-date: 2017-04-13
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: extend-stripe-with-node.js
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 Cool people use Stripe to process payments in their apps. Cooler people extend Stripe via webhooks. But only the coolest people extend Stripe with Node.js using [Auth0 Webtasks](https://webtask.io). 

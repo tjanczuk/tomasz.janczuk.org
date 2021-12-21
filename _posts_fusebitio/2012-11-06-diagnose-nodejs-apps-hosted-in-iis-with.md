@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2012-11-06'  
 post_title: Diagnose node.js apps hosted in IIS with iisnode-debug header
-date: 2012-11-06
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: diagnose-node.js-apps-hosted-in-iis-with-iisnode-debug-header
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

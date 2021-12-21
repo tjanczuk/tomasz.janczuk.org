@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-12-16'  
 post_title: Secure by default with SSL in Windows Azure Web Sites
-date: 2013-12-16
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: secure-by-default-with-ssl-in-windows-azure-web-sites
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

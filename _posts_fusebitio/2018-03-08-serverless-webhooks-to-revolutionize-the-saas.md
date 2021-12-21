@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2018-03-08'  
 post_title: Serverless webhooks to revolutionize the SaaS
-date: 2018-03-08
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: serverless-webhooks-to-revolutionize-the-saas
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 In 2007, Jeff Lindsay introduced *webhooks* in his [Webhooks to revolutionize the web](http://progrium.com/blog/2007/05/03/web-hooks-to-revolutionize-the-web/) article. Since then, webhooks have become the dominant mechanism for exposing events from web services. Fast forward to 2017, and a new, better pattern started to emerge: serverless webhooks. 

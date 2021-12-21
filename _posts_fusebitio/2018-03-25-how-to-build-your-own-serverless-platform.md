@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2018-03-25'  
 post_title: How to build your own serverless platform
-date: 2018-03-25
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: how-to-build-your-own-serverless-platform
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 In this post I will provide a blueprint for building your own serverless platform, based on the lessons learned from working on [Auth0 Extend](https://goextend.io) in the recent years. 

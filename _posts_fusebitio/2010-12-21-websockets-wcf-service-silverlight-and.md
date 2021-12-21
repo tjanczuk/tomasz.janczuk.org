@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-12-21'  
 post_title: Introducing the WebSockets prototype
   draft-montenegro-hybi-upgrade-hello-handshake-00
-date: 2010-12-21
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: introducing-the-websockets-prototype-draft-montenegro-hybi-upgrade-hello-handshake-00
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2017-09-23'  
 post_title: Serverless webhooks in Node 8 with Auth0 Webtasks
-date: 2017-09-23
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: serverless-webhooks-in-node-8-with-auth0-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 Many people know [Auth0 Webtasks](https://webtask.io) as the quickest way to set up an HTTP endpoint implemented in Node. Until now, you could write your code using Node 4.x with all public NPM modules. 

@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2016-07-15'  
 post_title: Serverless MySQL with Auth0 Webtasks
-date: 2016-07-15
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: serverless-mysql-with-auth0-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 In this post, we will take a parmeterized T-SQL query:

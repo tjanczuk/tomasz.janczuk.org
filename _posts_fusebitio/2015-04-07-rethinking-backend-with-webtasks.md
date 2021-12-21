@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2015-04-07'  
 post_title: Rethinking backend with webtasks
-date: 2015-04-07
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: rethinking-backend-with-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 If you are writing a mobile or web application today, your requirements for backend functionality are quite different from what they were 5 or 10 years go. In this post I will introduce the concept of a *webtask*: a novel approach to running backend logic in modern mobile or web applications. You can also head directly to [webtask.io](https://webtask.io) playground to try out the webtask concept in practice. 

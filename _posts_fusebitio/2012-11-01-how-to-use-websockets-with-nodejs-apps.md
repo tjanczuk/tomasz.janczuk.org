@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2012-11-01'  
 post_title: How to use WebSockets with node.js apps hosted in iisnode
-date: 2012-11-01
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: how-to-use-websockets-with-node.js-apps-hosted-in-iisnode
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

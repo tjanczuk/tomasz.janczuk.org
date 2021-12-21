@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2011-01-27'  
 post_title: WCF, Silverlight, and Windows Azure WebSocket samples
-date: 2011-01-27
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: wcf,-silverlight,-and-windows-azure-websocket-samples
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

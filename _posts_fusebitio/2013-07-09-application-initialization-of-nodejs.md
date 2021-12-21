@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-07-09'  
 post_title: Application initialization of Node.js apps running in IIS 8 using iisnode
-date: 2013-07-09
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: application-initialization-of-node.js-apps-running-in-iis-8-using-iisnode
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2018-04-05'  
 post_title: Build your own Twitter scheduler
-date: 2018-04-05
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: build-your-own-twitter-scheduler
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 Twitter is great for marketing your product or personal brand, but it has one disadvantage: you must actually tweet. 

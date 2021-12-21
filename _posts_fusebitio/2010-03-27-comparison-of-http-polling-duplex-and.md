@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-03-27'  
 post_title: Comparison of HTTP polling duplex and net.tcp performance in Silverlight 4 RC
-date: 2010-03-27
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: comparison-of-http-polling-duplex-and-net.tcp-performance-in-silverlight-4-rc
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

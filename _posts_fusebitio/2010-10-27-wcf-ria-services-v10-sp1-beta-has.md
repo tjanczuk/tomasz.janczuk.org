@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-10-27'  
 post_title: WCF RIA Services V1.0 SP1 Beta has shipped
-date: 2010-10-27
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: wcf-ria-services-v1.0-sp1-beta-has-shipped
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

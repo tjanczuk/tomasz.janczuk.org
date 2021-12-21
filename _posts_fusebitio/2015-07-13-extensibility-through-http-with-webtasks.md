@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2015-07-13'  
 post_title: Extensibility through HTTP with webtasks
-date: 2015-07-13
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: extensibility-through-http-with-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 Customization is what distinguishes platforms from applications. The most powerful form of customization is extensibility through custom code. In this post I will talk about how modern web platforms can benefit from code-based extensibility exposed through HTTP, and how you can make your application or platform extensible using [webtasks](https://webtask.io). 

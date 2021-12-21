@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-02-27'  
 post_title: Access MS SQL from a node.js application using OWIN, in-process CLR
   hosting, .NET, and ADO.NET
-date: 2013-02-27
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: access-ms-sql-from-a-node.js-application-using-owin,-in-process-clr-hosting,-.net,-and-ado.net
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

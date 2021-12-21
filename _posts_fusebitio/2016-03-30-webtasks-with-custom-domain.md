@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2016-03-30'  
 post_title: Using webtasks with custom domain names
-date: 2016-03-30
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: using-webtasks-with-custom-domain-names
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 [Auth0 Webtasks](https://webtask.io) allow you to create lightweight, serverless web apps and microservices without worrying about hosting, yet giving you full flexibility of writing code in Node.js. This post explains how you can use webtasks *with your own custom domain name and SSL*, for free.  

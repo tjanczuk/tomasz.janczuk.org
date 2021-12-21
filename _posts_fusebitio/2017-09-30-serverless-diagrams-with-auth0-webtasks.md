@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2017-09-30'  
 post_title: Serverless diagrams with Auth0 Webtasks
-date: 2017-09-30
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: serverless-diagrams-with-auth0-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 A picture is worth a thousand words. And a good sequence diagram can cut the time necessary to explain the behavior of a system tenfold. How often do you need a quick and convenient way to create, modify, and share a sequence diagram with a simple URL?

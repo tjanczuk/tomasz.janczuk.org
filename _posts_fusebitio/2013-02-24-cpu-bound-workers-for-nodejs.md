@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-02-24'  
 post_title: CPU bound workers for node.js applications using in-process .NET and OWIN
-date: 2013-02-24
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: cpu-bound-workers-for-node.js-applications-using-in-process-.net-and-owin
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

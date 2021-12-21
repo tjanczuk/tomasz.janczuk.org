@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2009-10-16'  
 post_title: Adoption of Silverlight serialization and communication technologies
   in web applications – October 2009
-date: 2009-10-16
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: adoption-of-silverlight-serialization-and-communication-technologies-in-web-applications-–-october-2009
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2018-08-31'  
 post_title: Embedded NPS widget with webtask.io
-date: 2018-08-31
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: embedded-nps-widget-with-webtask.io
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 [Net Promoter Score (NPS)](https://en.wikipedia.org/wiki/Net_Promoter) has been an established tool for measuring customer loyalty since 2003. It is based on asking your customers a single question: how likely are they to recommend your product to others? Research shows that the answer is correlated to the future success of the product. 

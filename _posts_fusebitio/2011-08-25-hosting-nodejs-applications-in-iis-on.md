@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2011-08-25'  
 post_title: Hosting node.js applications in IIS on Windows
-date: 2011-08-25
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: hosting-node.js-applications-in-iis-on-windows
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 In this post I am discussing hosting node.js appplications in IIS on Windows using the [iisnode](https://github.com/tjanczuk/iisnode) project.

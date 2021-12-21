@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2010-10-10'  
 post_title: Performance of the first stable release of the Laharsub pub/sub
   service for web clients
-date: 2010-10-10
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: performance-of-the-first-stable-release-of-the-laharsub-pub/sub-service-for-web-clients
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

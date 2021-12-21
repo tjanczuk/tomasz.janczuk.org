@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2015-09-04'  
 post_title: From Kafka to ZeroMQ for real-time log aggregation
-date: 2015-09-04
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: from-kafka-to-zeromq-for-real-time-log-aggregation
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 This post is about ditching Kafka in favor of ZeroMQ, based on a year-long experience of using Kafka for real-time log aggregation in a production setting of [Auth0 Webtasks](https://webtask.io). What, why, and how - read on. 

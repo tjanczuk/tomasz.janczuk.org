@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2013-06-06'  
 post_title: Access SQL Azure from a Node.js app deployed to Windows Azure Web Sites
-date: 2013-06-06
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: access-sql-azure-from-a-node.js-app-deployed-to-windows-azure-web-sites
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

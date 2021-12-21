@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2009-07-09'  
 post_title: Adoption of WCF technologies in Silverlight 2 applications on the web
-date: 2009-07-09
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: adoption-of-wcf-technologies-in-silverlight-2-applications-on-the-web
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

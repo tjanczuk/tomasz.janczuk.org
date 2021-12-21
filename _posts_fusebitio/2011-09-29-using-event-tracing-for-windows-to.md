@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2011-09-29'  
 post_title: Using Event Tracing for Windows to track and diagnose node.js
   applications hosted in IIS/iisnode
-date: 2011-09-29
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: using-event-tracing-for-windows-to-track-and-diagnose-node.js-applications-hosted-in-iis/iisnode
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 

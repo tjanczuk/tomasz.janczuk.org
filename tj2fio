@@ -36,15 +36,12 @@ posts.forEach((postFileName) => {
   // convert header
   const newHead = {
     post_title: head.title,
-    date: postFileName.substring(0, 10),
     post_author: head.author,
     post_author_avatar: "tomek.png",
     post_image: "blog-tomek.png",
     post_slug: head.title.toLowerCase().replace(/ /g, "-"),
     post_date_in_url: true,
-    post_og_image: "site",
     post_excerpt: "Tomek on Software - shaken, not stirred",
-    tags: ["post"],
   };
   // convert post
   const newPost = [];
@@ -57,7 +54,11 @@ posts.forEach((postFileName) => {
     );
   });
   // reconstruct and write post
-  content = `---\n${Yaml.stringify(newHead)}---\n${newPost.join("\n")}}`;
+  content = `---
+tags: ['post']
+post_og_image: 'site'
+date: '${postFileName.substring(0, 10)}'  
+${Yaml.stringify(newHead)}---\n${newPost.join("\n")}}`;
   Fs.writeFileSync(
     Path.join(__dirname, "_posts_fusebitio", postFileName),
     content

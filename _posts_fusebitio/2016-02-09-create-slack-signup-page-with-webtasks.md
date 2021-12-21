@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2016-02-09'  
 post_title: Create Slack signup page with Auth0 Webtasks
-date: 2016-02-09
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: create-slack-signup-page-with-auth0-webtasks
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 ### So you want to have a public Slack team for an open source project or community?

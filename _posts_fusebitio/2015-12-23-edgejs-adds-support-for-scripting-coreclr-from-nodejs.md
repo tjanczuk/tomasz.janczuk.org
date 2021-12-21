@@ -1,15 +1,14 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2015-12-23'  
 post_title: Edge.js adds support for scripting CoreCLR from Node.js
-date: 2015-12-23
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: edge.js-adds-support-for-scripting-coreclr-from-node.js
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 The [Edge.js project](https://github.com/tjanczuk/edge) allows you to script CLR from Node.js in-process on Windows, OSX, and Linux.

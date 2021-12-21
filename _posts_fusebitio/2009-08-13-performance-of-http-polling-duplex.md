@@ -1,16 +1,15 @@
 ---
+tags: ['post']
+post_og_image: 'site'
+date: '2009-08-13'  
 post_title: Performance of HTTP polling duplex server-side channel in Microsoft
   Silverlight 3
-date: 2009-08-13
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
 post_slug: performance-of-http-polling-duplex-server-side-channel-in-microsoft-silverlight-3
 post_date_in_url: true
-post_og_image: site
 post_excerpt: Tomek on Software - shaken, not stirred
-tags:
-  - post
 ---
 
 
