@@ -20,7 +20,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'.html','/' | prepend:'https://fusebit.io/blog' }}">
 
   <link rel="shortcut icon" href="//www.gravatar.com/avatar/53f70144dc9d7c76455fa91f858d4cec.png?s=64" type="image/x-icon" sizes="16x16">
   <link rel="icon" type="image/x-icon" href="//www.gravatar.com/avatar/53f70144dc9d7c76455fa91f858d4cec.png?s=16" sizes="16x16">
