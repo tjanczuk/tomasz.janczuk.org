@@ -4,7 +4,7 @@ highlighter: rouge
 plugins:
   - jemoji
 
-permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:title.html
 
 # Site settings
 title: "Tomek on Software"
