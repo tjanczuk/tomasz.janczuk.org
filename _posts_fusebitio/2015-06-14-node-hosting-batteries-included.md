@@ -28,7 +28,7 @@ How viable is this model in practice? While creating a hosting environment with 
 So how should one choose a pragmatic subset of Node.js modules to be pre-installed? One way is to stack rank Node.js modules using the number of downloads of every module in the last 30 days. Download count is a good proxy for module's popularity. 
 
 I've crunched statistical data from npm and here is what I found out: 
-![client-server](/assets/images/blog/tomek_blog/2015-06-14/1.png)  
+![client-server](tomek-blog/2015-06-14/1.png)  
 Not surprisingly, a relatively small number of modules on npm contributes to large number of total downloads. What is surprising is the scale of this phenomenon: the most downlodaded 591 modules (that is only 0.4% of the total modules on npm) make up a whooping 80% of the total number of downloads from npm. If you wanted to install modules that contribute to 99% of total downloads from npm, you would still need to install a realtively modest number of 7494 modules (4.9% of total). 
 
 As of this writing, [webtask.io](https://webtask.io) supports all the modules that make up 80 percentile of npm downloads.  

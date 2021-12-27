@@ -27,7 +27,7 @@ Alternatively, you can do it with two lines of C# code…
 … and then call into these two lines of C# code from Node.js using Edge.js: 
  
 
-{% highlight javascript linenos %}
+```
    var edge = require('edge');
 
 var play = edge.func(function() {/*
@@ -42,8 +42,7 @@ console.log('Starting playing');
 play('dday.wav');
 console.log('Done playing');
 
-{% endhighlight %}
-
+```
 
 
 So what happens here? We are using the System.Media.SoundPlayer class from .NET Framework to play a PCM WAV file (lines 5 & 6). We wrap this logic in a C# async lambda expression (line 4). Then we use the edge.func function of Edge.js to create a JavaScript proxy around this async lambda expression (line 3). Lastly, we call that JavaScript proxy function and pass it the file name of the WAV file to play (line 12). 
@@ -56,7 +55,7 @@ Coming back to playing audio. If you run the code above you will notice that the
 
 … so let’s fix it. We need to add two more C# lines to play our audio on a CLR thread pool thread and avoid blocking the V8 thread:
 
-{% highlight javascript linenos %}
+```
 var edge = require('edge');
 
 var play = edge.func(function() {/*
@@ -76,8 +75,7 @@ play('dday.wav', function (err) {
 });
 console.log('Started playing');
 
-{% endhighlight %}
-
+```
 
 
 Notice how we create a new CLR thread pool thread in line 5, and let that thread play our audio. This leaves the V8 thread free to process whatever other events need processing. Also notice that the *play* JavaScript proxy function can still detect when the audio has finished playing by supplying an async callback in line 14. Edge.js will invoke that async callback only after the C# async lambda expression completes, which happens when the audio playing on the CLR thread pool thread has finished playing and the thread terminates in line 8. The fact that the Node.js event loop remains unblocked is evidenced by the *Started playing* message from line 18 showing up before the *Done playing* message from line 16.
@@ -92,7 +90,7 @@ Now that we can play a simple WAV file asynchronously, how about adding some mor
 
 This calls for one of the more interesting features of Edge.js: the ability to marshal function proxies between V8 and CLR boundary. Moreover, functions exposed from CLR to Node.js can be implemented as a closure over some other CLR state, which opens interesting possibilities. For example, allowing an instance of System.Media.SoundPlayer to be controlled from Node.js:
 
-{% highlight javascript linenos %}
+```
 var edge = require('edge');
 
 var createPlayer = edge.func(function() {/*
@@ -111,15 +109,14 @@ var createPlayer = edge.func(function() {/*
     }
 */});
 
-{% endhighlight %}
-
+```
 
 
 We are using Edge.js to construct a *createPlayer* JavaScript function (line 3). This function wraps a logic in C# which acts as a factory method. It first creates an instance of System.Media.SoundPlayer (line 5). Then it returns an anonymous object with two functions on it: *play* and *stop.* Both functions are implemented as closures over the instance of SoundPlayer created in line 5, starting and stopping the playback, respectively. 
 
 This is how you can use the *createPlayer* function:
 
-{% highlight javascript linenos %}
+```
 console.log('Creating player');
 var player = createPlayer('dday.wav', true);
 
@@ -135,8 +132,7 @@ setTimeout(function () {
     });
 }, 5000);
 
-{% endhighlight %}
-
+```
 
 
 

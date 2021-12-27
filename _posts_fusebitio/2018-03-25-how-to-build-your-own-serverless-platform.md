@@ -21,7 +21,7 @@ The *serverless* (Function-as-a-Service) computation model is a powerful complem
 
 Serverless webhooks benefit end users, sales teams, and ultimately make the SaaS platform more successful. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-07/1.png" class="tj-img-diagram-100" alt="Serverless webhooks">
+<img src="tomek-blog/2018-03-07/1.png" class="tj-img-diagram-100" alt="Serverless webhooks">
 
 A growing number of SaaS platforms embrace the serverless webhook model. [Twilio Functions](https://www.twilio.com/functions) and [Netlify Functions](https://www.netlify.com/tags/functions/) are two recent examples. 
 
@@ -46,7 +46,7 @@ Let's start designing a serverless platform from the bottom up. We will use basi
 
 Execution of functions requires basic computing resources: CPU, memory, disk, and network. We will then start with an empty VM. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/0.svg" class="tj-img-diagram-50" alt="VM">
+<img src="tomek-blog/2018-03-22/0.svg" class="tj-img-diagram-50" alt="VM">
 
 We will tackle scalability later. Right now let's focus on the components running within the VM. 
 
@@ -54,7 +54,7 @@ We will tackle scalability later. Right now let's focus on the components runnin
 
 Serverless webhooks as well as APIs that allow their management are both exposed over HTTP. HTTP endpoints will be the main entry into the functionality of our VM, and an HTTP proxy is a component that will decide how to process a particular request.
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/1.svg" class="tj-img-diagram-50" alt="VM with Proxy">
+<img src="tomek-blog/2018-03-22/1.svg" class="tj-img-diagram-50" alt="VM with Proxy">
 
 You can use a variety of technologies for the proxy: HAProxy, Nginx, all the way to writing your own. 
 
@@ -62,7 +62,7 @@ You can use a variety of technologies for the proxy: HAProxy, Nginx, all the way
 
 At a minimum, the management APIs of our serverless platform need to allow for basic CRUD operations on serverless webhooks. You need to be able to create, update, read, delete, and list available webhooks. So you need a specialised web server component implementing these APIs. The proxy must be able to route the management API requests to this component. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/2.svg" class="tj-img-diagram-50" alt="VM with Proxy, Management APIs">
+<img src="tomek-blog/2018-03-22/2.svg" class="tj-img-diagram-50" alt="VM with Proxy, Management APIs">
 
 Management APIs themselves are stateless. Any durable representation of a serverless webhook, most notably its code, must be stored outside of the context of this component.
 
@@ -70,7 +70,7 @@ Management APIs themselves are stateless. Any durable representation of a server
 
 Persistent storage is required to maintain any durable state representing a serverless function. At a minimum, this is the code of the function itself with a manifest of module dependencies. Depending on your scenario, this state may also include additional configuration that the code requires at runtime, like API keys, connection strings, or other metadata that controls the execution of the function. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/3.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage">
+<img src="tomek-blog/2018-03-22/3.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage">
 
 The essence of the *Function-as-a-Service* paradigm is that individual functions are small units of business logic, unlike large monolithic web apps of the days past. Many standard databases or storage solutions should be a good fit to store this data. MongoDB, DynamoDB, MySQL should all fit the bill. 
 
@@ -100,7 +100,7 @@ One solution to this problem is to reuse *containers* to process multiple reques
 
 In order to pull this design off, we need a component that will manage the lifetime of the containers and their association with a specific tenant. Let's call this component a *container handler*. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/4.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler">
+<img src="tomek-blog/2018-03-22/4.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler">
 
 When a request to execute a specific serverless webhook arrives at the proxy, the proxy consults the container handler to obtain the address of the specific container that should handle this request. If a container assigned to a specific tenant is already running, the container handler promptly returns its address to the proxy which will in turn reverse proxy the request to that container. 
 
@@ -114,7 +114,7 @@ We don't want our cold startup latency to be substantially different from warm l
 
 A lot of the work related to starting up a new container is generic and can, therefore, be front-loaded. Let's have the container handler maintain a pool of pre-warmed containers ready to be assigned to tenants as necessary. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/5.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler, Container Pool">
+<img src="tomek-blog/2018-03-22/5.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler, Container Pool">
 
 With this design, when a request arrives on behalf of a tenant that does not yet have a running container, the container handler picks up one unassigned container from the pool, assigns it to the tenant for life, and notifies the proxy where to route the request. We have now cut out a substantial part of the container initialization time from the cold startup path: the creation of a container, and starting up of a process that runs a mini-HTTP server within it. 
 
@@ -130,7 +130,7 @@ Doing so during serverless webhook provisioning via the management APIs will be 
 
 Another interesting aspect of this problem is related to duplicated effort. If several functions have a dependency on the same module, will we really need to build this module anew each time? After all *async@2.6.0* is *async@2.6.0* is *async@2.6.0*, regardless how many serverless functions depend on it. So let's try to come up with a design that further optimizes around reuse of pre-built Node.js modules across different serverless webhooks, even when they are created by different tenants. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/6.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler, Container Pool, Module Builder">
+<img src="tomek-blog/2018-03-22/6.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler, Container Pool, Module Builder">
 
 When a management API is called to create or update a serverless webhook, its module dependencies are inspected. For each dependency (e.g. *async@2.6.0*) that is not yet available in Storage in a built form, the management API schedules it to be built with the *module builder*. 
 
@@ -156,7 +156,7 @@ What we have designed so far is a single VM solution that provides a self-contai
 
 Given that one VM is self-contained and can function independently, you can accommodate increasing throughput by scaling out the number of VMs and putting a proxy in front of the cluster. If you use a flexible scaling technology like AWS's Auto Scaling Groups, the size of the cluster can be dynamically adjusted as the load changes. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-22/7.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler, Container Pool, Module Builder, ASG, ELB">
+<img src="tomek-blog/2018-03-22/7.svg" class="tj-img-diagram-75" alt="VM with Proxy, Management APIs, Storage, Container Handler, Container Pool, Module Builder, ASG, ELB">
 
 In the current design, the VMs are independent of each other. This is hugely helpful in increasing the overall reliability of the deployment. Lack of state shared between VMs means they can crash at any time (and they will, the frequency of which depends on your choice of specific technologies and the underlying platform) without affecting the remaining VMs. The Auto Scaling Group, or a similar solution, can subsequently replace a failed VM with a new one. 
 

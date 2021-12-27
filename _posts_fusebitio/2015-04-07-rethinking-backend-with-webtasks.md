@@ -17,11 +17,11 @@ If you are writing a mobile or web application today, your requirements for back
 
 Client-server architecture was invented in the 1960s and widely used ever since. Majority of modern mobile and web applications are based on this architecture. 
 
-![client-server](/assets/images/blog/tomek_blog/2015-04-07/1.png)  
+![client-server](tomek-blog/2015-04-07/1.png)  
 
 The split of application functionality between front end and backend serves several purposes. It helps reuse backend computing resources across several clients. It also creates a trust boundary between client and server, which enables servers to authorize access to protected data or functionality. In a typical client-server application, the client submits data for processing after authenticating itself to the backend, and the backend responds after processing of the client request using protected resources.  
 
-![client-server details](/assets/images/blog/tomek_blog/2015-04-07/2.png)  
+![client-server details](tomek-blog/2015-04-07/2.png)  
 
 As the technology evolved since the inception of the internet, so did the reasons for applying client-server architecture in web and mobile application design. An average smartphone today has more computing power than all of NASA had when people first landed on the Moon. Consequently there are fewer and fewer functional areas that cannot be satisfied with the client's computing power alone and require backend computing capacity. 
 
@@ -35,15 +35,15 @@ With creation of a trust boundary as one of the primary roles of the backend in 
 
 The typical backend of a mobile or web application provides raw computing resources (CPU, memory, disk, network, etc.) as well as the operating system and application framework capabilities that are different from that of the client. Most importantly, the backend encapsulates server code that implements part of the application logic as well as secrets this code requires to access protected data or functionality (database connection strings, API keys, etc.). 
 
-![server details](/assets/images/blog/tomek_blog/2015-04-07/3.png)  
+![server details](tomek-blog/2015-04-07/3.png)  
 
 Let's deconstruct the server concepts. First, let's extract the two elements of the backend that are specific to the application: server code and the secrets it has access to. What remains: raw computing resources and OS, can be considered a commodity. Both server code and the secrets are data. They can be serialized together into one bundle, and cryptographically protected from tampering and disclosure.
 
-![webtask bundle](/assets/images/blog/tomek_blog/2015-04-07/4.png)  
+![webtask bundle](tomek-blog/2015-04-07/4.png)  
 
 Let's make one further transformation of that bundle. Instead of storing all of the server code in it, we externalize the code to a location that can be referenced with a URL (e.g. GitHub or S3), and store the URL in the bundle. 
 
-![webtask bundle with url](/assets/images/blog/tomek_blog/2015-04-07/5.png)  
+![webtask bundle with url](tomek-blog/2015-04-07/5.png)  
 
 This bundle is a *webtask token*. 
 
@@ -51,11 +51,11 @@ This bundle is a *webtask token*.
 
 Since webtask tokens contain a reference to the server code rather than the code itself, their serialized size tends to be small given today's bandwidth standards. It is reasonable to pass webtask tokens around as part of the payload in a variety of protocols, including HTTP. 
 
-![webtask token](/assets/images/blog/tomek_blog/2015-04-07/6.png)  
+![webtask token](tomek-blog/2015-04-07/6.png)  
 
 One place a webtask token can be securely stored is within the client application itself. Backend secrets remain safe form disclosure because they are encrypted. 
 
-![webtask token on the client](/assets/images/blog/tomek_blog/2015-04-07/7.png)  
+![webtask token on the client](tomek-blog/2015-04-07/7.png)  
 
 When the client application makes a request to the server, in addition to sending client-specific data it includes the webtask token in the request. This is a *webtask request*.
 
@@ -63,7 +63,7 @@ When the client application makes a request to the server, in addition to sendin
 
 The webtask token in a webtask request informs the server what backend application logic to apply in processing of the request. It also supplies the secrets that the backend logic requires to perform its function. 
 
-![webtask request](/assets/images/blog/tomek_blog/2015-04-07/8.png)  
+![webtask request](tomek-blog/2015-04-07/8.png)  
 
 Notice how the role of the server has changed in the transformation to the webtask model. The server provides a generic execution environment capable of executing any webtask rather than being scoped to a particular application logic. This generic server is a *webtask runtime*. 
 

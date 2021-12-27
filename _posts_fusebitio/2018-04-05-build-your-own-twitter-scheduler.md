@@ -13,7 +13,7 @@ post_excerpt: Tomek on Software - shaken, not stirred
 
 Twitter is great for marketing your product or personal brand, but it has one disadvantage: you must actually tweet. 
 
-<img src="/assets/images/blog/tomek_blog/2018-04-05/0.png" class="tj-img-diagram-100" alt="Twitter scheduler">
+<img src="tomek-blog/2018-04-05/0.png" class="tj-img-diagram-100" alt="Twitter scheduler">
 
 In the next 2 minutes I will show you how to create a simple yet flexible (and free) Twitter scheduler that allows you to set up your tweets along with a tweeting schedule ahead of time. You can then focus your attention and energy elsewhere, while [Auth0 Webtasks](webtask.io) dilligently follow your tweeting directions. 
 
@@ -21,14 +21,15 @@ In the next 2 minutes I will show you how to create a simple yet flexible (and f
 
 Start by installing and initializing *wt-cli* if you have not already: 
 
-```bash
+```
+bash
 npm install -g wt-cli
 wt init
 ```
-
 Next, create your intial tweet schedule in YAML in the *buffer.yaml* file. You can change the schedule later:
 
-```bash
+```
+bash
 cat > buffer.yaml <<EOF
 tweets:
   - text: "Check out this free Twitter scheduler that uses @auth0_extend and @webtaskio: https://tomasz.janczuk.org/2018/04/build-your-own-twitter-scheduler.html\n\n#nodejs #serverless"
@@ -37,12 +38,12 @@ tweets:
       - 4/4/2018 09:00 PDT
 EOF
 ```
-
 (More on the format later).
 
 Last step: create a CRON job on [Auth0 Webtasks](https://webtask.io) that will run every 15 minutes, inspect your schedule, and send out any due tweets:
 
-```bash
+```
+bash
 wt cron create buffer.yaml -n buffer \
   --schedule 15m \
   --no-auth \
@@ -53,7 +54,6 @@ wt cron create buffer.yaml -n buffer \
   -s TWITTER_ACCESS_TOKEN_KEY={YOUR_TWITTER_ACCESS_TOKEN_KEY} \
   -s TWITTER_ACCESS_TOKEN_SECRET={YOUR_TWITTER_ACCESS_TOKEN_SECRET}
 ```
-
 (You must substitute your own Twitter credentials which you can get from [here](https://apps.twitter.com/)). 
 
 That's it. Sit down and watch your tweets beeing sent out. 
@@ -68,19 +68,21 @@ For a gentle introduction of the powerful *webtask compiler* concept, check out 
 
 Given that the YAML is the *source code* of your webtask, you can simply use the Webtask Editor to modify it. Run
 
-```bash
+```
+bash
 wt edit buffer
 ```
-
 which will bring up the webtask editor allowing you to change the YAML. 
 
- <img src="/assets/images/blog/tomek_blog/2018-04-05/1.png" class="tj-img-diagram-100" alt="Webtask Editor">
+ <img src="tomek-blog/2018-04-05/1.png" class="tj-img-diagram-100" alt="Webtask Editor">
 
  Make any changes, save, and you are done!
 
  This is what you can do in the Yaml: 
 
- ```yaml
+ 
+```
+yaml
  tweets:
   - text: "I just installed a free Twitter scheduler that uses @auth0_extend and @webtaskio.\n\nCheck out https://github.com/tjanczuk/wtc#twitter-scheduler\n\n#nodejs #serverless"
     media: 
@@ -103,13 +105,13 @@ which will bring up the webtask editor allowing you to change the YAML.
 
  You can easily check the status of your Twitter scheduler by navigating to your webtask's URL in the browser: 
 
-<img src="/assets/images/blog/tomek_blog/2018-04-05/2.png" class="tj-img-diagram-100" alt="Status">
+<img src="tomek-blog/2018-04-05/2.png" class="tj-img-diagram-100" alt="Status">
 
 The *schedule* element shows the JSON representation of your YAML tweeting schedule, or an error if the YAML could not be parsed. The *plan* element specifies the Tweets that would be sent if the CRON job were to run *now*. 
 
 The last part of the status specifies the 20 most recently sent tweets: 
 
-<img src="/assets/images/blog/tomek_blog/2018-04-05/3.png" class="tj-img-diagram-100" alt="Tweet History">
+<img src="tomek-blog/2018-04-05/3.png" class="tj-img-diagram-100" alt="Tweet History">
 
 For each tweet, the *result* element tells if the tweet was sent successfuly or not, and the unique tweet id in case you want to automate further processing. 
 
@@ -120,9 +122,8 @@ Instead of waiting for the CRON job to execute, you can force execution of your 
 ```
 https://{your_container}.sandbox.auth0-extend.com/{your_webtask}?run
 ```
-
 As a result, all the overdue tweets since the last execution (either by the CRON job or manually) will be sent. 
 
 ### Shameless plug
 
-If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io?utm_source=blog&utm_medium=post&utm_campaign=blog-tomek&utm_content=2018-04-05-twitter-scheduler). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://tomasz.janczuk.org/2018/03/serverless-webhooks-to-revolutionize-the-saas.html). Check it out! }
+If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io?utm_source=blog&utm_medium=post&utm_campaign=blog-tomek&utm_content=2018-04-05-twitter-scheduler). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://fusebit.io/blog/2018/03/serverless-webhooks-to-revolutionize-the-saas/). Check it out!

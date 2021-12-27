@@ -22,22 +22,22 @@ The recent release of [iisnode v0.2.0](https://github.com/tjanczuk/iisnode) enab
 
 After installing iisnode v0.2.0, get a sample WebSocket application from [https://github.com/tjanczuk/dante](https://github.com/tjanczuk/dante) (if you are not a Git person, you can also [download a ZIP](https://github.com/tjanczuk/dante/zipball/master)):   
 
-{% highlight text linenos %}
+```
+
    git clone https://github.com/tjanczuk/dante.git
   
 
-{% endhighlight %}
-
+```
 
 
 Next, download the node.js dependencies and set up an IIS application in IIS 8 that points to the downloaded code:
 
-{% highlight text linenos %}
+```
+
 npm install  
 setup.bat
 
-{% endhighlight %}
-
+```
 
 
 Lastly, navigate to [http://localhost/dante/server-faye.js](http://localhost/dante/server-faye.js) and enjoy Dante’s Dive Comedy, Canto 1, streamed to you over WebSockets though IIS and iisnode, once stanza every 2 seconds:
@@ -48,7 +48,7 @@ Lastly, navigate to [http://localhost/dante/server-faye.js](http://localhost/dan
 
 If you have a closer look at server.js, you will notice the application uses the [faye-websocket](https://github.com/faye/faye-websocket-node) module to establish a WebSocket server, just like a self-hosted node.js WebSocket application would:
 
-{% highlight javascript linenos %}
+```
 var WebSocket = require('faye-websocket')  
     , http = require('http');  
   
@@ -67,8 +67,7 @@ server.listen(process.env.PORT || 8888);
 
   
 
-{% endhighlight %}
-
+```
 
 
 In fact, you could take this application and run it self-hosted using node.exe without any changes at all. 
@@ -77,7 +76,7 @@ The iisnode module uses the functionality enabled in IIS 8 on Windows Server 201
 
 Using WebSockets in a node.js applications running in iisnode requires that – contrary to what one would expect – websockets are *disabled* in web.config:
 
-{% highlight xml linenos %}
+```
 <configuration>  
   <system.webServer>  
     <webSocket enabled="false" />  
@@ -88,8 +87,7 @@ Using WebSockets in a node.js applications running in iisnode requires that – 
 </configuration>
   
 
-{% endhighlight %}
-
+```
 
 
 This is required because IIS 8 provides its own implementation of the WebSocket protocol that builds on top of the HTTP Upgrade mechanism. If the IIS 8 WebSocket module remained enabled, it would conflict with the WebSocket implementation provided by the node.js application itself in the form of one of the node.js modules, e.g. faye-websocket, ws, or socket.io. The IIS 8 WebSocket module is used to enable WebSocket functionality in ASP.NET applications. 

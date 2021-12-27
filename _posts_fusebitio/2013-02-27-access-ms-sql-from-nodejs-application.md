@@ -31,16 +31,16 @@ The code snippets below assume you have a working MS SQL connection string to [a
 
 First install the [owin](https://github.com/tjanczuk/owin) module with  
 
-{% highlight text linenos %}
+```
+
    npm install owin@0.4.0
 
-{% endhighlight %}
-
+```
 
 
 Then in your test.js:
 
-{% highlight javascript linenos %}
+```
 var owin = require('owin');  
   
 owin.sql("select * from Region", function (error, result) {  
@@ -49,35 +49,35 @@ owin.sql("select * from Region", function (error, result) {
 });
   
 
-{% endhighlight %}
-
+```
 
 
 Before you run the code, you need to set the connection string to the Northwind SQL database using the OWIN_SQL_CONNECTION_STRING environment variable, e.g:
 
-{% highlight text linenos %}
+```
+
 set OWIN_SQL_CONNECTION_STRING=Data Source=(local);Initial Catalog=Northwind;Integrated Security=True
   
 
-{% endhighlight %}
-
+```
 
 
 Now you are ready to run the node.js app with:
 
-{% highlight text linenos %}
+```
+
 node test.js
   
 
-{% endhighlight %}
-
+```
 
 
 
 
 You will see the following output:
 
-{% highlight text linenos %}
+```
+
 C:\projects\owin>;node test.js  
 [ [ 'RegionID', 'RegionDescription' ],  
   [ 1, 'Eastern                                           ' ],  
@@ -86,8 +86,7 @@ C:\projects\owin>;node test.js
   [ 4, 'Southern                                          ' ] ]
   
 
-{% endhighlight %}
-
+```
 
 
 The result of the query is a JavaScript array. The first element of the array is an array of column names. Subsequent elements of the array are rows representing the results of the SQL select query against the database. 
@@ -96,7 +95,7 @@ The result of the query is a JavaScript array. The first element of the array is
 
 You can insert data into a SQL database with the following code:
 
-{% highlight javascript linenos %}
+```
 var owin = require('owin');  
   
 owin.sql("insert into Region values (5, 'Pacific Northwest')", function (error, result) {  
@@ -105,19 +104,18 @@ owin.sql("insert into Region values (5, 'Pacific Northwest')", function (error, 
 });
   
 
-{% endhighlight %}
-
+```
 
 
 The result of running this applicaiton indicates how many rows in a SQL table have been affected:
 
-{% highlight text linenos %}
+```
+
 C:\projects\owin>node test.js  
 1
   
 
-{% endhighlight %}
-
+```
 
 Now when you run the same application again, instead of the result the JavaScript callback will receive an error containing a .NET ADO.NET exception indicating a primary key violation in a SQL database, since a row with this ID already exists:   
 
@@ -127,7 +125,8 @@ Now when you run the same application again, instead of the result the JavaScrip
 
 
 
-{% highlight text linenos %}
+```
+
 C:\projects\owin>node test.js  
 C:\projects\owin\test.js:9  
         if (error) throw error;  
@@ -137,15 +136,14 @@ Y constraint 'PK_Region'. Cannot insert duplicate key in object 'dbo.Region'.
 The statement has been terminated.
   
 
-{% endhighlight %}
-
+```
 
 
 ### Update and delete
 
 Similarly to insert, you can execute SQL update command, followed by a select showing the state of the table:
 
-{% highlight javascript linenos %}
+```
 var owin = require('owin');  
   
 owin.sql("update Region set RegionDescription='Washington and Oregon' where RegionID=5", function (error, result) {  
@@ -158,13 +156,13 @@ owin.sql("update Region set RegionDescription='Washington and Oregon' where Regi
 });
   
 
-{% endhighlight %}
-
+```
 
 
 The results of running this application are:
 
-{% highlight text linenos %}
+```
+
 C:\projects\owin>node test.js  
 1  
 [ [ 'RegionID', 'RegionDescription' ],  
@@ -175,15 +173,14 @@ C:\projects\owin>node test.js
   [ 5, 'Washington and Oregon                             ' ] ]
   
 
-{% endhighlight %}
-
+```
 
 
 
 
 The delete SQL command removes rows from the table:
 
-{% highlight javascript linenos %}
+```
 var owin = require('owin');  
   
 owin.sql("delete Region where RegionID > 4", function (error, result) {  
@@ -192,21 +189,20 @@ owin.sql("delete Region where RegionID > 4", function (error, result) {
 });
   
 
-{% endhighlight %}
-
+```
 
 
 
 
 and similarly to insert and update reports the number of rows affected:
 
-{% highlight text linenos %}
+```
+
 C:\projects\owin>node test.js  
 1
   
 
-{% endhighlight %}
-
+```
 
 
 

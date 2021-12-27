@@ -63,21 +63,18 @@ To optimize the performance of the Polling Duplex component, certain settings in
 
 Polling duplex protocol has been implemented on the server side as a WCF binding that provides session channels. Each session channel corresponds to a single client connection. The number of session channels that a WCF service can support concurrently is throttled using ServiceThrottlingBehavior.MaxConcurrentSessions service behavior. In order to measure the maximum number of connections the server can support, this throttle needs to be increased. For the purpose of this measurement, we increased the throttle to Int32.MaxValue using WCF configuration:  
 
-{% highlight text linenos %}
-
+```
 
 <serviceThrottling maxConcurrentSessions="2147483647"/> 
 
-{% endhighlight %}
-
+```
   
 
 When the system is put into production, you would want to set the value of maxConcurrentSessions to match the maximum number of clients your service can support concurrently.   
 
 There are several customizations that were introduced in the settings of the PollingDuplexBindingElement for the purposes of this performance measurements:  
 
-{% highlight text linenos %}
-
+```
 
 <binding name="PubSub">        
     <binaryMessageEncoding/>         
@@ -88,8 +85,7 @@ There are several customizations that were introduced in the settings of the Pol
     <httpTransport/>         
 </binding> 
 
-{% endhighlight %}
-
+```
   
 
 The value of inactivityTimeout controls the maximum time without any activity on the channel before the channel is faulted. The value has been set to 2 hours to avoid a situation when a channel is faulted due to infrequent message exchanges in a test variation. In production, you should set this value to exceed the expected duration of a client connection, which is application specific. Regardless of the value though, the client code should take appropriate fault-tolerance measures to possibly re-establish a connection when the channel is faulted due to inactivity.   
@@ -113,28 +109,24 @@ In .NET Framework 3.5 SP1, WCF introduced a new asynchronous HTTP handler for II
 
 Registration of the asynchronous HTTP handler for WCF as well as adjustment of the quota for concurrent HTTP requests can we performed with [Wenlong Dong’s WcfAsyncWebTool](http://blogs.msdn.com/wenlong/attachment/8856601.ashx):  
 
-{% highlight text linenos %}
-
+```
 
 WcfAsyncWebTool.exe /ia /t 20000 
 
-{% endhighlight %}
-
+```
   
 
 For the purpose of this test, we are setting the quota at 20000 to ensure it is not going to become the limiting factor in measuring the maximum number of clients the server can accommodate. In production, setting this limit should take into account on one hand a sustainable number of clients (resulting from performance measurements of the actual scenario), as well as an acceptable working set.   
 
 Following the setting of the quota for concurrent HTTP requests to 20000, the quotas for the thread pool worker threads and IO threads also need to be adjusted through .NET Configuration in machine.config:  
 
-{% highlight text linenos %}
-
+```
 
 <processModel maxWorkerThreads="20000"        
                       maxIoThreads="20000"    
                       minWorkerThreads="10000"/> 
 
-{% endhighlight %}
-
+```
   
 
 These settings ensure there is adequate supply of threads to handle the HTTP requests IIS7 will accept given the concurrent HTTP request quota, as well as for the service to send  bursts of asynchronous notifications to clients.   

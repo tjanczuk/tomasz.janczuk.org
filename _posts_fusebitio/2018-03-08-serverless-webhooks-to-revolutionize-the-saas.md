@@ -21,7 +21,7 @@ This is how Jeff defined webhooks in his iconic article from 2007:
 
 This is a very elegant and powerful concept. It allows for a clean, protocol-based decoupling of the system that exposes an event from the system that processes that event. It is flexible enough to allow for a wide range of scenarios, including system integration, data transformation, or customization of behavior. It also embraces the asynchronous nature of interactions between web services. 
 
-<img src="/assets/images/blog/tomek_blog/2018-03-07/0.png" class="tj-img-diagram-100" alt="2007 webhooks">
+<img src="tomek-blog/2018-03-07/0.png" class="tj-img-diagram-100" alt="2007 webhooks">
 
 Using webhooks requires setting up and running another web service. Servers, devops, monitoring, SSL, uptime, failover strategy, etc. For years this has been a small price to pay given the benefits webhooks offered, and the lack of a better alternative. However, given cloud computing advances over the last decade, there is now an opportunity to further improve on this core concept. 
 
@@ -31,7 +31,7 @@ Fast forward from 2007 to 2017, through IaaS, PaaS, all the way to FaaS (Functio
 
 Reacting to web service events with arbitrary business logic is the core value of webhooks. Imagine an experience where users of a SaaS platform can focus on implementing this business logic as a *function* without having to run a service to expose it as an HTTP endpoint:  
 
-<img src="/assets/images/blog/tomek_blog/2018-03-07/1.png" class="tj-img-diagram-100" alt="2017 Serverless webhooks">
+<img src="tomek-blog/2018-03-07/1.png" class="tj-img-diagram-100" alt="2017 Serverless webhooks">
 
 There are several immediate advantages such a serverless webhook model brings for a SaaS platform compared to the original webhooks:
 
@@ -42,11 +42,11 @@ There are several immediate advantages such a serverless webhook model brings fo
 
 Ten years after the introduction of the webhook concept, [this is what Jeff Lindsay says about the serverless webhook pattern](https://twitter.com/progrium/status/864588610858881029):
 
-<img src="/assets/images/blog/tomek_blog/2018-03-07/2.png" class="tj-img-diagram-100" alt="This was the whole point of webhooks">
+<img src="tomek-blog/2018-03-07/2.png" class="tj-img-diagram-100" alt="This was the whole point of webhooks">
 
 There are many existing implementations of this serverless webhook paradigm in practice. The [Twilio Functions](https://www.twilio.com/functions) and [Salesforce Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dev_guide.htm) are good examples. Until recently, these advanced solutions have been reserved for the SaaS platforms run by sophisticated, technology-savvy organizations. 
 
 ### Serverless webhooks for your SaaS
 
-If you are operating a SaaS platform that could benefit from serverless webhooks, you may ask yourself what it takes to implement them. In the [How to build your own serverless platform](https://tomasz.janczuk.org/2018/03/how-to-build-your-own-serverless-platform.html) post, I  describe an architectural blueprint for building a serverless webhook solution for your own SaaS platform, based on the lessons learned from the [Auth0 Extend](https://goextend.io) product in Auth0.   
+If you are operating a SaaS platform that could benefit from serverless webhooks, you may ask yourself what it takes to implement them. In the [How to build your own serverless platform](https://fusebit.io/blog/2018/03/how-to-build-your-own-serverless-platform/) post, I  describe an architectural blueprint for building a serverless webhook solution for your own SaaS platform, based on the lessons learned from the [Auth0 Extend](https://goextend.io) product in Auth0.   
 }

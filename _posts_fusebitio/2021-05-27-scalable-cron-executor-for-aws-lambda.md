@@ -25,7 +25,7 @@ We have decided to use AWS Lambda to run the customer-provided logic. While Lamb
 
 Once the infrastructure was in place to run the customer code, the next step was to trigger it on a customer-defined schedule. There are many ways to trigger execution of a Lambda function in AWS. One of them uses [scheduled CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html). On the surface, CloudWatch Events meet all the requirements. You can define an arbitrary CRON schedule following which a CloudWatch Event will be triggered, and attach a specific Lambda function to execute in response.
 
-<a href="/assets/images/blog/tomek_blog/2021-05-27/0.svg" style="border-bottom:none;"><img src="/assets/images/blog/tomek_blog/2021-05-27/0.svg" class="tj-img-diagram-100" alt="Non-scalable CRON executor for AWS Lambda"></a>
+<a href="tomek-blog/2021-05-27/0.svg" style="border-bottom:none;"><img src="tomek-blog/2021-05-27/0.svg" class="tj-img-diagram-100" alt="Non-scalable CRON executor for AWS Lambda"></a>
 
 The problem with using CloudWatch Events in a highly scalable system is the limits. Per AWS region and account, one can only support up to 100 scheduled events (as of this writing), which was not sufficient to support the needs of a highly scalable multi-tenant system. We clearly needed a different approach.
 
@@ -37,7 +37,7 @@ Equipped with this new tool, we have split our CRON processing pipeline by addin
 
 First, we defined a _single_ scheduled CloudWatch Event that triggered the scheduler Lambda function every 10 minutes, starting at minute 8 of an hour. So the scheduler Lambda was running at minute 8, 18, 28, 38 etc. of every hour.
 
-<a href="/assets/images/blog/tomek_blog/2021-05-27/1.svg" style="border-bottom:none;"><img src="/assets/images/blog/tomek_blog/2021-05-27/1.svg" class="tj-img-diagram-100" alt="Scalable CRON executor for AWS Lambda"></a>
+<a href="tomek-blog/2021-05-27/1.svg" style="border-bottom:none;"><img src="tomek-blog/2021-05-27/1.svg" class="tj-img-diagram-100" alt="Scalable CRON executor for AWS Lambda"></a>
 
 The purpose of the scheduler Lambda was to consider all scheduled jobs in the system (possibly millions), and select those that were due for execution in the subsequent whole-10-minute interval. For example, if the scheduler Lambda was running at 3:18, it would determine all scheduled job executions that need to occur in the 3:20-3:30 time span. The scheduler Lambda would then enqueue those job definitions to the SQS queue, setting the delayed delivery for each to correspond to the exact intended moment of execution of that job. For example, if a job was to run at 3:24, the scheduler Lambda running at 3:18 would enqueue that job to SQS setting the delayed execution to 6 minutes. The granularity of delayed execution allows the execution time to be set with 1 second precision.
 

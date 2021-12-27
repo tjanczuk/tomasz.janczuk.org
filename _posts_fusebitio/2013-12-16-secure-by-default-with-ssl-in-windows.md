@@ -24,7 +24,7 @@ When a caller is making an HTTPS request to your site, the request first arrives
 
 An application deployed to Windows Azure Web Sites can detect presence of the *x-arr-ssl* header in deciding whether to redirect client’s call to an HTTPS endpoint, or continue processing it. This approach can be implemented with any web application technology. The example below shows a simple Connect middleware for Node.js applications deployed to WAWS that allow redirecting all traffic to HTTPS endpoints:  
 
-{% highlight javascript linenos %}
+```
    function ensureHttps(redirect) {  
     return function (req, res, next) {  
         if (req.headers['x-arr-ssl']) {  
@@ -40,13 +40,12 @@ An application deployed to Windows Azure Web Sites can detect presence of the *x
 }
   
 
-{% endhighlight %}
-
+```
 
 
 The middleware will detect HTTPS request and continue processing them. If an HTTP request arrives, it can be either redirected to a corresponding HTTPS endpoint, or flat out rejected with an HTTP 404 response, depending how the middleware is configured. As a rule of thumb, if the request contains sensitive information and it was received over plain HTTP, it should be rejected. Otherwise, it is OK to redirect it to a corresponding HTTPS endpoint. Here is how you can use this middleware in configuring endpoints of an Express application:
 
-{% highlight javascript linenos %}
+```
 app.post('/',  
     ensureHttps(true), // This is a home page, redirect HTTP to HTTPS  
     routes.home);  
@@ -56,8 +55,7 @@ app.get('/account',
     authenticate(),  
     routes.account);
 
-{% endhighlight %}
-
+```
 
 
 You can see the redirection from HTTP to HTTPS in action when you navigate to [http://mobilechapters.com](http://mobilechapters.com). 

@@ -17,30 +17,30 @@ post_excerpt: Tomek on Software - shaken, not stirred
 
 Here is the function, saved to the *faas.js* file:
 
-```javascript
+```
+javascript
 module.exports = function (ctx, cb) {
     cb(null, 'Hello from a Function');
 }
 ```
-
 ### Second, we make it a *Service*
 
 Now, we convert the *function* to a *service* with `wt-cli`: 
 
 ```
+
 npm install -g wt-cli
 wt init
 wt create faas.js
 ```
-
 ### Voila, Function as a Service
 
 What comes back is a URL, which is the *Function as a Service*. It may look like this: 
 
 ```
+
 https://webtask.it.auth0.com/api/run/tjanczuk/faas
 ```
-
 Go ahead and call it. It is a service. 
 
 ### Wait, what just happened?

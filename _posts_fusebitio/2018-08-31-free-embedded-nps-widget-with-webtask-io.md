@@ -13,7 +13,7 @@ post_excerpt: Tomek on Software - shaken, not stirred
 
 [Net Promoter Score (NPS)](https://en.wikipedia.org/wiki/Net_Promoter) has been an established tool for measuring customer loyalty since 2003. It is based on asking your customers a single question: how likely are they to recommend your product to others? Research shows that the answer is correlated to the future success of the product. 
 
-<img src="/assets/images/blog/tomek_blog/2018-08-31/0.png" class="tj-img-diagram-100" alt="How likely are you to recommend Extend to your friend or colleauge?">
+<img src="tomek-blog/2018-08-31/0.png" class="tj-img-diagram-100" alt="How likely are you to recommend Extend to your friend or colleauge?">
 
 In this post I will show how you can create a free NPS widget, complete with UI, backend storage, and reporting using [Auth0 Webtasks](https://webtask.io), and embed this NPS widget with one line of HTML into your web application, single page app, or a blog post. 
 
@@ -21,36 +21,38 @@ In this post I will show how you can create a free NPS widget, complete with UI,
 
 Start by installing and initializing *wt-cli* if you have not already: 
 
-```bash
+```
+bash
 npm install -g wt-cli
 wt init
 ```
-
 Next, create your free NPS widget hosted as a serverless endpoint on [webtask.io](https://webtask.io):
 
-```bash
+```
+bash
 wt create -n nps-blog \
   -d webtask-compiler \
   --meta wt-compiler=webtask-compiler/nps <<EOF
 EOF
 ```
-
 You will get back a URL we will call *{webtask_url}*. This is the endpoint of your NPS survey. 
 
 Next, use an *iframe* to embed your NPS survey in your web site, single page app, blog post, or wherever you host your HTML:
 
-```html
+```
+html
 <p>How likely are you to recommend MyProduct to your friend or colleague?</p>
 <p><iframe src="{webtask_url}" style="border: 0; height: 1em; width: 11em;"></iframe></p>
 ```
-
 Next, sit back and watch as NPS survey results pour in when your customers visit your site and share their opinion:
 
-<img src="/assets/images/blog/tomek_blog/2018-08-31/1.png" class="tj-img-diagram-100" alt="How likely are you to recommend MyProduct to your friend or colleauge?">
+<img src="tomek-blog/2018-08-31/1.png" class="tj-img-diagram-100" alt="How likely are you to recommend MyProduct to your friend or colleauge?">
 
 Lastly, to view the results of your NPS survey, navigate to *{webtask_url}/stats*. You will get back a JSON document with the histogram of all answers as well the number of NPS promoters, detractors, passives, as well as the overall NPS score:
 
-```json
+
+```
+json
 {
   "histogram": {
     "0": 0,
@@ -75,6 +77,7 @@ Lastly, to view the results of your NPS survey, navigate to *{webtask_url}/stats
   }
 }
 ```
+
 
 Congratulations on your NPS score of 40%! MyProduct has a bright future. 
 
@@ -102,4 +105,4 @@ If you are interested in the technical details of the implementation, as well as
 
 ### Shameless plug
 
-If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io/webtaskio). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://tomasz.janczuk.org/2018/03/serverless-webhooks-to-revolutionize-the-saas.html). Check it out! }
+If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io/webtaskio). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://fusebit.io/blog/2018/03/serverless-webhooks-to-revolutionize-the-saas/). Check it out! }

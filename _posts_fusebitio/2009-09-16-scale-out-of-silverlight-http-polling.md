@@ -66,9 +66,7 @@ The converted VS solution contains a new project called Microsoft.ServiceModel.P
 
 The IPollingDuplex service contract from Microsoft.ServiceModel.PollingDuplex.Scalable project enables explicit handling of long polling messages by the service implementation:  
 
-{% highlight csharp linenos %}
-
-
+```
 [ServiceContract]       
 public interface IPollingDuplex        
 {        
@@ -88,8 +86,7 @@ public class MakeConnection
     // …        
 } 
 
-{% endhighlight %}
-
+```
   
 
   
@@ -98,9 +95,7 @@ The contract is intentionally asynchronous, as handling of long polls is by defi
 
 A service that wants to implement the polling duplex protocol in a scalable manner must have service contract derived from the IPollingDuplex service contract above. In addition, the application service contract must be simplex (as opposed to duplex). For example, this is the service contract for the pub\sub service from the original sample:  
 
-{% highlight csharp linenos %}
-
-
+```
 [ServiceContract]       
 public interface IPubSub : IPollingDuplex        
 {        
@@ -111,8 +106,7 @@ public interface IPubSub : IPollingDuplex
     void Publish(string topic, string content);        
 } 
 
-{% endhighlight %}
-
+```
   
 
   
@@ -123,40 +117,31 @@ Notice the callback contract is gone, as well as the Subscribe and Publish opera
 
 IPollingDuplex.MakeConnect operation receives the MakeConnection message which contains the unique address of the client making the request in the MakeConnection.Address property. The implementation should determine if there are any notifications to be sent to ***any*** of the sessions associated with this client (the model assumes 1-N relationship between a client and a logical duplex session with the client, as described before). If there is a notification to be sent to one of the sessions, the response message should be constructed in two steps: first create an instance of the message with the desired action and payload:  
 
-{% highlight csharp linenos %}
-
-
+```
 Message response = Message.CreateMessage(MessageVersion.Default, “uri:someaction”, somePayload); 
 
-{% endhighlight %}
-
+```
   
 
 (The message format and action must of course match what the client expects to receive given its service contract).   
 
 And then the polling duplex protocol SOAP headers need to be added to the message to indicate which of the sessions on the client this notification should be dispatched to. There is a helper method on the MakeConnection class to make it easy:  
 
-{% highlight csharp linenos %}
-
-
+```
 MakeConnection poll;       
 string sessionId;        
 response = poll.PrepareRespose(response, sessionId); 
 
-{% endhighlight %}
-
+```
   
 
 MakeConnect implementation should hold onto the request without responding for a specific time (e.g. 15 seconds) even if there are no notifications to be sent back to the particular client. If after that time there is still no notification scheduled to be sent for any of the sessions on the client, the implementation of MakeConnect should respond with an empty HTTP 200. This is made easy with a call to MakeConnection.CreateEmptyResponse():  
 
-{% highlight csharp linenos %}
-
-
+```
 MakeConnection poll;       
 Message response = poll.CreateEmptyResponse(); 
 
-{% endhighlight %}
-
+```
   
 
 ### Accessing session information from “application” service operations  
@@ -165,28 +150,22 @@ Application service operations other than IPollingDuplex.MakeConnect (e.g. Publi
 
 The way to get at the session information from an incoming application message is to call an extension method on the OperationContext (the method is implemented in the Microsoft.ServiceModel.PollingDuplex.Scalable project):  
 
-{% highlight csharp linenos %}
-
-
+```
 PollingDuplexSession incomingSession = OperationContext.Current.GetPollingDuplexSession(); 
 
-{% endhighlight %}
-
+```
   
 
 The PollingDuplexSession contains two identifiers that uniquely identify the client and the session on the client:  
 
-{% highlight csharp linenos %}
-
-
+```
 public class PollingDuplexSession       
 {        
     public string Address { get; set; }        
     public string SessionId { get; set; }        
 } 
 
-{% endhighlight %}
-
+```
   
 
   
@@ -197,9 +176,7 @@ The PollingDuplexSession.SessionId is the same identifier as the MakeConnection.
 
 The simplex service can now be exposed directly over an HTTP binding as opposed to polling duplex sessionful binding:  
 
-{% highlight xml linenos %}
-
-
+```
 <system.serviceModel>       
   <bindings>        
     <customBinding>        
@@ -216,8 +193,7 @@ The simplex service can now be exposed directly over an HTTP binding as opposed 
   </services>        
 </system.serviceModel> 
 
-{% endhighlight %}
-
+```
   
 
 ### Scalable server side storage for messages to be sent to the client  

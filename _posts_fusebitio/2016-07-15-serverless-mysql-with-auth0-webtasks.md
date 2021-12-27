@@ -13,19 +13,19 @@ post_excerpt: Tomek on Software - shaken, not stirred
 
 In this post, we will take a parmeterized T-SQL query:
 
-```sql
+```
+sql
 select * from crime where crimedescr like ? limit 100
 ```
-
 and use [Auth0 Webtasks](https://webtask.io) to turn it into an HTTP endpoint:
 
-```bash
+```
+bash
 > wt create crime.sql ...
 ```
-
 The endpoint can we used to execute parameterized T-SQL queries against a MySQL database with public crime records in Sacramento: 
 
-<img src="/assets/images/blog/tomek_blog/2016-07-15/1.png" alt="T-SQL Auth0 Webtask">
+<img src="tomek-blog/2016-07-15/1.png" alt="T-SQL Auth0 Webtask">
 
 Intrigued? Read on.
 
@@ -41,7 +41,7 @@ In this post I will show how [Auth0 Webtasks](https://webtask.io) allow you to u
 
 Before we can use T-SQL we must have some exciting data to query in a MySQL database. For the sake of this exercise, I created a free MySQL database on [freemysqlhosting.net](https://www.freemysqlhosting.net/) and populated it with public crime records for Sacramento which I got in CSV format [here](https://support.spatialkey.com/spatialkey-sample-csv-data/).
 
-<img src="/assets/images/blog/tomek_blog/2016-07-15/0.png" alt="Serverless crime in Sacramento">
+<img src="tomek-blog/2016-07-15/0.png" alt="Serverless crime in Sacramento">
 
 Bottom line is you need the hostname of the MySQL server, database name, and user name and password to connect to it. 
 
@@ -49,7 +49,8 @@ Bottom line is you need the hostname of the MySQL server, database name, and use
 
 Let's say we want to allow querying our crime database to match for patterns on the crime description field (*crimedescr* above), and expose it over HTTP such that the search pattern can be specified through URL query parameters. Traditionally such functionality would be implemented in any of the high level languages. In case of Auth0 Webtasks, the following Node.js code could be written to accomplish the task: 
 
-```javascript
+```
+javascript
 var mysql = require('mysql');
 
 module.exports = function (ctx, cb) {
@@ -86,14 +87,14 @@ module.exports = function (ctx, cb) {
         cb);
 };
 ```
-
 > Notice that the business logic of this code boils down to a single line of a parameterized T-SQL script. The rest of it is boilerplate code in Node.js.
 
 The unexciting boilerplate is reposible for validating parameters, establishing MySQL connection, and running the query. Notice also how the parameterized T-SQL query is passed values from the URL query paramater `q` stored in `ctx.query.q` at runtime.
 
 Turning this Node.js module into an HTTP endpoint using Auth0 Webtasks is simple with the *wt-cli* command line tool (assuming the code above is stored in *crime.js*): 
 
-```bash
+```
+bash
 npm i -g wt-cli
 wt init
 
@@ -103,7 +104,6 @@ wt create crime.js \
   -s USER={mysql_user} \
   -s PASSWORD={mysql_password}
 ```
-
 Notice how the key/value pairs specified using the `-s` option are provided at runtime to the running code using the `ctx.secrets` hash. This unique mechanisms allows you to easily provision your webtask code with secrets without much ceremony around managing how they are stored and protected, and without having to store them directly in your code. You can read more about this Auth0 Webtask security model [here](https://webtask.io/docs/how). 
 
 When the command runs, a URL is retuned that can be used to invoke the Node.js function over HTTP. Using the `q` URL query parameter you can limit the results by providing a T-SQL pattern to match against the crime description field. Try the following URL in the browser to find information about burglaries (crime code 459):
@@ -112,7 +112,7 @@ When the command runs, a URL is retuned that can be used to invoke the Node.js f
 
 The response will contain a JSON array with matching MySQL records:
 
-<img src="/assets/images/blog/tomek_blog/2016-07-15/1.png" alt="T-SQL Auth0 Webtask">
+<img src="tomek-blog/2016-07-15/1.png" alt="T-SQL Auth0 Webtask">
 
 While the development experience of creating this HTTP endpoint is already streamlined compared to many more traditional ways of deploying web applications, there is still room for improvement. 
 
@@ -128,15 +128,16 @@ Given a webtask script using a domain specific language (e.g. T-SQL), an Auth0 W
 
 To put it all together, consider the essential business logic of the previous example implemented as a single line of parameterized T-SQL script stored in *crime.sql* file: 
 
-```sql
+```
+sql
 select * from crime where crimedescr like ? limit 100
 ```
-
 This is the code you care about as a developer, and Auth0 Webtasks with *webtask compilers* allow you to focus on it rather than surrounding boilerplate. 
 
 Similarly to the previous example, you can turn this code into an Auth0 Webtask HTTP endpoint using *wt-cli* command line tool:
 
-```bash
+```
+bash
 wt create crime.sql --name crime \
   --meta wt-compiler=http://bit.ly/29ZDXVt \
   -s HOST={mysql_host} \
@@ -144,7 +145,6 @@ wt create crime.sql --name crime \
   -s USER={mysql_user} \
   -s PASSWORD={mysql_password}
 ```
-
 The key element of this command is the `--meta` parameter, which specifies the *webtask compiler* to associate with the webtask. Webtask compilers can we specified as URLs that resolve to code in Node.js. That code executes in the webtask environment to perform the adaptation of the custom webtask script to one of the supported webtask programming models. Read more about the webtask compiler model and how to implement one [here](https://webtask.io/docs/webtask-compilers). 
 
 > Webtask compilers allow for reuse of the logic that enables domain specific languages in Auth0 Webtasks. 
@@ -153,7 +153,7 @@ Webtask compilers introduce separation of concerns between the logic that enable
 
 Now with the reusable compiler in place, webtask development can focus on the business logic in T-SQL:
 
-<img src="/assets/images/blog/tomek_blog/2016-07-15/2.png" alt="T-SQL Auth0 Webtask in Webtask Editor Widget">
+<img src="tomek-blog/2016-07-15/2.png" alt="T-SQL Auth0 Webtask in Webtask Editor Widget">
 
 ### What else can you do with webtask compilers
 
@@ -161,7 +161,7 @@ Webtask compilers can be used to enable webtask development in a variety of lang
 
 You can take it as far as supporting implementation of webtasks in C#, by using the [Edge.js](https://github.com/tjanczuk/edge) module to execute CLR code in-process with Node.js: 
 
-<img src="/assets/images/blog/tomek_blog/2016-07-15/3.png" alt="C# Auth0 Webtask in Webtask Editor Widget using Edge.js">
+<img src="tomek-blog/2016-07-15/3.png" alt="C# Auth0 Webtask in Webtask Editor Widget using Edge.js">
 
 You can read more about using the webtask compilers [here](https://webtask.io/docs/model#webtask-compilers), and about implementing your own [here](https://webtask.io/docs/webtask-compilers). Enjoy!
 }

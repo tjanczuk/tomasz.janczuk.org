@@ -18,7 +18,7 @@ When writing Node.js or JavaScript applications, you sometimes need to embed mul
 
 JavaScript has no built-in way of representing multi-line strings. If you need to embed a longer non-JavaScript text in your application the natural options are limited to concatenating several one-line JavaScript strings or using external files. Unless, of course, you use a little known trick:  
 
-{% highlight javascript linenos %}
+```
    var html = (function () {/*  
   <!DOCTYPE html>  
   <html>  
@@ -29,8 +29,7 @@ JavaScript has no built-in way of representing multi-line strings. If you need t
 */}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
   
 
-{% endhighlight %}
-
+```
 
 
 What happens here? An anonymous function is created with a function body consisting only of a multi-line comment. The comment itself is the very text you want to embed in your application. The function is then serialized to a string using *toString()*. Interestingly, the call preserves the function signature along with the function body and the comments within. Last, a regular expression is run over the serialized form of the function to extract the comment hidden inside. The end result assigned to the *html* variable contains the HTML content within the comment. 

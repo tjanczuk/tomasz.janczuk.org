@@ -36,7 +36,8 @@ The button above is supported by [Stripe](https://stripe.com), a payment process
 
 The HTML code I had to place on this page to make the Stripe payment button above is simple and well explained in [Stripe documentation](https://stripe.com/docs/checkout). It goes like this:
 
-```html
+```
+html
 <form action="{postback_url_to_my_backend}" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js"
@@ -52,7 +53,6 @@ The HTML code I had to place on this page to make the Stripe payment button abov
   </script>
 </form>
 ```
-
 A Stripe payment flow initiated by clicking this button looks like this (please excuse my handwriting):
 
 <div class="diagram">
@@ -77,7 +77,8 @@ Backend is necessary to create a trust boundary between the code running in the 
 
 What exactly is the piece of code I need to run on the backend to process the form post and execute actual credit card charge so that I can get my coffee? The nice people at Stripe made sure I won't excert myself typing vast amounts of code:
 
-```javascript
+```
+javascript
 var my_private_stripe_key = '...';
 var token_from_form_post = '...';
 var stripe = require('stripe')(my_private_stripe_key);
@@ -89,7 +90,6 @@ stripe.customers.create({
   // ...
 });
 ```
-
 Now the unfortunate predicament I found myself in is that a blog post like the one you are reading is an example of a single page application with a thin, file-serving backend that does not allow me to run aforementioned piece of Node.js code. 
 
 > You need a separate backend. Or do you?
@@ -106,14 +106,15 @@ The [Webtask](https://webtask.io) platform allows you to run backend code withou
 
 Getting started with webtasks is a breeze. First initialize your account:
 
-```bash
+```
+bash
 npm install -g wt-cli
 wt init
 ```
-
 Next store your webtask code in a file; let's call it *coffee4tomek.js*:
 
-```javascript
+```
+javascript
 var stripe = require('stripe');
 
 module.exports = function (ctx, req, res) {
@@ -130,22 +131,22 @@ module.exports = function (ctx, req, res) {
     });
 };
 ```
-
 Now create a webtask by combining the code in *coffee4tomek.js* with the secret Stripe key: 
 
-```bash
+```
+bash
 wt create coffee4tomek.js --parse-body --secret stripeSecretKey={stripe_secret_key} --parse-body
 ```
-
 You will get back a webtask URL that may look like this:
 
 ```
+
 https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek
 ```
-
 Take that webtask URL and set is as the form action of the Stripe form from the beginning of this post:
 
-```html
+```
+html
 <form  
   method="POST"
   action="https://tjanczuk.sandbox.auth0-extend.com/coffee4tomek">
@@ -157,7 +158,6 @@ Take that webtask URL and set is as the form action of the Stripe form from the 
   </script>
 </form>
 ```
-
 And you are done! Your payment button is fully functional! Time to rake in a fortune and get caffeinated!
 
 Did I earn my coffee *now*?

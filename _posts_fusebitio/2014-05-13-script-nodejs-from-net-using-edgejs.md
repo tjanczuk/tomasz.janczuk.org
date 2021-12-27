@@ -37,17 +37,16 @@ Open Visual Studio 2013 and create a new .NET console application. Then add the 
 
 Now add a using directive for Edge.js:  
 
-{% highlight javascript linenos %}
+```
 using EdgeJs;
-{% endhighlight %}
-
+```
 
 
 
 
 And implement the body of the Main method:
 
-{% highlight javascript linenos %}
+```
 static void Main(string[] args)
 {
     var func = Edge.Func(@"
@@ -58,8 +57,7 @@ static void Main(string[] args)
 
     Console.WriteLine(func(".NET").Result);
 }
-{% endhighlight %}
-
+```
 
 
 Compile, run, and enjoy!

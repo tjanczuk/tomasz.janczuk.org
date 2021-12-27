@@ -26,19 +26,18 @@ First create your Windows Azure Cache Service instance following instructions at
 
 Then install the *azurecache* and *express* modules:  
 
-{% highlight javascript linenos %}
+```
    npm install azurecache  
 npm install express  
 
   
 
-{% endhighlight %}
-
+```
 
 
 Next author your Express application that uses the *azurecache* module to store Express session state in the Windows Azure Cache Service:
 
-{% highlight javascript linenos %}
+```
 var express = require('express')  
     , AzureCacheStore = require('azurecache')(express);  
   
@@ -60,21 +59,19 @@ app.listen(process.env.PORT || 3000);
 
   
 
-{% endhighlight %}
-
+```
 
 
 Lastly set some environment variables and start your server:
 
-{% highlight javascript linenos %}
+```
 set AZURE_CACHE_IDENTIFIER={your_azure_cache_endpoint_url}  
 set AZURE_CACHE_TOKEN={your_azure_cache_access_key}  
 node server.js  
 
   
 
-{% endhighlight %}
-
+```
 
 
 Every time you visit *http://localhost:3000/inc* in the browser you will receive an ever increasing counter value. When you visit *http://localhost:3000/get* you will receive the current counter value. The value of the counter is stored as part of the Express session state in the Windows Azure Cache Service with a default TTL of one day. You can now scale out the application to several instances since the session state is externalized to the Windows Azure Cache Service. 
@@ -85,7 +82,7 @@ If you are not familiar with deploying Node.js application to Windows Azure Web 
 
 Deploying an Express application that uses the *azurecache* module to store session state requires that module dependencies are declared in the *package.json* file:
 
-{% highlight javascript linenos %}
+```
 {  
   "name": "azurecachetest",  
   "version": "0.1.0",  
@@ -96,8 +93,7 @@ Deploying an Express application that uses the *azurecache* module to store sess
 }
   
 
-{% endhighlight %}
-
+```
 
 
 Once you deploy a Node.js application consisting of the *package.json* and *server.js* above to Windows Azure Web Sites, you still need to provide the credentials to Windows Azure Cache Service to it. Just as you were doing this using environment variables before, you can now set the application settings of your web site using the Windows Azure management portal: 
@@ -120,7 +116,7 @@ After saving the changes, you can navigate to your site and see the *azurecache*
 
 What is the latency of accessing Windows Azure Cache Service from a Node.js application using the *azurecache* module? To find out, let’s deploy a simple latency test to Azure Web Sites. The HTTP server will execute 1000 sequential *puts* against the cache and return the average latency in milliseconds as an HTTP response:
 
-{% highlight javascript linenos %}
+```
 var http = require('http')  
     , cache = require('azurecache').create();  
   
@@ -143,8 +139,7 @@ http.createServer(function (req, res) {
 }).listen(process.env.PORT || 3000);
   
 
-{% endhighlight %}
-
+```
 
 
 

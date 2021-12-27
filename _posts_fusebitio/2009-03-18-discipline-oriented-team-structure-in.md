@@ -18,8 +18,7 @@ I will describe my team's transition from a structure (and culture) with separat
 
 Once upon a time there was team of 10 brave men and women. There were 5 testers and 3 developers, each group with their own lead. The test and development leads reported to discipline managers, who in turn reported to a single cross-discipline manager. Given that a tester was 5 organizational clicks away from a dev, the team chugged along surprisingly nicely, cranking sprint after sprint in its little grassroots SCRUM process, painstakingly introduced a few months before (the larger organization is following the waterfall development model). Below is a snapshot of the burndown chart for one of these sprints:
 
-
- ![image](http://4.bp.blogspot.com/_NUp_nWDyyvI/ScgGk9zSnDI/AAAAAAAAAgQ/9zSoBw_Wb1I/s320/rtm.2.png)
+<img src="tomek-blog/2009-03-18/rtm2.png">
 
 I like SCRUM for several reasons. One of them is that it provides timely and insightful data about the quality of the process itself. A piece of wisdom that can be gleaned from the chart above is that the total number of work hours the team completed during the 2 week sprint is around 150. In this particular case 150 is also the number of hours the debt of the project was reduced by, since the planned work estimates remained rather constant throughout the sprint (at ~400 hour level). Given the entire team of 10 was declaring 100% availability during the 2 week sprint (equal to 80 hours per person in developed countries), the load factor for this sprint was a pathetic 18% (150/800). A load factor of 18% means that for every hour the team spends on the project, the remaining work is reduced by around 11 minutes. Compare this to the industry standard of 50% for experienced SCRUM teams (this team can be considered experienced having been using SCRUM for several months), and you can understand why project management thought there was room for improvement, to put it diplomatically.
 
@@ -34,7 +33,9 @@ At this point there was a choice to be made. We could revert from using SCRUM pa
 
 The proposal that was eventually put into practice was to have a team of engineers who do both development and testing as opposed to dedicated developers and testers. Furthermore, the engineers were reporting to a single lead as opposed to discipline specific leads. In order to test the hypothesis that such a change would increase efficiency, the team size was reduced by 50%, from 10 people to 5 people. The team continued to follow the SCRUM process.
 
-Did I mention I like SCRUM because it helps measure the quality of the process? After the dust settled following the reorganization, we took another look at a burndown chart of the new team: ![image](http://4.bp.blogspot.com/_NUp_nWDyyvI/Scm6TeSj3SI/AAAAAAAAAgY/vY_bxBf_UQ4/s320/rtm.5.PNG) 
+Did I mention I like SCRUM because it helps measure the quality of the process? After the dust settled following the reorganization, we took another look at a burndown chart of the new team: 
+
+<img src="tomek-blog/2009-03-18/rtm5.png">
 
 This burndown chart shows the status of the team a day before the end of a 2 week sprint, a few sprints after the reorganization. It is clear the team is on track to complete over 100 hours of work. Given that the planned work estimates remained largely constant, it can be assumed the project debt was reduced by 100 hours. The team was declaring 100% availability for the sprint, which gives us 25% load factor (100/400). It is still pathetic, but less so compared to the 18% before the reorganization. In fact, after another couple of months the team reached a consistently steady pace of execution in the 45-50% load factor range, comparable to a BMW V6 engine sailing smoothly at 5000RPM. 
 

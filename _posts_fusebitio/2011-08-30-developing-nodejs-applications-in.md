@@ -35,20 +35,20 @@ Now install iisnode by calling the installation script from the command line *wi
 
 On a 32 bit Windows system:  
 
-{% highlight text linenos %}
+```
+
      install_iisexpress.bat
 
-{% endhighlight %}
-
+```
 
 
 On a 64 bit Windows system:
 
-{% highlight text linenos %}
+```
+
 %systemroot%\syswow64\cmd.exe /C install_iisexpress.bat
 
-{% endhighlight %}
-
+```
 
 
 If everything goes well, you should see successful installation confirmation:

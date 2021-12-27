@@ -30,18 +30,18 @@ The [owin](http://tomasz.janczuk.org/2013/02/hosting-net-code-in-nodejs-applicat
 
 Get started by importing the owin module:  
 
-{% highlight text linenos %}
+```
+
    npm install owin@0.4.0
 
-{% endhighlight %}
-
+```
 
 
 
 
 Then implement your CPU-bound workload in .NET as follows and save the result in Startup.cs file:
 
-{% highlight csharp linenos %}
+```
 namespace CalculateBudget  
 {  
     public class Startup : Owinjs.Worker  
@@ -61,8 +61,7 @@ namespace CalculateBudget
 
   
 
-{% endhighlight %}
-
+```
 
 
 Notice the signature of the Execute method, which is the contract for specifying input to and returning results from your CPU-bound workload. This mechanism allows you to pass in a dictionary of strings and return another one. These dictionaries are marshaled from and into JavaScript objects in the node.js application. 
@@ -71,18 +70,18 @@ The Execute method is called on a CLR thread allocated by the Owinjs.Worker base
 
 Now compile the Startup.cs into CalculateBudget.dll and reference the Owinjs.dll that comes with the owin module:
 
-{% highlight text linenos %}
+```
+
 copy node_modules\owin\lib\clr\Owinjs.dll  
 csc /target:library /r:Owinjs.dll /out:CalculateBudget.dll Startup.cs
   
 
-{% endhighlight %}
-
+```
 
 
 Lastly, implement a node.js application which invokes the CPU-bound computation using the owin module, and save it to test.js file:
 
-{% highlight javascript linenos %}
+```
 var owin = require('owin')  
   
 console.log('Starting long running operation...');  
@@ -100,23 +99,23 @@ setInterval(function () {
 }, 1000);
   
 
-{% endhighlight %}
-
+```
 
 
 This application starts the CPU-bound computation using the OWIN module, and then initiates an interval that will print out a message on the screen every second. When you start this application with
 
-{% highlight text linenos %}
+```
+
 node test.js
   
 
-{% endhighlight %}
-
+```
 
 
 You will see the following output:
 
-{% highlight text linenos %}
+```
+
 C:\projects\owin_test>node test.js  
 Starting long running operation...  
 Node.js event loop is alive!  
@@ -129,8 +128,7 @@ Node.js event loop is alive!
 Node.js event loop is alive!
   
 
-{% endhighlight %}
-
+```
 
 Notice how the interval is able to print out messages between the time the CPU-bound worker is started and it returns the result. This proves that the node.js event loop remains responsive while the CPU-bound computation takes place on a separate CLR thread. 
 

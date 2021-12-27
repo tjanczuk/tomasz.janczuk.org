@@ -32,22 +32,20 @@ To summarize, the deployment of the application requires 1,250 extra large (8 CP
 
 To support horizontal partitioning the system must have a routing logic in place that knows how to route all requests targeting a specific chat room to the Node.js process that keeps the chat room’s state. To build such routing system, individual chat rooms must be addressable, for example using HTTP URL path segments as follows:  
 
-{% highlight javascript linenos %}
+```
    http://megachat.com/{server_id}/{process_id}/{chatroom_id}
   
 
-{% endhighlight %}
-
+```
 
 
 or a combination of a DNS name and HTTP URL path segment:
 
-{% highlight javascript linenos %}
+```
 http://{server_id}.megachat.com/{process_id}/{chatroom_id}
   
 
-{% endhighlight %}
-
+```
 
 
 In this post I am going to assume that the problem of server level routing had already been solved: when the system receives an HTTP or WebSocket request from the client, a router consistently routes the request to the server identified with the *{server_id}*. Once a request is received by the appropriate server, additional routing mechanism is necessary to dispatch that request to the Node.js process identified by the *{process_id}* URL segment. And a good way of doing that is the 5 million dollar question this post is about. 

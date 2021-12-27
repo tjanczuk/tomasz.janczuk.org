@@ -26,20 +26,20 @@ You can benefit from IIS output caching if the content served by your node.js ap
 
 For the simple, unscientific benchmark, I will use a “hello world” application in node.js:  
 
-{% highlight javascript linenos %}
+```
    require('http').createServer(function (req, res) {  
     res.writeHead(200, { 'Content-Type': 'text/plain' });  
     res.end('Hello, world!');  
 }).listen(process.env.PORT);
   
 
-{% endhighlight %}
-
+```
 
 
 I will then host the application in IIS using [iisnode](https://github.com/tjanczuk/iisnode), and measure its throughput using the [WCAT](http://www.iis.net/community/default.aspx?tabid=34&i=1466&g=6) stress testing tool. The WCAT test configuration specifies that we will be repeatedly calling the the node.js application above with Connection: keep-alive for consecutive 30 seconds:
 
-{% highlight text linenos %}
+```
+
 scenario  
 {  
     name    = "default";  
@@ -70,8 +70,7 @@ scenario
 }
   
 
-{% endhighlight %}
-
+```
 
 
 Note that I am running both client and server on the same machine so the results are highly unscientific. However, we are only going to use them for relative comparison between lack of caching and presence of caching to get a high level idea of the benefits.

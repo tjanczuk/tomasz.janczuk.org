@@ -44,9 +44,7 @@ I will describe steps 2-8 in more detail next.
 
 The [pub/sub sample for HTTP polling duplex](http://tomasz.janczuk.org/2009/07/pubsub-sample-using-http-polling-duplex.html) came with a WCF duplex service implementing the pub/sub logic. Enabling net.tcp protocol support for this service does not require any changes in the application code, and can be accomplished by adding a new endpoint in the web.config file (additions highlighted in bold):  
 
-{% highlight xml linenos %}
-
-
+```
     <system.serviceModel>        
         <extensions>         
         <bindings>         
@@ -71,8 +69,7 @@ The [pub/sub sample for HTTP polling duplex](http://tomasz.janczuk.org/2009/07/p
         </services>         
     </system.serviceModel> 
 
-{% endhighlight %}
-
+```
   
 
 This change will add a new net.tcp endpoint to the existing WCF pub\sub service. The net.tcp endpoint will exist side by side with an endpoint based on the HTTP polling duplex protocol, enabling clients to communicate with the service over either of the protocols. Metadata exchange endpoint will enable automatic generation of a client proxy for either of the protocols.   
@@ -93,11 +90,11 @@ If you are running Windows 2008 server, the same feature is available through Se
 
 To find out if net.tcp activation is enabled on your machine, go to the command line and run the following command:  
 
-{% highlight text linenos %}
+```
+
 sc query NetTcpActivator
 
-{% endhighlight %}
-
+```
     
 
 The output should indicate the local service is running.  
@@ -120,9 +117,7 @@ For a Silverlight application to create a TCP connection to a backend server, th
 
 For example, to allow all Silverlight applications to open TCP connections on ports 4502-4530 to the machine, create a clientaccesspolicy.xml file with the following content and host at the root of the document directory of your IIS server (typically c:\inetpub\wwwroot):  
 
-{% highlight xml linenos %}
-
-
+```
 <?xml version="1.0" encoding="utf-8"?>        
 <access-policy>         
   <cross-domain-access>         
@@ -138,8 +133,7 @@ For example, to allow all Silverlight applications to open TCP connections on po
   </cross-domain-access>         
 </access-policy> 
 
-{% endhighlight %}
-
+```
   
 
 Open you web browser and navigate to http://localhost/clientaccesspolicy.xml to verify it will be accessible to Silverlight applications. The permit-all policy above allows unrestricted cross domain calls for both HTTP and TCP protocol over ports 4502-4530.   
@@ -164,9 +158,7 @@ Creating a service proxy to a WCF net.tcp service is easy with the Add Service R
 
 One feature the WCF net.tcp proxy offers beyond what HTTP polling duplex supports is integration with configuration file. During proxy generation, endpoint and binding information will be stored in the ServiceReferences.ClientConfig file, which enables the service address and other binding details to be controlled declaratively through config:   
 
-{% highlight xml linenos %}
-
-
+```
 <configuration>        
     <system.serviceModel>         
         <bindings>         
@@ -185,32 +177,25 @@ One feature the WCF net.tcp proxy offers beyond what HTTP polling duplex support
     </system.serviceModel>         
 </configuration> 
 
-{% endhighlight %}
-
+```
   
 
 An instance of the proxy using net.tcp protocol can be created in code by referring to the named endpoint in the configuration file:  
 
-{% highlight csharp linenos %}
-
-
+```
 PubSubClient client = new PubSubClient("NetTcpBinding_IPubSub"); 
 
-{% endhighlight %}
-
+```
   
 
 The same proxy class can be used with HTTP polling duplex protocol, but the binding and address must be provided in code (we are working on providing configuration support for HTTP polling duplex before Silverlight 4 release):   
 
-{% highlight csharp linenos %}
-
-
+```
 PubSubClient client = new PubSubClient(        
     new PollingDuplexHttpBinding(),         
     new EndpointAddress(new Uri(App.Current.Host.Source + "/../../PubSubService.svc"))); 
 
-{% endhighlight %}
-
+```
   
 
 ### Running the pub/sub sample  
