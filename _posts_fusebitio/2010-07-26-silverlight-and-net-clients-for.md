@@ -7,7 +7,7 @@ post_title: Silverlight and .NET clients for the Laharsub publish/subscribe
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: silverlight-and-.net-clients-for-the-laharsub-publish/subscribe-service-for-web-clients
+post_slug: silverlight-and-net-clients-for
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -23,4 +23,4 @@ The [just released 2010.07.25 stable build of the open source Laharsub project](
 4. A jQuery AJAX-based JavaScript client.  
   
 
-I am looking forward to your comments and suggestions. You can read more about the open source Laharsub project at [http://laharsub.codeplex.com](http://laharsub.codeplex.com).   }
+I am looking forward to your comments and suggestions. You can read more about the open source Laharsub project at [http://laharsub.codeplex.com](http://laharsub.codeplex.com).   

@@ -6,7 +6,7 @@ post_title: Running node.js code in 2 mouse clicks using haiku-http
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: running-node.js-code-in-2-mouse-clicks-using-haiku-http
+post_slug: running-nodejs-code-in-2-mouse-clicks
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -112,4 +112,4 @@ function notError(err) {
 
 [Experiment more with haiku-http](http://tjanczuk.github.com/haiku-http/), read about [haiku-http vision and design](http://tomasz.janczuk.org/2012/02/sub-process-multi-tenant-runtime-for.html), or [get the code on GitHub](https://github.com/tjanczuk/haiku-http). 
 
-Comments welcome!  }
+Comments welcome!  

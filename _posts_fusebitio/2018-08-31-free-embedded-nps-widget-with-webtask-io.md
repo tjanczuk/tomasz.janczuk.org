@@ -6,7 +6,7 @@ post_title: Embedded NPS widget with webtask.io
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: embedded-nps-widget-with-webtask.io
+post_slug: free-embedded-nps-widget-with-webtask-io
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -105,4 +105,4 @@ If you are interested in the technical details of the implementation, as well as
 
 ### Shameless plug
 
-If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io/webtaskio). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://fusebit.io/blog/2018/03/serverless-webhooks-to-revolutionize-the-saas/). Check it out! }
+If you enojoy the flexibility of Auth0 Webtasks, you may be interested in the commercial product we've built on top of this technology: [Extend](https://goextend.io/webtaskio). Extend removes friction from the customization and integration of SaaS platforms by providing an embedded scripting experience, ["serverless wehbooks"](https://fusebit.io/blog/2018/03/serverless-webhooks-to-revolutionize-the-saas/). Check it out! 

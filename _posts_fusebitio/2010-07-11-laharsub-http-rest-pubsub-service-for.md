@@ -6,7 +6,7 @@ post_title: "Laharsub: HTTP REST pub/sub service for AJAX and Silverlight web cl
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: laharsub:-http-rest-pub/sub-service-for-ajax-and-silverlight-web-clients
+post_slug: laharsub-http-rest-pubsub-service-for
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -35,4 +35,4 @@ The project is directly related to my interest in rich communication patterns fo
 * It focuses on the publish/subscribe message exchange pattern as opposed to duplex messaging capability, reflecting the majority use case for the HTTP Polling Duplex protocol in Silverlight.  
   
 
-I am looking forward to your feedback.  }
+I am looking forward to your feedback.  

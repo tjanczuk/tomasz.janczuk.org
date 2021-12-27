@@ -6,7 +6,7 @@ post_title: iisnode v0.1.10 has shipped
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: iisnode-v0.1.10-has-shipped
+post_slug: iisnode-project-allows-hosting-node
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -27,4 +27,4 @@ The [iisnode project](https://github.com/tjanczuk/iisnode) allows hosting node.j
 9. Other assorted bug fixes that increase stability and correctness.  
   
 
-This version of iisnode requires [node.js version 0.6.2](http://nodejs.org/#download) or greater. Enjoy!  }
+This version of iisnode requires [node.js version 0.6.2](http://nodejs.org/#download) or greater. Enjoy!  

@@ -6,7 +6,7 @@ post_title: When a JavaScript function is not a function
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: when-a-javascript-function-is-not-a-function
+post_slug: when-javascript-function-is-not
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -86,4 +86,4 @@ f instanceof Function
 ```
 
 
-End of trivia.  }
+End of trivia.  

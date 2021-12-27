@@ -6,7 +6,7 @@ post_title: Adoption of WCF technologies in Silverlight 2 applications on the we
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: adoption-of-wcf-technologies-in-silverlight-2-applications-on-the-web
+post_slug: adoption-of-wcf-technologies-in
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -65,4 +65,4 @@ WebClient is the mostly adopted communication technology, followed by the WCF pr
 
 Analysis of the backend technology of the services that Silverlight 2 clients are communicating with indicates 52% of them are based on WCF technology, 42% are based on ASMX, and the technology of the remaining 6% could not be determined. Furthermore, analysis of the URLs of the web service calls indicates 68% of calls is cross-domain while only 32% are same-domain. The large share of cross-domain calls is an interesting finding in itself. It also seems to support a hypothesis that the (still) large share of ASMX as the backend technology has to do with the existence of legacy services.  
 
-Overall the data from this research informed several decisions related to investments in subsequent releases of Silverlight, but this is another story. As a matter of fact Silverlight 3 is coming out within hours of this writing, check out [http://www.microsoft.com/silverlight/](http://www.microsoft.com/silverlight/) for an announcement.   }
+Overall the data from this research informed several decisions related to investments in subsequent releases of Silverlight, but this is another story. As a matter of fact Silverlight 3 is coming out within hours of this writing, check out [http://www.microsoft.com/silverlight/](http://www.microsoft.com/silverlight/) for an announcement.   

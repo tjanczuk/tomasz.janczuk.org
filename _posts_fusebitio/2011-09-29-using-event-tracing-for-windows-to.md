@@ -7,7 +7,7 @@ post_title: Using Event Tracing for Windows to track and diagnose node.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: using-event-tracing-for-windows-to-track-and-diagnose-node.js-applications-hosted-in-iis/iisnode
+post_slug: using-event-tracing-for-windows-to
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -56,4 +56,4 @@ iisnode currently generates following ETW traces at three verbosity levels:
 
 If you prefer using ETW tools on your own over invoking the included etw.bat file, you will need the iisnode ETW provider id, which is {1040DFC4-61DB-484A-9530-584B2735F7F7}.  
 
-Enjoy!  }
+Enjoy!  

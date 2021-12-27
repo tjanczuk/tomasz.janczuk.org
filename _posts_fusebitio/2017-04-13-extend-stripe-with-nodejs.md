@@ -6,7 +6,7 @@ post_title: Extend Stripe with Node.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: extend-stripe-with-node.js
+post_slug: extend-stripe-with-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -125,4 +125,3 @@ The client is based on the [stripe](https://www.npmjs.com/package/stripe) NPM mo
 ### Want more?
 
 If you are writing a mobile or HTML5 single-page application, you may also be interested in [how Auth0 Webtasks can help you integrate Stripe payments](https://fusebit.io/blog/2016/01/accept-stripe-payments-without-backend-using-webtasks/) without the need for a first class backend. Check it out!
-}

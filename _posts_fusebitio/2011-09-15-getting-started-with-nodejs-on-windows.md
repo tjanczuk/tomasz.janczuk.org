@@ -6,7 +6,7 @@ post_title: Getting started with node.js on Windows
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: getting-started-with-node.js-on-windows
+post_slug: getting-started-with-nodejs-on-windows
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -26,4 +26,4 @@ Here are a few quick steps to set up a node.js development environment on Window
 
 For more information and howtos check out my recent posts and visit [http://github.com/tjanczuk/iisnode](http://github.com/tjanczuk/iisnode).   
 
-I hope you like it and I am looking for your comments and suggestions. Please report any issues at [https://github.com/tjanczuk/iisnode/issues](https://github.com/tjanczuk/iisnode/issues).   }
+I hope you like it and I am looking for your comments and suggestions. Please report any issues at [https://github.com/tjanczuk/iisnode/issues](https://github.com/tjanczuk/iisnode/issues).   

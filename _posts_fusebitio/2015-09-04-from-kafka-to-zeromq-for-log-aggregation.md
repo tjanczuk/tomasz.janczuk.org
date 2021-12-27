@@ -6,7 +6,7 @@ post_title: From Kafka to ZeroMQ for real-time log aggregation
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: from-kafka-to-zeromq-for-real-time-log-aggregation
+post_slug: from-kafka-to-zeromq-for-log-aggregation
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -133,4 +133,3 @@ In our particular situation at Auth0, we are already using AWS Kinesis, ElasticS
 The move from Kafka to ZeroMQ for real-time log aggregation was the right choice to make in our circumstances. By focusing on the key requirements of our scenario we were able to significantly reduce the complexity of the solution. While improved stability and reliability was the key motivation for this transition, the added performance and reduced system complexity were a nice side effects. 
 
 As with any major change in a cloud service than needs to operate 24/7, more time needs to pass before we can fully understand the impact, in particular on stability. Bottom line is this: in the few days since we replaced Kafka with ZeroMQ the quality of my sleep has improved substantially. 
-}

@@ -6,7 +6,7 @@ post_title: How to save $5 million running a Node.js application
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: how-to-save-$5-million-running-a-node.js-application
+post_slug: how-to-save-5-million-running-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -100,4 +100,4 @@ By replacing the ARR/IIS reverse proxy mechanism in our web application with one
 
  ![image](http://lh6.ggpht.com/-IfgQSdNQRCQ/UaEKqTGj_LI/AAAAAAAADf0/H6n9BUWrzlA/image_thumb%25255B19%25255D.png?imgmax=800) 
 
-Switching from ARR/IIS to HTTP.SYS port sharing saved $5,778,432. It is somehow larger saving than the $5 million originally promised by this post. You could spend the extra $778,432 in savings on a [Bavaria Cruiser 56](http://www.bavariayachts.com/bavaria-cruiser-56.php) with still enough change left to take you comfortably on a cruise around the world. If you do, please send me a post card.   }
+Switching from ARR/IIS to HTTP.SYS port sharing saved $5,778,432. It is somehow larger saving than the $5 million originally promised by this post. You could spend the extra $778,432 in savings on a [Bavaria Cruiser 56](http://www.bavariayachts.com/bavaria-cruiser-56.php) with still enough change left to take you comfortably on a cruise around the world. If you do, please send me a post card.   

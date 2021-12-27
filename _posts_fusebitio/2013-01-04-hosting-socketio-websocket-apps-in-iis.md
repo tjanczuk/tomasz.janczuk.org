@@ -6,7 +6,7 @@ post_title: Hosting socket.io WebSocket apps in IIS using iisnode
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: hosting-socket.io-websocket-apps-in-iis-using-iisnode
+post_slug: hosting-socketio-websocket-apps-in-iis
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -134,4 +134,4 @@ Notice that this client code works correctly both when the server is self-hosted
 
 The full code of the client is at [https://github.com/tjanczuk/dante/blob/master/index-socketio.html](https://github.com/tjanczuk/dante/blob/master/index-socketio.html).
 
-Enjoy!  }
+Enjoy!  

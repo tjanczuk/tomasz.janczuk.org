@@ -6,7 +6,7 @@ post_title: Access Windows Azure Cache Service from Node.js and Express
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: access-windows-azure-cache-service-from-node.js-and-express
+post_slug: access-windows-azure-cache-service-from
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -156,4 +156,4 @@ Similarly to *put*, a *get* is around 1 millisecond.
 
 Note that you can only achieve such low latency for Node.js applications deployed to Windows Azure, since locality of data is a major factor in caching. If you run the same performance test by hosting the Node.js server on your developer machine, your latencies will be much higher (in my case they were around 50ms) since every call to the Windows Azure Cache Service needs to go from your developer machine to a Windows Azure data center. 
 
-So, go forth and scale out!   }
+So, go forth and scale out!   

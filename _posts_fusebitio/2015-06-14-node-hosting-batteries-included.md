@@ -6,7 +6,7 @@ post_title: Node.js hosting with batteries included
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: node.js-hosting-with-batteries-included
+post_slug: node-hosting-batteries-included
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -36,4 +36,3 @@ As of this writing, [webtask.io](https://webtask.io) supports all the modules th
 In the next post I will write about how to actually install such a large number of modules without using up too much of disk space. I will also write about supporting several module versions side by side. Stay tuned. 
 
 
-}

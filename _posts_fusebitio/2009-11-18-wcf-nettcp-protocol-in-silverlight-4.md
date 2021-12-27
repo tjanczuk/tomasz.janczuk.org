@@ -6,7 +6,7 @@ post_title: WCF net.tcp protocol in Silverlight 4
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: wcf-net.tcp-protocol-in-silverlight-4
+post_slug: wcf-nettcp-protocol-in-silverlight-4
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -137,4 +137,4 @@ The WCF net.tcp protocol in the Silverlight environment has limitations that mak
 
 ### Summary  
 
-WCF net.tcp protocol in Silverlight 4 is a great fit for intranet applications that require the utmost in communication performance. The protocol supports the simple to use, event-based WCF duplex programming model. Adding strongly typed service proxy to a Silverlight project is made easy with integration with the Visual Studio 10 Add Service Reference feature. Communication and security limitations make the protocol a better fit for controlled intranet environments than the public internet. A good protocol alternative for a duplex communication for the public internet is the [HTTP polling duplex](http://tomasz.janczuk.org/2009/07/pubsub-sample-using-http-polling-duplex.html) already present in Silverlight since version 2.   }
+WCF net.tcp protocol in Silverlight 4 is a great fit for intranet applications that require the utmost in communication performance. The protocol supports the simple to use, event-based WCF duplex programming model. Adding strongly typed service proxy to a Silverlight project is made easy with integration with the Visual Studio 10 Add Service Reference feature. Communication and security limitations make the protocol a better fit for controlled intranet environments than the public internet. A good protocol alternative for a duplex communication for the public internet is the [HTTP polling duplex](http://tomasz.janczuk.org/2009/07/pubsub-sample-using-http-polling-duplex.html) already present in Silverlight since version 2.   

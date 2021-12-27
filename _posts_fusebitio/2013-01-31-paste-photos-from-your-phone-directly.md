@@ -6,7 +6,7 @@ post_title: Paste photos from your phone directly into Windows Live Writer
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: paste-photos-from-your-phone-directly-into-windows-live-writer
+post_slug: paste-photos-from-your-phone-directly
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -58,4 +58,4 @@ To get started, you will need a lizard’s tail, four rotten eggs of the greenba
 
 Here is how you mix it all up. First, when you open the “Picture from phone” plug-in window, a temporary, one-time relay address is registered with a node.js web site hosted in Windows Azure Web Sites. The relay allows messages to be exchanged between devices that know its unique address. The QR code the plug-in displays encodes this one-time relay address. When you scan the QR code with your phone and open the address in the mobile browser, it immediately posts a “hello” message to the relay, which allows the Windows Live Writer on your PC to switch its view and encourage you to choose a picture on the phone. Once you select the picture and upload it to the relay, it is temporarily saved in Windows Azure Blob Storage, and can be referenced there with a unique URL. The URL of the picture is then posted to the relay. When Windows Live Writer receives the message, it fetches the picture from Windows Azure Blob Storage, closes the plug-in window, and includes the picture in the blog post you are editing. The temporary relay address is deleted along with any associated content in the Windows Azure Blob Storage.   
 
-So where does the lizard’s tail come in? I just like to keep it handy in case I need it, so save it for some of the future experiments.   }
+So where does the lizard’s tail come in? I just like to keep it handy in case I need it, so save it for some of the future experiments.   

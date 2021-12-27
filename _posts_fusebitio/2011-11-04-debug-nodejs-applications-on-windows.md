@@ -6,7 +6,7 @@ post_title: Debug node.js applications on Windows with iisnode integrated debugg
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: debug-node.js-applications-on-windows-with-iisnode-integrated-debugging
+post_slug: debug-nodejs-applications-on-windows
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -136,4 +136,4 @@ With iisnode you can now easily debug node.js applications deployed to IIS from 
 
 This new feature has just shipped and I do expect issues will be found. I would appreciate your help in making iisnode better: please file any issues you encounter at [https://github.com/tjanczuk/iisnode/issues](https://github.com/tjanczuk/iisnode/issues). 
 
-Enjoy!  }
+Enjoy!  

@@ -6,7 +6,7 @@ post_title: How to use WebSockets with node.js apps hosted in iisnode
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: how-to-use-websockets-with-node.js-apps-hosted-in-iisnode
+post_slug: how-to-use-websockets-with-nodejs-apps
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -100,4 +100,4 @@ This is required because IIS 8 provides its own implementation of the WebSocket 
 
 
 
-The release of iisnode 0.2.0 closes the last major functional gap between self-hosting and IIS hosting node.js applications on Windows: the availability of WebSockets. You can now host your socket.io application in IIS 8 using WebSockets as opposed to falling back to HTTP long polling. Note that WebSocket functionality is only supported on IIS 8 running on Windows Server 2012 or Windows 8. WebSocket on!  }
+The release of iisnode 0.2.0 closes the last major functional gap between self-hosting and IIS hosting node.js applications on Windows: the availability of WebSockets. You can now host your socket.io application in IIS 8 using WebSockets as opposed to falling back to HTTP long polling. Note that WebSocket functionality is only supported on IIS 8 running on Windows Server 2012 or Windows 8. WebSocket on!  

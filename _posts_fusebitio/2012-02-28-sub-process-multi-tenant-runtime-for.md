@@ -6,7 +6,7 @@ post_title: Sub-process, multi-tenant runtime for HTTP APIs using node.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: sub-process,-multi-tenant-runtime-for-http-apis-using-node.js
+post_slug: sub-process-multi-tenant-runtime-for
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -246,4 +246,4 @@ Since haiku-http cannot currently prevent such situations, it assumes they will 
 
 Haiku-http is an attempt to create a sub-process, multi-tenant environment for running HTTP APIs implemented in node.js. 
 
-It currently offers a good level of application data isolation. However, challenges remain with respect to resource consumption control and local denial of service prevention. This is going to be the area of focus and development going forward.   }
+It currently offers a good level of application data isolation. However, challenges remain with respect to resource consumption control and local denial of service prevention. This is going to be the area of focus and development going forward.   

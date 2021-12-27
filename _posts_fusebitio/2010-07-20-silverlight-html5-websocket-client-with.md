@@ -6,7 +6,7 @@ post_title: Silverlight HTML5 WebSocket client with an HTML bridge to Ajax/JavaS
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: silverlight-html5-websocket-client-with-an-html-bridge-to-ajax/javascript
+post_slug: silverlight-html5-websocket-client-with
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -29,4 +29,4 @@ A sample web chat application built using a prototype implementation of the WebS
 
 Given the approach taken, the sample chat application based on WebSockets should be working in all major browsers (Internet Explorer, Firefox, Chrome, Safari, Opera).    
       
-Mike Taulty has an [excellent post](http://mtaulty.com/CommunityServer/blogs/mike_taultys_blog/archive/2010/07/27/silverlight-and-websockets.aspx) explaining in more detail the client side implementation.   }
+Mike Taulty has an [excellent post](http://mtaulty.com/CommunityServer/blogs/mike_taultys_blog/archive/2010/07/27/silverlight-and-websockets.aspx) explaining in more detail the client side implementation.   

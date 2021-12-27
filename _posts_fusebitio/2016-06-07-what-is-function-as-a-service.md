@@ -6,7 +6,7 @@ post_title: What is Function as a Service (FaaS)?
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: what-is-function-as-a-service-(faas)?
+post_slug: what-is-function-as-a-service
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -52,4 +52,3 @@ We have used the CLI of [Auth0 Webtasks](https://webtask.io) to turn a Node.js f
 How is *Function as a Service* (FaaS) different from *serverless*? It is not. At the core it represents the same trend explained in the [What is serverless?](https://auth0.com/blog/2016/06/09/what-is-serverless/) and on Martin Fowler's blog [Serverless Architectures](http://martinfowler.com/articles/serverless.html). 
 
 The key difference is emotional. The term *server-less* is both inacurate (there are still servers involved), as well as socially controversial, since it suggests looming structural unemployment of swaths of IT personel who make their living by running those servers today. The *Function as a Service (FaaS)* term is clearly less radioactive. Read more about the merit of the trend at [What is serverless](https://auth0.com/blog/2016/06/09/what-is-serverless/). 
-}

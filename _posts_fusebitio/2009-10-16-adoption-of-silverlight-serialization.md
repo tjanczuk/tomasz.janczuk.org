@@ -7,7 +7,7 @@ post_title: Adoption of Silverlight serialization and communication technologies
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: adoption-of-silverlight-serialization-and-communication-technologies-in-web-applications-–-october-2009
+post_slug: adoption-of-silverlight-serialization
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -103,4 +103,3 @@ A few notable observations based on this data:
 
 * Large portion (around 20%) of sites hosting Silverlight are using Linux and Apache (or other web servers like Nginx).  
 * Silverlight applications using WCF client have a much higher affinity to a Windows platform on the backend (95%) compared to an average Silverlight application (78%), as well as Silverlight applications using non-WCF communication technologies (83%).  
-}

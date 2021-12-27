@@ -6,7 +6,7 @@ post_title: Application initialization of Node.js apps running in IIS 8 using ii
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: application-initialization-of-node.js-apps-running-in-iis-8-using-iisnode
+post_slug: application-initialization-of-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -108,4 +108,4 @@ And here is latency of a first request to the same Node.js app configured to use
 
  ![image](http://lh5.ggpht.com/-2UefLfLEXvQ/UdwaHF8AcdI/AAAAAAAADok/R56Eh5ePVIc/image_thumb%25255B6%25255D.png?imgmax=800) 
 
-Enjoy!  }
+Enjoy!  

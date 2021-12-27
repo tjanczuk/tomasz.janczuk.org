@@ -6,7 +6,7 @@ post_title: Duplex communication with WCF on Silverlight TV
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: duplex-communication-with-wcf-on-silverlight-tv
+post_slug: duplex-communication-with-wcf-on
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -25,4 +25,4 @@ Silverlight TV episode about [Duplex communication with WCF in Silverlight](http
 * The [Silverlight Web Services Team](http://blogs.msdn.com/b/silverlightws/) blog contains a wealth of information about WCF and communication in Silverlight in general.  
   
 
-I hope you enjoy [the video](http://channel9.msdn.com/shows/SilverlightTV/Duplex-Communication-with-WCF-in-Silverlight-4-Silverlight-TV-34/). Make sure to [check out other Silverlight TV episodes](http://channel9.msdn.com/shows/SilverlightTV/) as well.   }
+I hope you enjoy [the video](http://channel9.msdn.com/shows/SilverlightTV/Duplex-Communication-with-WCF-in-Silverlight-4-Silverlight-TV-34/). Make sure to [check out other Silverlight TV episodes](http://channel9.msdn.com/shows/SilverlightTV/) as well.   

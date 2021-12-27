@@ -49,4 +49,3 @@ There are many existing implementations of this serverless webhook paradigm in p
 ### Serverless webhooks for your SaaS
 
 If you are operating a SaaS platform that could benefit from serverless webhooks, you may ask yourself what it takes to implement them. In the [How to build your own serverless platform](https://fusebit.io/blog/2018/03/how-to-build-your-own-serverless-platform/) post, I  describe an architectural blueprint for building a serverless webhook solution for your own SaaS platform, based on the lessons learned from the [Auth0 Extend](https://goextend.io) product in Auth0.   
-}

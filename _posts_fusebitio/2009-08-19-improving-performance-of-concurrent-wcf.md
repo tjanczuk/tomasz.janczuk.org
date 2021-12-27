@@ -6,7 +6,7 @@ post_title: Improving performance of concurrent WCF calls in Silverlight applica
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: improving-performance-of-concurrent-wcf-calls-in-silverlight-applications
+post_slug: improving-performance-of-concurrent-wcf
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -91,4 +91,4 @@ void proxy_HelloCompleted(object sender, WcfPerf.TestService.HelloCompletedEvent
 ```
   
 
-My ad-hoc measurements indicate the average latency of the worker thread approach is about 20% of the average latency of the UI thread approach. The downside of this approach is the more complex way of manipulating the UI controls on the page. The worker thread has to explicitly schedule the code that manipulates the UI to execute on the UI thread, as shown in the proxy_HelloCompleted implementation above.   }
+My ad-hoc measurements indicate the average latency of the worker thread approach is about 20% of the average latency of the UI thread approach. The downside of this approach is the more complex way of manipulating the UI controls on the page. The worker thread has to explicitly schedule the code that manipulates the UI to execute on the UI thread, as shown in the proxy_HelloCompleted implementation above.   

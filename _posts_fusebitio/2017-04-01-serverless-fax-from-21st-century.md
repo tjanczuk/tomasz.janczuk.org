@@ -6,7 +6,7 @@ post_title: Serverless fax from the XXI century
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: serverless-fax-from-the-xxi-century
+post_slug: serverless-fax-from-21st-century
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -162,4 +162,4 @@ And with that, we have finally opened a wormhole connecting the today with the d
 
 In this post we've used [Twilio Fax APIs](https://www.twilio.com/blog/2017/03/twilio-programmable-fax.html) with [Auth0 Webtasks](https://webtask.io) to serverlessly send faxes. Then we exposed this functionality as a Slack slash command using [Slash Webtasks](https://webtask.io/slack). 
 
-No servers were harmed in this experiment. }
+No servers were harmed in this experiment. 

@@ -16,4 +16,4 @@ post_excerpt: Tomek on Software - shaken, not stirred
 
 I have lately picked up interest in the server side application of JavaScript and had a chance to learn and experiment with domain technologies. Related to that is my presence on the JavaScript panel at MIX 2011 on Wednesday April 13 at 3:30pm-4:30pm at Lagoon H. You are welcome to attend, or otherwise drop me a line if you are interested in discussing this topic.
 
-The full MIX schedule is [here](http://live.visitmix.com/MIX11/Schedule). Promises to be an interesting event.}
+The full MIX schedule is [here](http://live.visitmix.com/MIX11/Schedule). Promises to be an interesting event.

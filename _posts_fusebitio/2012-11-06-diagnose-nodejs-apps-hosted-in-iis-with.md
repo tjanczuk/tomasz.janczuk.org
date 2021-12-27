@@ -6,7 +6,7 @@ post_title: Diagnose node.js apps hosted in IIS with iisnode-debug header
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: diagnose-node.js-apps-hosted-in-iis-with-iisnode-debug-header
+post_slug: diagnose-nodejs-apps-hosted-in-iis-with
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -60,4 +60,4 @@ Besides the new iisnode-debug header, iisnode continues to offer other diagnosti
 [Using ETW traces](http://tomasz.janczuk.org/2011/09/using-event-tracing-for-windows-to.html)      
 [Logging](http://tomasz.janczuk.org/2011/08/hosting-nodejs-applications-in-iis-on.html)  
 
-Enjoy!  }
+Enjoy!  

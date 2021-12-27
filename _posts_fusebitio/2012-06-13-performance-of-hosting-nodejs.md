@@ -7,7 +7,7 @@ post_title: Performance of hosting node.js applications in iisnode vs
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: performance-of-hosting-node.js-applications-in-iisnode-vs-self-hosting-on-windows
+post_slug: performance-of-hosting-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -65,4 +65,4 @@ As scenario #3 shows, IIS+iisnode beats self-hosted node.js in serving static co
 
 Scenarios #2 and #4 demonstrate that IIS+iisnode introduce substantial CPU overhead in processing request that require dynamic content generation in a node.js application. These scenarios represent a class of “Web APIs” – HTTP endpoints that are geared towards dynamic content generation, e.g. JSON, XML, ATOM, RSS, but also dynamic HTML.     
       
-As the amount of CPU intensive work required to generate the response in the application code increases, the IIS+iisnode overhead becomes less pronounced. On one extreme of CPU intensity we have scenario #2, with extremely lightweight application logic. In that case IIS+iisnode overhead is over 100%, resulting in throughput degradation to 49% compared to self-hosted node.exe. Scenario #4 is a reasonable approximation of the CPU intensity of an MVC application that applies some business logic to the model before rendering the results to the client. This scenario shows smaller IIS+iisnode overhead with throughput reduced to 73% of self-hosted node.exe.  }
+As the amount of CPU intensive work required to generate the response in the application code increases, the IIS+iisnode overhead becomes less pronounced. On one extreme of CPU intensity we have scenario #2, with extremely lightweight application logic. In that case IIS+iisnode overhead is over 100%, resulting in throughput degradation to 49% compared to self-hosted node.exe. Scenario #4 is a reasonable approximation of the CPU intensity of an MVC application that applies some business logic to the model before rendering the results to the client. This scenario shows smaller IIS+iisnode overhead with throughput reduced to 73% of self-hosted node.exe.  

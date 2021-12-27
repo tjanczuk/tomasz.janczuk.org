@@ -6,7 +6,7 @@ post_title: JSConf.US 2014 Lapidarium
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: jsconf.us-2014-lapidarium
+post_slug: jsconfus-2014-lapidarium
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -49,4 +49,4 @@ Below are selected takeaways from these presentations and conversations, in no p
 >
 > *Any mobile internet of things big data set in the cloud can be efficiently sorted with jortSort [[@jennschiffer](https://twitter.com/jennschiffer)]*  
 
-I am leaving JSConf.US 2014 with a lot of new *ideas* in my head and the memory of great conversations with *people*. Conference, defined.   }
+I am leaving JSConf.US 2014 with a lot of new *ideas* in my head and the memory of great conversations with *people*. Conference, defined.   

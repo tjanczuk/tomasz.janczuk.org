@@ -6,7 +6,7 @@ post_title: Run node.js and .NET code in-process
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: run-node.js-and-.net-code-in-process
+post_slug: run-nodejs-and-net-code-in-process
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -114,4 +114,4 @@ Visit the [owin project on GitHub](https://github.com/tjanczuk/owin) for in-dept
 
 Check out the previous reincarnation of the [owin@0.4.0](http://tomasz.janczuk.org/2013/02/hosting-net-code-in-nodejs-applications.html) project to get a better idea of the scenarios that informed the project in the first place. 
 
-Enjoy!  }
+Enjoy!  

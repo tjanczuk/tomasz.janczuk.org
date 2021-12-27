@@ -6,7 +6,7 @@ post_title: Debug Node.js applications in Windows Azure Web Sites
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: debug-node.js-applications-in-windows-azure-web-sites
+post_slug: debug-nodejs-applications-in-windows
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -88,4 +88,4 @@ When changing the debugger path segment, a corresponding change must be done in 
 
 Note that customizing the URL path segment reserved for debugging is important for the security of your site. As long as debugging is enabled in *iisnode.yml* (it is disabled by default), anyone who knows the value of the debugger path segment can interfere with your application. It is therefore wise to set the value to a cryptographically secure string before enabling debugging for your site. 
 
-Enjoy!  }
+Enjoy!  

@@ -6,7 +6,7 @@ post_title: Increase throughput of a node.js application with IIS output caching
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: increase-throughput-of-a-node.js-application-with-iis-output-caching
+post_slug: increase-throughput-of-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -89,4 +89,4 @@ And then re-run the WCAT test with the same configuration. This time we see the 
 
 ### The conclusion
 
-If your node.js application hosted in [iisnode](https://github.com/tjanczuk/iisnode) serves content which can be cached for even short periods (e.g. 1 second), you can realize very substantial throughput improvement by using IIS output caching.   }
+If your node.js application hosted in [iisnode](https://github.com/tjanczuk/iisnode) serves content which can be cached for even short periods (e.g. 1 second), you can realize very substantial throughput improvement by using IIS output caching.   

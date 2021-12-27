@@ -6,7 +6,7 @@ post_title: WCF, Silverlight, and Windows Azure WebSocket samples
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: wcf,-silverlight,-and-windows-azure-websocket-samples
+post_slug: wcf-silverlight-and-windows-azure
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -107,4 +107,4 @@ $.slws.ready(function () {
 ```
 
 
-You can read more about this mechanism at [Mike Taulty’s blog](http://mtaulty.com/CommunityServer/blogs/mike_taultys_blog/archive/2010/07/27/silverlight-and-websockets.aspx).   }
+You can read more about this mechanism at [Mike Taulty’s blog](http://mtaulty.com/CommunityServer/blogs/mike_taultys_blog/archive/2010/07/27/silverlight-and-websockets.aspx).   

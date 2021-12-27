@@ -6,7 +6,7 @@ post_title: Using URL rewriting with node.js applications hosted in IIS using ii
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: using-url-rewriting-with-node.js-applications-hosted-in-iis-using-iisnode
+post_slug: using-url-rewriting-with-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -121,4 +121,4 @@ The request URL passed by IIS to the node.js application is the original URL fro
 
 ### Where do I get iisnode again?
 
-Everything you need to get started is at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode). Make sure to check out the [urlrewrite sample](https://github.com/tjanczuk/iisnode/tree/master/src/samples/urlrewrite). Feedback welcome!  }
+Everything you need to get started is at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode). Make sure to check out the [urlrewrite sample](https://github.com/tjanczuk/iisnode/tree/master/src/samples/urlrewrite). Feedback welcome!  

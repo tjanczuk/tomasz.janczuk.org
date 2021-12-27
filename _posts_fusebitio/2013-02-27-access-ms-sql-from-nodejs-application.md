@@ -7,7 +7,7 @@ post_title: Access MS SQL from a node.js application using OWIN, in-process CLR
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: access-ms-sql-from-a-node.js-application-using-owin,-in-process-clr-hosting,-.net,-and-ado.net
+post_slug: access-ms-sql-from-nodejs-application
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -217,4 +217,4 @@ Visit the project page at [https://github.com/tjanczuk/owin](https://github.com/
 
 Make sure to check out [implementing express.js request handlers and connect middleware in .NET](http://tomasz.janczuk.org/2013/02/hosting-net-code-in-nodejs-applications.html) as well as [running CPU-bound computations implemented in .NET within the node.js process](http://tomasz.janczuk.org/2013/02/cpu-bound-workers-for-nodejs.html) use cases as well. 
 
-[Feedback](https://github.com/tjanczuk/owin/issues) and pull requests welcome.  }
+[Feedback](https://github.com/tjanczuk/owin/issues) and pull requests welcome.  

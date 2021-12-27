@@ -7,7 +7,7 @@ post_title: Performance of the first stable release of the Laharsub pub/sub
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: performance-of-the-first-stable-release-of-the-laharsub-pub/sub-service-for-web-clients
+post_slug: performance-of-first-stable-release-of
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -109,4 +109,4 @@ Network utilization as measured on the server for all three test configurations 
 
  ![f9.network](http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=laharsub&DownloadId=156341)  
 
-It is not surprising that network utilization grows linearly with the number of messages exchanged. One aspect to be noted is that despite the relatively large overhead of the HTTP protocol over the body payload (10 bytes) in the HTTP long polling protocol that the Laharsub server is using, in none of the configurations did the network utilization of a 100MB/s interface exceed 18%. As discussed before, this is partially due to the subscription and notification multiplexing on a single HTTP long poll request.   }
+It is not surprising that network utilization grows linearly with the number of messages exchanged. One aspect to be noted is that despite the relatively large overhead of the HTTP protocol over the body payload (10 bytes) in the HTTP long polling protocol that the Laharsub server is using, in none of the configurations did the network utilization of a 100MB/s interface exceed 18%. As discussed before, this is partially due to the subscription and notification multiplexing on a single HTTP long poll request.   

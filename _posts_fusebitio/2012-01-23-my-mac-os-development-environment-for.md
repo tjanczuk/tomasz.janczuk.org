@@ -6,7 +6,7 @@ post_title: My Mac OS development environment for node.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: my-mac-os-development-environment-for-node.js
+post_slug: my-mac-os-development-environment-for
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -79,4 +79,4 @@ Then I ssh to the box and untar:
 >
 > tar xzf gissues.tgz  
 
-The last issue I needed to address was running the node.js server on the Ubuntu box in a way that provides a degree of reliability. I looked at the forever module that ensures a node.js process is restarted when it crashes, but I finally settled on Ubuntu’s native [upstart](http://upstart.ubuntu.com/). Upstart allows one to start a process on system startup and restart it when it crashes, with a level of rapid failure protection. Plus it takes a minute to configure and get running using great instructions from [Kevin van Zonneveld](http://kevin.vanzonneveld.net/techblog/article/run_nodejs_as_a_service_on_ubuntu_karmic/).   }
+The last issue I needed to address was running the node.js server on the Ubuntu box in a way that provides a degree of reliability. I looked at the forever module that ensures a node.js process is restarted when it crashes, but I finally settled on Ubuntu’s native [upstart](http://upstart.ubuntu.com/). Upstart allows one to start a process on system startup and restart it when it crashes, with a level of rapid failure protection. Plus it takes a minute to configure and get running using great instructions from [Kevin van Zonneveld](http://kevin.vanzonneveld.net/techblog/article/run_nodejs_as_a_service_on_ubuntu_karmic/).   

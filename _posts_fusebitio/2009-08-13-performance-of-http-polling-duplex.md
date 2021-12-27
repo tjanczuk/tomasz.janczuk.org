@@ -7,7 +7,7 @@ post_title: Performance of HTTP polling duplex server-side channel in Microsoft
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: performance-of-http-polling-duplex-server-side-channel-in-microsoft-silverlight-3
+post_slug: performance-of-http-polling-duplex
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -300,4 +300,4 @@ Stdev [ms]       </td>     </tr>      <tr>       <td>
 
 Whenever the median latency shows 0ms, it indicates the latency in over 50% of data points was below the threshold of a time span we could capture.   
 
-The data indicates a single server can support 2000 simultaneous chat rooms with 2 participants each and a 15 second delay between publications with a 25ms mean latency (0 ms median latency), which should satisfy latency requirements of most UI driven scenarios. At the same time, the data shows that the latency gets out of hand with 800 chatrooms with 3 participants each and 15 second delay between publications.   }
+The data indicates a single server can support 2000 simultaneous chat rooms with 2 participants each and a 15 second delay between publications with a 25ms mean latency (0 ms median latency), which should satisfy latency requirements of most UI driven scenarios. At the same time, the data shows that the latency gets out of hand with 800 chatrooms with 3 participants each and 15 second delay between publications.   

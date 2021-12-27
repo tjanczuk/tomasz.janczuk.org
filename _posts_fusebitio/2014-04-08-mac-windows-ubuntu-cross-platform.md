@@ -6,7 +6,7 @@ post_title: Mac, Windows, Ubuntu cross-platform development
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: mac,-windows,-ubuntu-cross-platform-development
+post_slug: mac-windows-ubuntu-cross-platform
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -38,4 +38,4 @@ I use Sublime Text for a uniform code editing experience across platforms. It is
 
 I use Visual Studio for those infrequent tasks that require Windows specific work. It also comes really handy when profiling code. Turns out some of the code that is slow on Windows is *also* slow on *nix and MacOS. Yes, at the end of the day everything boils down to E=mc^2.   
 
-I use Windows Live Writer to write this post.   }
+I use Windows Live Writer to write this post.   

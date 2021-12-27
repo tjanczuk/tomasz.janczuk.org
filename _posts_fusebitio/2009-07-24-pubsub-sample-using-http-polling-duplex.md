@@ -6,7 +6,7 @@ post_title: Pub/sub sample using HTTP polling duplex WCF channel in Microsoft Si
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: pub/sub-sample-using-http-polling-duplex-wcf-channel-in-microsoft-silverlight-3
+post_slug: pubsub-sample-using-http-polling-duplex
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -147,4 +147,4 @@ this.client.SubscribeAsync("my topic");
 ```
   
 
-Thanks to this feature, the entire pub/sub client application is around 100 lines of C# code.   }
+Thanks to this feature, the entire pub/sub client application is around 100 lines of C# code.   

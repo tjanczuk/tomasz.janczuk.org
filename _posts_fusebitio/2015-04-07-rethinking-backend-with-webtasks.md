@@ -86,4 +86,3 @@ Building a webtask runtime that serves the needs of multiple applications and us
 ### Webtask.io
 
 Lastly, you can learn more and experiment with a live webtask runtime at [webtask.io](https://webtask.io) playground. From accessing MongoDB, sending E-mails, to accepting Stripe payments and sending SMS messages, there are many examples of using webtasks to implement and securely run backend logic from a modern web application. Enjoy!
-}

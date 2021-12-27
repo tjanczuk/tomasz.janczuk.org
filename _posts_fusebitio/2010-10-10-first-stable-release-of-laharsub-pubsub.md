@@ -6,7 +6,7 @@ post_title: First stable release of the Laharsub pub/sub service for web clients
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: first-stable-release-of-the-laharsub-pub/sub-service-for-web-clients
+post_slug: first-stable-release-of-laharsub-pubsub
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -33,4 +33,4 @@ The Laharsub 2010.10.09 release contains:
 4. jQuery client.  
 5. Samples  
 6. Unit tests  
-  }
+  

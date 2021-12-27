@@ -6,7 +6,7 @@ post_title: Pub/sub sample with WCF net.tcp protocol in Silverlight 4
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: pub/sub-sample-with-wcf-net.tcp-protocol-in-silverlight-4
+post_slug: pubsub-sample-with-wcf-nettcp-protocol
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -213,4 +213,4 @@ So what does this sample demonstrate? You can have a Silverlight 4 publisher usi
 
  ![Pub\sub client using WCF HTTP polling duplex protocol in Silverlight 4 running in Mozilla Firefox](http://lh6.ggpht.com/_NUp_nWDyyvI/SwRbJs2PrOI/AAAAAAAABD4/p0nb1YGD_LA/image_thumb%5B6%5D.png?imgmax=800) ![Pub\sub client using WCF HTTP polling duplex protocol in AJAX running in Internet Explorer](http://lh4.ggpht.com/_NUp_nWDyyvI/SwRbKct6mdI/AAAAAAAABEA/MmS7Y6M3j0E/image_thumb%5B7%5D.png?imgmax=800)  
 
-You can read more about the HTTP polling duplex and AJAX aspects of the sample in several of my previous posts. For more in-depth look at net.tcp, check out the most recent post on [WCF net.tcp in Silverlight 4](http://tomasz.janczuk.org/2009/11/wcf-nettcp-protocol-in-silverlight-4.html).  }
+You can read more about the HTTP polling duplex and AJAX aspects of the sample in several of my previous posts. For more in-depth look at net.tcp, check out the most recent post on [WCF net.tcp in Silverlight 4](http://tomasz.janczuk.org/2009/11/wcf-nettcp-protocol-in-silverlight-4.html).  

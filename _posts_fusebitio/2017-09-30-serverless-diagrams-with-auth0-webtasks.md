@@ -77,4 +77,3 @@ Webtask compilers are a powerful concept that enable you to implement serverless
 ### Big picture: Auth0 Extend, and Webtasks
 
 [Webtask.io](https://webtask.io) is a freemium sandbox of the [Auth0 Extend](https://goextend.io) product. Based on the Auth0 Webtasks technology, it offers modern, serverless extensibility solution for SaaS platforms and applications. Think [better webhooks](https://auth0.com/blog/why-is-serverless-extensibility-better-than-webhooks/).
-}

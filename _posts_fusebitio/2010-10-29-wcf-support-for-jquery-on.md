@@ -6,7 +6,7 @@ post_title: WCF support for jQuery on wcf.codeplex.com
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: wcf-support-for-jquery-on-wcf.codeplex.com
+post_slug: wcf-support-for-jquery-on
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -255,4 +255,4 @@ In other words, writing compact and robust LINQ expressions against JSON data wi
 
 ### Read more
 
-I have only touched on the key features of the WCF support for jQuery release. Find out more in the [dedicated documentation section](http://wcf.codeplex.com/documentation) on wcf.codeplex.com. Let us know what you think and help us shape the direction of this feature going forward. }
+I have only touched on the key features of the WCF support for jQuery release. Find out more in the [dedicated documentation section](http://wcf.codeplex.com/documentation) on wcf.codeplex.com. Let us know what you think and help us shape the direction of this feature going forward. 

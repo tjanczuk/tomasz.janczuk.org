@@ -6,7 +6,7 @@ post_title: Develop on Mac, host on GitHub, and deploy to Windows Azure with git
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: develop-on-mac,-host-on-github,-and-deploy-to-windows-azure-with-git-azure
+post_slug: develop-on-mac-host-on-github-and
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -72,4 +72,4 @@ Please share your thoughts or ideas by [filing an issue](https://github.com/tjan
 
 Special thanks to [Glenn Block](http://twitter.com/#!/gblock), the first user of git-azure, for valuable feedback and ideas, as well as helping spread the news about git-azure across several node.js events he spoke at recently in Europe.   
 
-Also a big thank you to [Matias Woloski](http://twitter.com/#!/woloski) who was kind enough to talk about git-azure during JSConf.AR 2012.   }
+Also a big thank you to [Matias Woloski](http://twitter.com/#!/woloski) who was kind enough to talk about git-azure during JSConf.AR 2012.   

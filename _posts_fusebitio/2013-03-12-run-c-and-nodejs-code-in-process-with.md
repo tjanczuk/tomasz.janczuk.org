@@ -6,7 +6,7 @@ post_title: Run C# and node.js code in-process with no compilation
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: run-c#-and-node.js-code-in-process-with-no-compilation
+post_slug: run-c-and-nodejs-code-in-process-with
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -29,4 +29,4 @@ For specific topics check out previous posts:
 [Run node.js and .NET code in-process](http://tomasz.janczuk.org/2013/03/run-nodejs-and-net-code-in-process.html)       
 [Access MS SQL from node.js using OWIN](http://tomasz.janczuk.org/2013/02/access-ms-sql-from-nodejs-application.html)       
 [Implement CPU-bound computations on CLR threads within node.js process](http://tomasz.janczuk.org/2013/02/cpu-bound-workers-for-nodejs.html)       
-[Hosting .NET code in node.js process using OWIN](http://tomasz.janczuk.org/2013/02/hosting-net-code-in-nodejs-applications.html)  }
+[Hosting .NET code in node.js process using OWIN](http://tomasz.janczuk.org/2013/02/hosting-net-code-in-nodejs-applications.html)  

@@ -6,7 +6,7 @@ post_title: CPU bound workers for node.js applications using in-process .NET and
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: cpu-bound-workers-for-node.js-applications-using-in-process-.net-and-owin
+post_slug: cpu-bound-workers-for-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -143,4 +143,4 @@ Check out related posts:
 [Implement express.js request handlers and connect middleware using in-process hosted CLR/.NET and OWIN](http://tomasz.janczuk.org/2013/02/hosting-net-code-in-nodejs-applications.html) 
 
     
-[SQL access from node.js applications using in-process CLR/ADO.NET and OWIN](http://tomasz.janczuk.org/2013/02/access-ms-sql-from-nodejs-application.html)  }
+[SQL access from node.js applications using in-process CLR/ADO.NET and OWIN](http://tomasz.janczuk.org/2013/02/access-ms-sql-from-nodejs-application.html)  

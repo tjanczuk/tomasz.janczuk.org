@@ -6,7 +6,7 @@ post_title: Serverless webhooks in Node 8 with Auth0 Webtasks
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: serverless-webhooks-in-node-8-with-auth0-webtasks
+post_slug: auth0-webtasks-and-node-8
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -75,4 +75,3 @@ Until recently the freemium Auth0 Extend sandbox at [webtask.io](https://webtask
 Last week we shipped the [Auth0 Webtasks provider for Serverless Framework](https://auth0.com/blog/serverless-framework-and-auth0-webtasks-hop-on-the-bullet-train/). On this occasion we provisioned a new version of the Auth0 Extend sandbox, based on the latest version of Node 8. 
 
 This post shows how any subscriber to [webtask.io](https://webtask.io) can also use the new, Node 8 environment. Enjoy!
-}

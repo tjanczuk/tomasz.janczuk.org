@@ -6,7 +6,7 @@ post_title: Workers on a shoestring in Windows Azure Web Sites
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: workers-on-a-shoestring-in-windows-azure-web-sites
+post_slug: workers-on-shoestring-in-windows-azure
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -123,4 +123,4 @@ Another job the worker process performs is to periodically refresh data the mobi
 
 The important part is the shoestring approach provides me as a developer with a superior experience compared to what I would have to endure if I hosted worker code in a Hosted Service, without compromising the functionality of the web application.   
 
-Enjoy!  }
+Enjoy!  

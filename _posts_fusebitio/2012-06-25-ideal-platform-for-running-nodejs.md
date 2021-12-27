@@ -6,7 +6,7 @@ post_title: Ideal platform for running node.js applications
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: ideal-platform-for-running-node.js-applications
+post_slug: ideal-platform-for-running-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -36,4 +36,4 @@ Below are the features for which more than 20% of respondents answered â€œI donâ
 
 ### What do you think?  
 
-What do you think of this data? Is there a feature that was not on the list but you care deeply about? Do you expect different features from production and development environment?   }
+What do you think of this data? Is there a feature that was not on the list but you care deeply about? Do you expect different features from production and development environment?   

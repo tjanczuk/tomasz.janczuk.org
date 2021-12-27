@@ -6,7 +6,7 @@ post_title: Discipline oriented team structure in software development
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: discipline-oriented-team-structure-in-software-development
+post_slug: discipline-oriented-team-structure-in
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -51,4 +51,4 @@ The reorganization also had a positive ripple effect on the shape of team's proc
 
 The only disadvantage of the reorganization I can put my finger on has to do not with software engineering but with employee performance assessment. In software organizations that have performance appraisal systems aligned with engineering disciplines of testing and development, a job description that combines both is a struggle. Extra effort is required to recognize and meaningfully compare the effort of a software engineer against that of a developer or tester. 
 
-The transition from an organization with positions split along the testing and development discipline lines to an organization with a single position that combines both disciplines was a positive change. There was little to no incentive for any of the described improvements when the development and test teams were executing within their own, disparate charters, organization structures, and processes. What was particularly noteworthy in the reorganization is that many of the positive process changes happened naturally given the right set of initial conditions set by organization structure changes. For once software development and testing felt like smooth sailing rather than tacking against the wind.}
+The transition from an organization with positions split along the testing and development discipline lines to an organization with a single position that combines both disciplines was a positive change. There was little to no incentive for any of the described improvements when the development and test teams were executing within their own, disparate charters, organization structures, and processes. What was particularly noteworthy in the reorganization is that many of the positive process changes happened naturally given the right set of initial conditions set by organization structure changes. For once software development and testing felt like smooth sailing rather than tacking against the wind.

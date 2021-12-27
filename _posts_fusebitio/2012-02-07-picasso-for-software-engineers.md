@@ -18,4 +18,4 @@ There is one striking parallel between fine arts and software engineering: it is
 
 Think hard then write code. Think harder then throw away most of it.   
 
- ![Slide1](http://lh5.ggpht.com/-5pCLZlfqbZY/TzDmK5bNd3I/AAAAAAAAB7Q/_DO0okyYsdw/Slide1_thumb%25255B3%25255D.png?imgmax=800)  }
+ ![Slide1](http://lh5.ggpht.com/-5pCLZlfqbZY/TzDmK5bNd3I/AAAAAAAAB7Q/_DO0okyYsdw/Slide1_thumb%25255B3%25255D.png?imgmax=800)  

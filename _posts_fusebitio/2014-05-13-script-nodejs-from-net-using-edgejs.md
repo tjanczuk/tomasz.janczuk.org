@@ -6,7 +6,7 @@ post_title: Script Node.js from .NET using Edge.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: script-node.js-from-.net-using-edge.js
+post_slug: script-nodejs-from-net-using-edgejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -79,4 +79,4 @@ Here are more resources to get your started using Edge.js:
 [Using NPM modules](https://github.com/tjanczuk/edge#how-to-use-external-nodejs-modules)  
 [Handle Node.js events in C#](https://github.com/tjanczuk/edge#how-to-handle-nodejs-events-in-net)  
 [Manage Node.js state from C#](https://github.com/tjanczuk/edge#how-to-expose-nodejs-state-to-net)  
-[Script Node.js in ASP.NET](https://github.com/tjanczuk/edge#how-to-use-nodejs-in-aspnet-web-applications)  }
+[Script Node.js in ASP.NET](https://github.com/tjanczuk/edge#how-to-use-nodejs-in-aspnet-web-applications)  

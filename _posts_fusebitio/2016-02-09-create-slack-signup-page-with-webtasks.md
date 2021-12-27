@@ -6,7 +6,7 @@ post_title: Create Slack signup page with Auth0 Webtasks
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: create-slack-signup-page-with-auth0-webtasks
+post_slug: create-slack-signup-page-with-webtasks
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -72,4 +72,4 @@ For another specific example of webtask usage, check out my prior post on [accep
   </script>
 </form>
 
-Enjoy webtasks!}
+Enjoy webtasks!

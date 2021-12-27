@@ -6,7 +6,7 @@ post_title: Multi-line strings in JavaScript and Node.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: multi-line-strings-in-javascript-and-node.js
+post_slug: multi-line-strings-in-javascript-and
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -38,4 +38,4 @@ That pattern can be applied to a variety of types of multi-line text. For exampl
 
  ![fs.ps.py.cs.js](http://lh3.ggpht.com/-Sh6hlijb6QA/UZPRnPSDY5I/AAAAAAAADd8/aVNuHMP6buc/fs.ps.py.cs.js_thumb%25255B2%25255D.png?imgmax=800) 
 
-Enjoy!  }
+Enjoy!  

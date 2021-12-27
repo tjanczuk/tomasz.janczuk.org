@@ -6,7 +6,7 @@ post_title: Using webtasks with custom domain names
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: using-webtasks-with-custom-domain-names
+post_slug: webtasks-with-custom-domain
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -71,4 +71,4 @@ For example, a webtask you were previously able to access at [https://tjanczuk.s
 
 <img src="tomek-blog/2016-03-30/7.png" class="tj-img-diagram-75" alt="Auth0 Webtasks: backendless appliaction with backend logic">
 
-Enjoy!}
+Enjoy!

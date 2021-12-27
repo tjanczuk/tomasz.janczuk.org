@@ -6,7 +6,7 @@ post_title: Secure by default with SSL in Windows Azure Web Sites
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: secure-by-default-with-ssl-in-windows-azure-web-sites
+post_slug: secure-by-default-with-ssl-in-windows
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -62,4 +62,4 @@ You can see the redirection from HTTP to HTTPS in action when you navigate to [h
 
  ![image](http://lh4.ggpht.com/-ohTEbsw55ss/Uq9uOM2UadI/AAAAAAAAD3w/eBux_Jp-wIo/image_thumb%25255B8%25255D.png?imgmax=800) 
 
-Enjoy!  }
+Enjoy!  

@@ -6,7 +6,7 @@ post_title: Current installation packages for node.js and iisnode for Windows
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: current-installation-packages-for-node.js-and-iisnode-for-windows
+post_slug: current-installation-packages-for
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -23,4 +23,4 @@ iisnode for iis7 express (x86): [http://go.microsoft.com/?linkid=9784329](http:/
 iisnode for iis7 (x86): [http://go.microsoft.com/?linkid=9784330](http://go.microsoft.com/?linkid=9784330)      
 iisnode for iis7 (x64): [http://go.microsoft.com/?linkid=9784331](http://go.microsoft.com/?linkid=9784331)  
 
-Enjoy!  }
+Enjoy!  

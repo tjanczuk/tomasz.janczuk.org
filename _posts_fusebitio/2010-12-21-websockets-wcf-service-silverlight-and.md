@@ -7,7 +7,7 @@ post_title: Introducing the WebSockets prototype
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: introducing-the-websockets-prototype-draft-montenegro-hybi-upgrade-hello-handshake-00
+post_slug: websockets-wcf-service-silverlight-and
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -65,4 +65,4 @@ Through access to emerging specifications like WebSockets, the HTML5 Labs sandbo
 
 ### We want your feedback
 
-As you try this implementation we [welcome your feedback](http://mailinglist.interoperabilitybridges.com/scripts/wa-INTEROP.exe?A0=HTML5_WEBSOCKETS) and we are looking forward to your comments! }
+As you try this implementation we [welcome your feedback](http://mailinglist.interoperabilitybridges.com/scripts/wa-INTEROP.exe?A0=HTML5_WEBSOCKETS) and we are looking forward to your comments! 

@@ -1,0 +1,56 @@
+#!/usr/bin/env zx
+
+const Fs = require("fs");
+const Path = require("path");
+const Yaml = require("yaml");
+
+const posts = Fs.readdirSync(Path.join(__dirname, "_posts_fusebitio"));
+posts.forEach((postFileName) => {
+  console.log(`Converting ${postFileName}`);
+  // read post
+  let content = Fs.readFileSync(
+    Path.join(__dirname, "_posts_fusebitio", postFileName),
+    {
+      encoding: "utf8",
+    }
+  );
+  // extract and parse header
+  const lines = content.split("\n");
+  let markerCount = 0;
+  let head = [];
+  let post = [];
+  lines.forEach((line) => {
+    if (line === "---") {
+      if (markerCount === 2) {
+        post.push(line);
+      } else {
+        markerCount++;
+      }
+    } else if (markerCount === 1) {
+      head.push(line);
+    } else if (markerCount === 2) {
+      post.push(line);
+    }
+  });
+  head = Yaml.parse(head.join("\n"));
+  // convert header
+  const newHead = {
+    ...head,
+    post_slug: postFileName.substring(11).match(/^(.+)\.md$/)[1],
+  };
+  delete newHead.tags;
+  delete newHead.post_og_image;
+  delete newHead.date;
+  // convert post
+  const newPost = post;
+  // reconstruct and write post
+  content = `---
+tags: ['post']
+post_og_image: 'site'
+date: '${postFileName.substring(0, 10)}'  
+${Yaml.stringify(newHead)}---\n${newPost.join("\n").replace(/\}$/, "")}`;
+  Fs.writeFileSync(
+    Path.join(__dirname, "_posts_fusebitio", postFileName),
+    content
+  );
+});

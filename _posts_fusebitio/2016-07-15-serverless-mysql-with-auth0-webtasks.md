@@ -164,4 +164,3 @@ You can take it as far as supporting implementation of webtasks in C#, by using 
 <img src="tomek-blog/2016-07-15/3.png" alt="C# Auth0 Webtask in Webtask Editor Widget using Edge.js">
 
 You can read more about using the webtask compilers [here](https://webtask.io/docs/model#webtask-compilers), and about implementing your own [here](https://webtask.io/docs/webtask-compilers). Enjoy!
-}

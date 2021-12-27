@@ -7,7 +7,7 @@ post_title: Developing node.js applications in WebMatrix and testing in IIS
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: developing-node.js-applications-in-webmatrix-and-testing-in-iis-express-on-windows
+post_slug: developing-nodejs-applications-in
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -81,4 +81,4 @@ WebMatrix with IIS Express gives you a lightweight, free development stack for n
 
 ### So where can I get iisnode again?
 
-Everything you need to get started is at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode). Make sure to check out [the samples](https://github.com/tjanczuk/iisnode/tree/master/src/samples). Feedback welcome!  }
+Everything you need to get started is at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode). Make sure to check out [the samples](https://github.com/tjanczuk/iisnode/tree/master/src/samples). Feedback welcome!  

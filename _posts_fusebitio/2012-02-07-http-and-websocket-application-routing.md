@@ -7,7 +7,7 @@ post_title: HTTP and WebSocket application routing using arrjs reduces the cost
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: http-and-websocket-application-routing-using-arrjs-reduces-the-cost-of-hosting-applications
+post_slug: http-and-websocket-application-routing
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -35,4 +35,4 @@ Arrjs helps you run multiple web applications in a single farm of servers to rea
 
 Arrjs is a system that supports running multiple web applications in a single web farm while ensuring they are all externally accessible using a single port 80 for HTTP/WebSocket traffic and a single port 443 for HTTPS/secure WebSocket traffic. Arrjs is a reverse HTTP proxy capable of message-based activation of applications and keeping track of a dynamic routing table for routing requests targeting disparate applications. Arrjs is implemented in node.js and uses MongoDB, and can therefore be deployed on Windows, *nix, or MacOS.   
 
-Read more at [https://github.com/tjanczuk/arrjs](https://github.com/tjanczuk/arrjs).   }
+Read more at [https://github.com/tjanczuk/arrjs](https://github.com/tjanczuk/arrjs).   

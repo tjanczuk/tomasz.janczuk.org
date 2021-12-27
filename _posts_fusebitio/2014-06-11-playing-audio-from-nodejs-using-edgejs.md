@@ -6,7 +6,7 @@ post_title: Playing audio from Node.js using Edge.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: playing-audio-from-node.js-using-edge.js
+post_slug: playing-audio-from-nodejs-using-edgejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -145,4 +145,4 @@ It means that in many cases it is much easier to write a few lines of C# and use
 
 ### Dude, Edge.js surely only works on Windows, why are you wasting my time?
 
-Dear Dude, I am pleased to inform you that Edge.js works on [Mac and Linux as well as Windows](https://github.com/tjanczuk/edge#before-you-dive-in). Yours truly.   }
+Dear Dude, I am pleased to inform you that Edge.js works on [Mac and Linux as well as Windows](https://github.com/tjanczuk/edge#before-you-dive-in). Yours truly.   

@@ -6,7 +6,7 @@ post_title: Scale-out of Silverlight HTTP polling duplex WCF service in a web fa
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: scale-out-of-silverlight-http-polling-duplex-wcf-service-in-a-web-farm-scenario
+post_slug: scale-out-of-silverlight-http-polling
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -206,4 +206,4 @@ The approach described here removes the in-memory queue the server side implemen
 
 The [sample code of the solution](http://janczuk.org/code/samples/PollingDuplexSampleScalable.zip) stops short of recommending a particular backing store. In fact, it uses a mock up of the store that is in-memory based, which means the sample would not even scale out as is. However, it provides a good demonstration of the refactoring steps specific to the protocol itself.   
 
-[Aleksey Savateyev](http://blogs.msdn.com/ales/), a colleague of mine, has taken this sample to an entirely different level by prototyping a pub\sub solution that uses [Windows Azure Queues](http://msdn.microsoft.com/en-us/library/dd179363.aspx) as the backend storage, and allows scale-out of the polling duplex WCF service using the pattern described here to an arbitrary number of web roles in the [Windows Azure](http://www.microsoft.com/azure/default.mspx) platform. Aleksey promised to blog about this approach, so check out [Aleksey’s site](http://blogs.msdn.com/ales/).   }
+[Aleksey Savateyev](http://blogs.msdn.com/ales/), a colleague of mine, has taken this sample to an entirely different level by prototyping a pub\sub solution that uses [Windows Azure Queues](http://msdn.microsoft.com/en-us/library/dd179363.aspx) as the backend storage, and allows scale-out of the polling duplex WCF service using the pattern described here to an arbitrary number of web roles in the [Windows Azure](http://www.microsoft.com/azure/default.mspx) platform. Aleksey promised to blog about this approach, so check out [Aleksey’s site](http://blogs.msdn.com/ales/).   

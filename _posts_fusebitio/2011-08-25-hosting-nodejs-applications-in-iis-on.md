@@ -6,7 +6,7 @@ post_title: Hosting node.js applications in IIS on Windows
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: hosting-node.js-applications-in-iis-on-windows
+post_slug: hosting-nodejs-applications-in-iis-on
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -214,4 +214,3 @@ The [iisnode](https://github.com/tjanczuk/iisnode) project is open source on Git
 [Using IIS output caching to improve performance of a node.js application](http://tomasz.janczuk.org/2012/07/increase-throughput-of-nodejs.html)  
 [Hosting socket.io Websocket apps in IIS using iisnode](http://tomasz.janczuk.org/2013/01/hosting-socketio-websocket-apps-in-iis.html)  
 [How to use Websockets with node.js apps hosted in iisnode](http://tomasz.janczuk.org/2012/11/how-to-use-websockets-with-nodejs-apps.html)
-}

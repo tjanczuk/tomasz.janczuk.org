@@ -6,7 +6,7 @@ post_title: The HTTP.SYS stack for node.js apps on Windows
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: the-http.sys-stack-for-node.js-apps-on-windows
+post_slug: the-httpsys-stack-for-nodejs-apps-on
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -102,4 +102,4 @@ The HTTPS with Connection: close and full SSL handshake is the only variant acro
 
 It appears that substituting the built-in HTTP stack in node.js with one based on HTTP.SYS using the httpsys module can deliver substantial performance improvements. In addition to performance, HTTP.SYS enables port sharing (ability for two node.exe processes to listen on a subset of the URL space on a single TCP port), and additional performance boost of using HTTP.SYS kernel mode output cache.   
 
-So install [httpsys](https://github.com/tjanczuk/httpsys) today, play with it, and let me know what you think.   }
+So install [httpsys](https://github.com/tjanczuk/httpsys) today, play with it, and let me know what you think.   

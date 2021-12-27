@@ -6,7 +6,7 @@ post_title: Access SQL Azure from a Node.js app deployed to Windows Azure Web Si
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: access-sql-azure-from-a-node.js-app-deployed-to-windows-azure-web-sites
+post_slug: access-sql-azure-from-nodejs-app
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -90,4 +90,4 @@ Lines 24-29 expose the */products/<id>* endpoint which uses the *getProductById*
 
 The [Edge.js](http://tjanczuk.github.io/edge) module for Node.js allows in-process interop beween Node.js and .NET code. The [Edge-sql](https://github.com/tjanczuk/edge#how-to-script-t-sql-in-a-nodejs-application) extension of Edge.js enables executing T-SQL scripts embedded within a Node.js application using asynchronous ADO.NET running in-process with Node.js code. Therefore it enables access to MS SQL databases, including but not limited to SQL Azure databases. The Edge-sql extension currently supports the four basic CRUD operations: select, insert, update, and delete.   
 
-Enjoy. Collaboration welcome: [https://github.com/tjanczuk.edge](https://github.com/tjanczuk.edge).   }
+Enjoy. Collaboration welcome: [https://github.com/tjanczuk.edge](https://github.com/tjanczuk.edge).   

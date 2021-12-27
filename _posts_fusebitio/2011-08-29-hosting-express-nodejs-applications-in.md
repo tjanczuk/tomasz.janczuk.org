@@ -6,7 +6,7 @@ post_title: Hosting express node.js applications in IIS using iisnode
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: hosting-express-node.js-applications-in-iis-using-iisnode
+post_slug: hosting-express-nodejs-applications-in
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -119,4 +119,4 @@ Your IIS-hosted express node.js application behaves like expected:
 
 ### So where can I get iisnode again?
 
-Everything you need to get started is at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode). Make sure to check out the [express sample](https://github.com/tjanczuk/iisnode/tree/master/src/samples/express). Feedback welcome!  }
+Everything you need to get started is at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode). Make sure to check out the [express sample](https://github.com/tjanczuk/iisnode/tree/master/src/samples/express). Feedback welcome!  

@@ -6,7 +6,7 @@ post_title: Selecting the node.js version in Windows Azure Web Sites
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: selecting-the-node.js-version-in-windows-azure-web-sites
+post_slug: selecting-nodejs-version-in-windows
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -113,4 +113,4 @@ This mechanism of selecting a custom node.js version to run your application wit
 
 ### Bugs? Ideas? Send a pull request
 
-The node.js version selection mechanism employed by Windows Azure Web Sites is part of an open source project [Kudu](https://github.com/projectkudu/kudu); specifically, the version selection logic is implemented [here](https://github.com/projectkudu/kudu/blob/master/Kudu.Core/Scripts/selectNodeVersion.js). Support for the low level mechanism of nodeProcessCommandLine in iisnode.yml is part of the open source [iisnode](https://github.com/tjanczuk/iisnode) project that Windows Azure Web Sites uses to host node.js applications. Both projects are open to contributions.   }
+The node.js version selection mechanism employed by Windows Azure Web Sites is part of an open source project [Kudu](https://github.com/projectkudu/kudu); specifically, the version selection logic is implemented [here](https://github.com/projectkudu/kudu/blob/master/Kudu.Core/Scripts/selectNodeVersion.js). Support for the low level mechanism of nodeProcessCommandLine in iisnode.yml is part of the open source [iisnode](https://github.com/tjanczuk/iisnode) project that Windows Azure Web Sites uses to host node.js applications. Both projects are open to contributions.   

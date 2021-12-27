@@ -6,7 +6,7 @@ post_title: Scalable CRON job executor for AWS Lambda
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: scalable-cron-job-executor-for-aws-lambda
+post_slug: scalable-cron-executor-for-aws-lambda
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -48,4 +48,3 @@ With this architecture, we were able to use a single CloudWatch Event to schedul
 ### Shameless plug
 
 This is just one of many interesting technical problems we are continuously solving when building the integration platform at Fusebit. If you enjoy working on developer-centric products and cracking this type of technical problems on a daily basis and in a good company, [we are hiring](https://fusebit.io/careers)!
-}

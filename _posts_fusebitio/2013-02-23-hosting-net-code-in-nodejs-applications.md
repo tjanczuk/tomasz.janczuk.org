@@ -6,7 +6,7 @@ post_title: Hosting .NET code in node.js applications using OWIN
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: hosting-.net-code-in-node.js-applications-using-owin
+post_slug: hosting-net-code-in-nodejs-applications
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -160,4 +160,4 @@ Check out related posts:
 [CPU bound workers for node.js applications using in-process .NET and OWIN](http://tomasz.janczuk.org/2013/02/cpu-bound-workers-for-nodejs.html) 
 
     
-[SQL access from node.js applications using in-process CLR/ADO.NET and OWIN](http://tomasz.janczuk.org/2013/02/access-ms-sql-from-nodejs-application.html)  }
+[SQL access from node.js applications using in-process CLR/ADO.NET and OWIN](http://tomasz.janczuk.org/2013/02/access-ms-sql-from-nodejs-application.html)  

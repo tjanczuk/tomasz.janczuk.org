@@ -6,7 +6,7 @@ post_title: WCF Web APIs on wcf.codeplex.com
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: wcf-web-apis-on-wcf.codeplex.com
+post_slug: wcf-web-apis-on-wcfcodeplexcom
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -24,4 +24,4 @@ If you haven’t had a chance to [watch Glenn Block’s talk at PDC 2010](http:/
 * **WCF HTTP**: a brand new WCF HTTP processing stack that makes programming WCF web services easy with a set first class concepts and utilities targeting the HTTP protocol. Read more about this aspect at [Glenn Block’s blog](http://blogs.msdn.com/b/gblock/archive/2010/11/01/wcf-web-apis-http-your-way.aspx).  
   
 
-So go explore [wcf.codeplex.com](http://wcf.codeplex.com/), [download the binary release](http://wcf.codeplex.com/releases), [read the documentation](http://wcf.codeplex.com/documentation), [download or browser the code](http://wcf.codeplex.com/SourceControl/list/changesets), [start a discussion](http://wcf.codeplex.com/discussions), or otherwise let us know what you think!  }
+So go explore [wcf.codeplex.com](http://wcf.codeplex.com/), [download the binary release](http://wcf.codeplex.com/releases), [read the documentation](http://wcf.codeplex.com/documentation), [download or browser the code](http://wcf.codeplex.com/SourceControl/list/changesets), [start a discussion](http://wcf.codeplex.com/discussions), or otherwise let us know what you think!  

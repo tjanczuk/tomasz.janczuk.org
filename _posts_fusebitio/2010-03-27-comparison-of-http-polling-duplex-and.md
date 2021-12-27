@@ -6,7 +6,7 @@ post_title: Comparison of HTTP polling duplex and net.tcp performance in Silverl
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: comparison-of-http-polling-duplex-and-net.tcp-performance-in-silverlight-4-rc
+post_slug: comparison-of-http-polling-duplex-and
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -38,4 +38,4 @@ First and foremost, the performance increase of the new MultipleMessagesPerPoll 
 
 All but one variations of the test where the client initiated communication from the worker thread are substantially faster than corresponding UI thread variations. Silverlight application is running a single UI thread at a time, while there may be several worker threads created. So in case of the UI thread variations the communication bottleneck was clearly related to the necessity to synchronize response processing on a single thread on the client side. One surprising exception to this rule is the SingleMessagePerPoll mode, which shows the same performance on the worker thread and the UI thread. This is related to a combination of two factors. First, in the SingleMessagePerPoll mode, every message from the server to the client requires a new HTTP long poll from the client. Second, the HTTP implementation in Silverlight 4 synchronizes low level operations on the UI thread even if the request originated on a worker thread (which is a known limitation that will be addressed in future versions). MultipleMessagesPerPoll mode does not suffer from this constraint, since sending multiple messages from the server to the client requires only a single HTTP request.   
 
-Worth calling out is also the performance benefit of binary session encoding (which is the default) compared to text encoding in the MultipleMessagesPerPoll mode on a worker thread. Binary encoding offers **138%** of the throughput of text encoding. This is related to reduced processing cost of binary XML compared to text XML; not to mention the reduction of network bandwidth (~50% of text encoding).   }
+Worth calling out is also the performance benefit of binary session encoding (which is the default) compared to text encoding in the MultipleMessagesPerPoll mode on a worker thread. Binary encoding offers **138%** of the throughput of text encoding. This is related to reduced processing cost of binary XML compared to text XML; not to mention the reduction of network bandwidth (~50% of text encoding).   

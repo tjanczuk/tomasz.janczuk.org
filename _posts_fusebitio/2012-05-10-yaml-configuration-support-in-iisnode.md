@@ -110,4 +110,4 @@ The web.config above has the following effect:
 
 ### Try it out
 
-Get your copy if iisnode at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode) and give YAML config a try!  }
+Get your copy if iisnode at [https://github.com/tjanczuk/iisnode](https://github.com/tjanczuk/iisnode) and give YAML config a try!  

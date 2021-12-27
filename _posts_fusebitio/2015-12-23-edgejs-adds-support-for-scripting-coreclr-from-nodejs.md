@@ -6,7 +6,7 @@ post_title: Edge.js adds support for scripting CoreCLR from Node.js
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: edge.js-adds-support-for-scripting-coreclr-from-node.js
+post_slug: edgejs-adds-support-for-scripting-coreclr-from-nodejs
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -86,4 +86,3 @@ In addition to scripting CLR from Node.js, Edge.js also allows the opposite: scr
 
 Script away!
 
-}

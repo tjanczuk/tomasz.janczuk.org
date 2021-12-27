@@ -123,4 +123,4 @@ Even if you are already offering webhooks, with webtasks you can now greatly imp
 
 We have developed webtasks and have been using them at [Auth0](https://auth0.com) for a long time. In fact, if are using Auth0 today, you are already using webtasks. 
 
-We believe webtasks provide a superior customization experience for developers using our identity management platform. As such we've made webtasks available at [https://webtask.io](https://webtask.io) for anyone to try. If you are interested in using webtasks to extend your own platform or app, get in touch at [support@auth0.com](mailto:support@auth0.com). }
+We believe webtasks provide a superior customization experience for developers using our identity management platform. As such we've made webtasks available at [https://webtask.io](https://webtask.io) for anyone to try. If you are interested in using webtasks to extend your own platform or app, get in touch at [support@auth0.com](mailto:support@auth0.com). 

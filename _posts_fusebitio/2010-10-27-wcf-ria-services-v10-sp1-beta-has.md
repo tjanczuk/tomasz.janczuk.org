@@ -6,7 +6,7 @@ post_title: WCF RIA Services V1.0 SP1 Beta has shipped
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: wcf-ria-services-v1.0-sp1-beta-has-shipped
+post_slug: wcf-ria-services-v10-sp1-beta-has
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -33,4 +33,4 @@ The product release is accompanied by the [WCF RIA Services Toolkit October 2010
 
 Make sure to check out [Jeff Handley](http://jeffhandley.com/tags/pdc10) and [Deepesh Mohnani](http://blogs.msdn.com/deepm) blogs for more data about this release.  
 
-For a more behind the scenes/director commentary perspective on SP1, check out [Dinesh Kulkarni’s blog](http://www.dineshk.net/) (fresh from the oven).  }
+For a more behind the scenes/director commentary perspective on SP1, check out [Dinesh Kulkarni’s blog](http://www.dineshk.net/) (fresh from the oven).  

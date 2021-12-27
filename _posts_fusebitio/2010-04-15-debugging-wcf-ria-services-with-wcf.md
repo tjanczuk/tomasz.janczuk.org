@@ -6,7 +6,7 @@ post_title: Debugging WCF RIA Services with WCF traces
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: debugging-wcf-ria-services-with-wcf-traces
+post_slug: debugging-wcf-ria-services-with-wcf
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -101,4 +101,4 @@ maxEntries="200"/>
 ```
   
 
-Tracing information should only be exposed for access by web clients in controlled development or staging environments for the same reasons one should not propagate all ASP.NET exceptions back to the client in a production deployment.  }
+Tracing information should only be exposed for access by web clients in controlled development or staging environments for the same reasons one should not propagate all ASP.NET exceptions back to the client in a production deployment.  

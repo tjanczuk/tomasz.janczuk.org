@@ -6,7 +6,7 @@ post_title: AJAX client for HTTP polling duplex WCF channel in Microsoft Silverl
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: ajax-client-for-http-polling-duplex-wcf-channel-in-microsoft-silverlight-3
+post_slug: ajax-client-for-http-polling-duplex-wcf
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -158,4 +158,4 @@ org.janczuk.sl3duplex.Sl3DuplexProxy = function(args /* .url, .onMessageReceived
 ```
   
 
-Session identifier of the client proxy is included in all messages sent from that proxy to the server as well as notifications from the server intended for that particular client. This enables demux of notifications received over a single polling connection to the appropriate client proxy instance.  }
+Session identifier of the client proxy is included in all messages sent from that proxy to the server as well as notifications from the server intended for that particular client. This enables demux of notifications received over a single polling connection to the appropriate client proxy instance.  

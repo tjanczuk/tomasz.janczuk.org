@@ -6,7 +6,7 @@ post_title: Accept Stripe payments without a backend using Webtasks
 post_author: Tomasz Janczuk
 post_author_avatar: tomek.png
 post_image: blog-tomek.png
-post_slug: accept-stripe-payments-without-a-backend-using-webtasks
+post_slug: accept-stripe-payments-without-backend-using-webtasks
 post_date_in_url: true
 post_excerpt: Tomek on Software - shaken, not stirred
 ---
@@ -212,4 +212,3 @@ So what are you waiting for? Webtask away! And don't forget about my coffee:
     data-allow-remember-me="false">
   </script>
 </form>
-}
