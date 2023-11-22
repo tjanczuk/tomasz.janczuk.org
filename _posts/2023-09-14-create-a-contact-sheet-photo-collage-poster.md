@@ -10,9 +10,9 @@ tags:
   - travel
 ---
 
-Creating a photo collage from your digital photos should be easy, right? It is, unless you have very specific needs for how you want your collage to look like.
+Creating a photo collage from your digital photos should be easy, right? It is unless you have very specific needs for how you want your collage to look like.
 
-In my case, I have just returned from a [year-long, around-the-world travel](https://22.janczuk.org) with 25,000+ pictures, and I wanted to arrange some 500 of them in a contact-sheet-like 30"x20" photo collage poster to hang on a wall. I wanted each picture to have a custom description and the GPS location where the picture was taken, estracted from the EXIF metadata.
+In my case, I have just returned from a [year-long, around-the-world travel](https://22.janczuk.org) with 25,000+ pictures, and I wanted to arrange some 500 of them in a contact-sheet-like 30"x20" photo collage poster to hang on a wall. I wanted each picture to have a custom description and the GPS location where the picture was taken, extracted from the EXIF metadata.
 
 When I started looking for a solution, no tool out there did exactly what I wanted, so I created my own: [tjanczuk/mkcollage](https://github.com/tjanczuk/mkcollage). Here is a sample of what the tool can create, with a few pictures from south of the equator:
 
